@@ -22,6 +22,7 @@ collections:
           - { label: "Subtitle Part2", name: "subtitlePart2", widget: "string" }
           - { label: "CTA Text", name: "ctaText", widget: "string" }
           - { label: "CTA Video Text", name: "ctaVideoText", widget: "string" }
+          - { label: "Video URL", name: "videoUrl", widget: "string" }
       - name: "home_es"
         label: "Home Page (Spanish)"
         file: "content/home_es.md"
@@ -45,3 +46,4 @@ collections:
               name: "ctaVideoText",
               widget: "string",
             }
+          - { label: "URL del Video", name: "videoUrl", widget: "string" }
