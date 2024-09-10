@@ -1,22 +1,22 @@
+// pages/index.js
 import HeroSection from "../components/HeroSection";
+import { getMarkdownContent } from "../lib/markdown"; // Asegúrate de que esta función está bien definida
 
-export default function Home({ content }) {
+function HomePage({ hero }) {
   return (
     <div>
-      <HeroSection title={content.title} subtitle={content.subtitle} />
+      <HeroSection hero={hero} />
     </div>
   );
 }
 
-export async function getStaticProps() {
-  // Aquí agregarías el código para traer el contenido desde Decap CMS
-  // Simulando contenido estático
+export async function getStaticProps({ locale }) {
+  const hero = await getMarkdownContent(`home_${locale}`);
   return {
     props: {
-      content: {
-        title: "Welcome to Our Agency",
-        subtitle: "Providing the best business solutions.",
-      },
+      hero,
     },
   };
 }
+
+export default HomePage;

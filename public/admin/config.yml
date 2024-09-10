@@ -6,11 +6,42 @@ media_folder: "public/images"
 public_folder: "/images"
 
 collections:
-  - name: "pages" # Nombre de la colección
-    label: "Pages" # Etiqueta que se muestra en el CMS
-    folder: "content/pages" # Carpeta donde se almacenarán los archivos de esta colección
-    create: true # Permite a los usuarios crear nuevos ítems en esta colección
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Formato del nombre de archivo
-    fields: # Define los campos que los ítems tendrán
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "pages"
+    label: "Pages"
+    create: true
+    delete: false
+    files:
+      - name: "home_en"
+        label: "Home Page (English)"
+        file: "content/home_en.md"
+        fields:
+          - { label: "Word 1", name: "word1", widget: "string" }
+          - { label: "Word 2", name: "word2", widget: "string" }
+          - { label: "Word 3", name: "word3", widget: "string" }
+          - { label: "Subtitle Part1", name: "subtitlePart1", widget: "string" }
+          - { label: "Subtitle Part2", name: "subtitlePart2", widget: "string" }
+          - { label: "CTA Text", name: "ctaText", widget: "string" }
+          - { label: "CTA Video Text", name: "ctaVideoText", widget: "string" }
+      - name: "home_es"
+        label: "Home Page (Spanish)"
+        file: "content/home_es.md"
+        fields:
+          - { label: "Palabra 1", name: "word1", widget: "string" }
+          - { label: "Palabra 2", name: "word2", widget: "string" }
+          - { label: "Palabra 3", name: "word3", widget: "string" }
+          - {
+              label: "Subtítulo Parte 1",
+              name: "subtitlePart1",
+              widget: "string",
+            }
+          - {
+              label: "Subtítulo Parte 2",
+              name: "subtitlePart2",
+              widget: "string",
+            }
+          - { label: "Texto del CTA", name: "ctaText", widget: "string" }
+          - {
+              label: "Texto del Video CTA",
+              name: "ctaVideoText",
+              widget: "string",
+            }
