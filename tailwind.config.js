@@ -1,5 +1,5 @@
 module.exports = {
-  darkMode: "class", // Permite el uso de la clase 'dark' para el modo oscuro
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,13 +15,18 @@ module.exports = {
         pink: "#DC0073",
         pinkSecondary: "#FFC3D1",
         main: "#190C13",
+        mainSecondary: "#2F0019",
         light: "#FFF2F5",
       },
       fontFamily: {
-        sans: ["Poppins", "sans-serif"], // Llamada a la fuente Poppins
-        ramillas: ["TTRamillas", "serif"], // Llamada a las fuentes TT Ramillas
+        sans: ["Poppins", "sans-serif"],
+        ramillas: ["TTRamillas", "serif"],
+      },
+      fontSize: {
+        110: "110%",
+        105: "105%", // Agrega una clase personalizada para 110%
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
