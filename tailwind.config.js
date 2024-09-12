@@ -25,6 +25,7 @@ module.exports = {
       fontSize: {
         110: "110%",
         105: "105%", // Agrega una clase personalizada para 110%
+        95: "95%",
       },
     },
   },

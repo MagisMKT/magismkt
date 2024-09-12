@@ -11,6 +11,8 @@ const Button = ({
   rotate = 0,
   iconFillColor = "#190C13", // Color del ícono
   hoverTextColor = "text-main", // Nuevo prop para el color del texto en hover
+  onClick, // Add the onClick prop
+  ...props // Spread any other props like onMouseEnter, onMouseLeave, etc.
 }) => {
   const [hover, setHover] = useState(false);
 
@@ -42,6 +44,7 @@ const Button = ({
         className={buttonClasses}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        {...props} // Spread any other props (e.g., onClick for <a>)
       >
         <span className={textClasses}>{text}</span>
         {/* Círculo expansivo */}
@@ -60,6 +63,8 @@ const Button = ({
       className={buttonClasses}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick} // Pass the onClick handler to the button
+      {...props} // Spread any other props like onClick for <button>
     >
       <span className={textClasses}>{text}</span>
       {/* Círculo expansivo */}
