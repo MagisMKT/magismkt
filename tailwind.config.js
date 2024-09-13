@@ -26,6 +26,10 @@ module.exports = {
         110: "110%",
         105: "105%", // Agrega una clase personalizada para 110%
         95: "95%",
+        50: "50%",
+      },
+      aspectRatio: {
+        vertical: "9 / 11",
       },
     },
   },

@@ -1,0 +1,259 @@
+import React from "react";
+import Image from "next/image";
+import Shine from "@/components/icons/Shine";
+import Button from "@/components/Button";
+import Arrow from "@/components/icons/Arrow";
+
+const teamMembers = [
+  {
+    id: 1,
+    name: "Jessica Briones",
+    role: "Head of Business Development",
+    imageUrl: "/images/team/jessica.jpg",
+    videoUrl: "/images/team/jessica.mp4",
+  },
+  {
+    id: 2,
+    name: "Brenda Briones",
+    role: "Head of Content Strategy",
+    imageUrl: "/images/team/brenda.jpg",
+    videoUrl: "/images/team/brenda.mp4",
+  },
+  {
+    id: 3,
+    name: "Miranda Valencia",
+    role: "Sales Executive",
+    imageUrl: "/images/team/miranda.jpg",
+    videoUrl: "/images/team/miranda.mp4",
+  },
+  {
+    id: 4,
+    name: "Brenda Báez",
+    role: "Senior Designer",
+    imageUrl: "/images/team/brenda_b.jpg",
+    videoUrl: "/images/team/brenda_b.mp4",
+  },
+  {
+    id: 5,
+    name: "Ana Franco",
+    role: "Junior Designer",
+    imageUrl: "/images/team/ana.jpg",
+    videoUrl: "/images/team/ana.mp4",
+  },
+  {
+    id: 6,
+    name: "Laritza Martínez",
+    role: "Key Account Holder",
+    imageUrl: "/images/team/laritza.jpg",
+    videoUrl: "/images/team/laritza.mp4",
+  },
+  {
+    id: 7,
+    name: "Miranda Valencia",
+    role: "Sales Executive",
+    imageUrl: "/images/team/miranda.jpg",
+    videoUrl: "/images/team/miranda.mp4",
+  },
+];
+
+function Team() {
+  return (
+    <section className="min-h-[90vh] z-40 relative flex flex-col gap-12 justify-center items-end py-12 lg:py-24">
+      <div className="container text-center flex flex-col gap-8 justify-center items-center mx-auto">
+        <div className="flex gap-4 items-center">
+          <Shine color="#DC0073" />
+          <h4>
+            The <span className="font-ramillas italic text-110">Team</span>
+          </h4>
+        </div>
+        <h2>
+          The faces{" "}
+          <span className="text-110 font-ramillas italic font-extrabold text-pink">
+            behind the Magic
+          </span>
+        </h2>
+        <p className="lg:w-1/3">
+          Finding a capable team to achieve great things can be quite
+          challenging, but we can offer you the best.
+        </p>
+      </div>
+
+      <div className="w-full grid grid-cols-3 grid-rows-3 border-collapse overflow-hidden border border-white border-opacity-20">
+        {/* First row with 3 team members */}
+        {teamMembers.slice(0, 3).map((member) => (
+          <div
+            key={member.id}
+            className="relative p-[30px] border border-white border-opacity-20 aspect-vertical"
+          >
+            <div className="relative bg-cover flex flex-col items-center justify-end rounded-[32px] overflow-hidden group aspect-vertical">
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(255,255,255,0.45)] via-transparent to-transparent bg-opacity-40 z-10"></div>
+
+              <div className="absolute inset-0 overflow-hidden">
+                <img
+                  src={member.imageUrl}
+                  alt={member.name}
+                  className="w-full h-full object-cover group-hover:hidden"
+                />
+                <video
+                  src={member.videoUrl}
+                  className="w-full h-full object-cover hidden group-hover:block"
+                  muted
+                  loop
+                  autoPlay
+                />
+              </div>
+              <div className="relative z-20 bg-opacity-50 p-8 w-full flex flex-col gap-1">
+                <h3 className="text-main">
+                  <span className="italic font-ramillas text-110">
+                    {member.name.split(" ")[0]}
+                  </span>{" "}
+                  {member.name.split(" ")[1]}
+                </h3>
+                <p className="uppercase text-main">{member.role}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        {/* Fourth member */}
+        <div
+          key={teamMembers[3].id}
+          className="relative p-[30px] border border-white border-opacity-20 aspect-vertical"
+        >
+          <div className="relative bg-cover flex flex-col items-center justify-end rounded-[32px] overflow-hidden group aspect-vertical">
+            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(255,255,255,0.45)] via-transparent to-transparent bg-opacity-40 z-10"></div>
+
+            <div className="absolute inset-0 overflow-hidden">
+              <img
+                src={teamMembers[3].imageUrl}
+                alt={teamMembers[3].name}
+                className="w-full h-full object-cover group-hover:hidden"
+              />
+              <video
+                src={teamMembers[3].videoUrl}
+                className="w-full h-full object-cover hidden group-hover:block"
+                muted
+                loop
+                autoPlay
+              />
+            </div>
+            <div className="relative z-20 bg-opacity-50 p-8 w-full flex flex-col gap-1">
+              <h3 className="text-main">
+                <span className="italic font-ramillas text-110">
+                  {teamMembers[3].name.split(" ")[0]}
+                </span>{" "}
+                {teamMembers[3].name.split(" ")[1]}
+              </h3>
+              <p className="uppercase text-main">{teamMembers[3].role}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Central phrase with aspect-vertical */}
+        <div className="relative p-[30px] border border-white border-opacity-20  text-center">
+          <div className="relative inset-0 overflow-hidden aspect-vertical bg-pinkSecondary w-full h-full rounded-[32px] flex items-center justify-center">
+            <h3 className="text-main">
+              <span className="font-bold italic font-ramillas text-pink">
+                Womans that work
+              </span>
+              <br />
+              with love
+            </h3>
+            <Image src="/images/shine-circle.svg" layout="fill" />
+          </div>
+        </div>
+
+        {/* Fifth member */}
+        <div
+          key={teamMembers[4].id}
+          className="relative p-[30px] border border-white border-opacity-20 aspect-vertical"
+        >
+          <div className="relative bg-cover flex flex-col items-center justify-end rounded-[32px] overflow-hidden group aspect-vertical">
+            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(255,255,255,0.45)] via-transparent to-transparent bg-opacity-40 z-10"></div>
+
+            <div className="absolute inset-0 overflow-hidden">
+              <img
+                src={teamMembers[4].imageUrl}
+                alt={teamMembers[4].name}
+                className="w-full h-full object-cover group-hover:hidden"
+              />
+              <video
+                src={teamMembers[4].videoUrl}
+                className="w-full h-full object-cover hidden group-hover:block"
+                muted
+                loop
+                autoPlay
+              />
+            </div>
+            <div className="relative z-20 bg-opacity-50 p-8 w-full flex flex-col gap-1">
+              <h3 className="text-main">
+                <span className="italic font-ramillas text-110">
+                  {teamMembers[4].name.split(" ")[0]}
+                </span>{" "}
+                {teamMembers[4].name.split(" ")[1]}
+              </h3>
+              <p className="uppercase text-main">{teamMembers[4].role}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Last two members */}
+        {teamMembers.slice(5, 7).map((member) => (
+          <div
+            key={member.id}
+            className="relative p-[30px] border border-white border-opacity-20 aspect-vertical"
+          >
+            <div className="relative bg-cover flex flex-col items-center justify-end rounded-[32px] overflow-hidden group aspect-vertical">
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(255,255,255,0.45)] via-transparent to-transparent bg-opacity-40 z-10"></div>
+
+              <div className="absolute inset-0 overflow-hidden">
+                <img
+                  src={member.imageUrl}
+                  alt={member.name}
+                  className="w-full h-full object-cover group-hover:hidden"
+                />
+                <video
+                  src={member.videoUrl}
+                  className="w-full h-full object-cover hidden group-hover:block"
+                  muted
+                  loop
+                  autoPlay
+                />
+              </div>
+              <div className="relative z-20 bg-opacity-50 p-8 w-full flex flex-col gap-1">
+                <h3 className="text-main">
+                  <span className="italic font-ramillas text-110">
+                    {member.name.split(" ")[0]}
+                  </span>{" "}
+                  {member.name.split(" ")[1]}
+                </h3>
+                <p className="uppercase text-main">{member.role}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        {/* CTA Grid Item with aspect-vertical */}
+        <div className="p-[30px] border border-white border-opacity-20 aspect-vertical">
+          <div className="relative bg-[url('/images/bg-lines.svg')] bg-cover bg-pink w-full h-full rounded-[32px] flex flex-col gap-6 items-center justify-center">
+            <h3 className="text-main">
+              Join our{" "}
+              <span className="italic font-ramillas text-110">team!</span>
+            </h3>
+            <Button
+              text="Apply Now!"
+              bgColor="bg-black"
+              textColor="text-white"
+              iconBgColor="bg-pink"
+              href="#contact"
+              rotate={-90}
+              icon={Arrow}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Team;
