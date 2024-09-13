@@ -32,6 +32,11 @@ function ContactForm() {
     }
   };
 
+  const handleChevronClick = (fieldId) => {
+    document.getElementById(fieldId).focus();
+    document.getElementById(fieldId).click();
+  };
+
   const fields = [
     {
       id: "name",
@@ -222,10 +227,29 @@ function ContactForm() {
                 ))}
               </select>
               {/* Mostrar Chevron o Check según selección */}
-              {!selectedServices && !selectedBudget ? (
-                <Chevron className="absolute right-4 top-1/2 transform -translate-y-1/2" />
-              ) : (
-                <Check className="absolute right-4 top-1/2 transform -translate-y-1/2" />
+              {field.id === "services" && !selectedServices && (
+                <Chevron
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2"
+                  onClick={() => handleChevronClick(field.id)}
+                />
+              )}
+              {field.id === "budget" && !selectedBudget && (
+                <Chevron
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2"
+                  onClick={() => handleChevronClick(field.id)}
+                />
+              )}
+              {field.id === "services" && selectedServices && (
+                <Check
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2"
+                  onClick={() => handleChevronClick(field.id)}
+                />
+              )}
+              {field.id === "budget" && selectedBudget && (
+                <Check
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2"
+                  onClick={() => handleChevronClick(field.id)}
+                />
               )}
             </div>
           ) : (
