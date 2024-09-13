@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Button from "@/components/Button";
-import Arrow from "@/components/icons/Arrow";
 
 const services = [
   {
@@ -79,8 +77,8 @@ function Services({ home }) {
                   <Image
                     src={service.imgSrc}
                     alt={service.title}
-                    width={650}
-                    height={650}
+                    width={600}
+                    height={600}
                     className="object-contain"
                   />
                 </div>
