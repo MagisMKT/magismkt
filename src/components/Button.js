@@ -16,7 +16,7 @@ const Button = ({
 }) => {
   const [hover, setHover] = useState(false);
 
-  const buttonClasses = `relative overflow-hidden flex items-center justify-between pl-8 gap-8 font-ramillas font-medium italic tracking-tight rounded-full ${bgColor} ${textColor} p-[5px] border border-white border-opacity-20 transition-all duration-300 ease-in-out`;
+  const buttonClasses = `relative overflow-hidden flex items-center justify-between pl-8 gap-8 font-ramillas font-medium italic tracking-tight rounded-full ${bgColor} ${textColor} p-[5px] border dark:border-white border-main !border-opacity-20 transition-all duration-300 ease-in-out`;
 
   const expandingCircleClasses = `absolute right-[5px] top-1/2 transform -translate-y-1/2 transition-all duration-1000 ease-in-out bg-opacity-100 ${iconBgColor} rounded-full ${
     hover ? "w-[calc(100%-10px)] h-[calc(100%-10px)]" : "w-[60px] h-[60px]"

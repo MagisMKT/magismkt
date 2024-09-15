@@ -66,7 +66,7 @@ function Services({ home }) {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`sticky top-0 bg-main grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-between w-full py-[60px] bg-main border-t first:border-none border-white border-opacity-20`}
+                className={`sticky top-0 dark:bg-main bg-light grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-between w-full py-[60px]  border-t first:border-none dark:border-white border-main border-opacity-20`}
               >
                 {/* Controlamos el orden con lg:order-1 y lg:order-2 */}
                 <div
@@ -100,7 +100,7 @@ function Services({ home }) {
                       {service.subServices.map((subService, subIndex) => (
                         <li
                           key={subIndex}
-                          className="text-white font-semibold tracking-tight"
+                          className="font-semibold tracking-tight"
                         >
                           {subService}
                         </li>

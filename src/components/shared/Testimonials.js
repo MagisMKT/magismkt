@@ -71,7 +71,7 @@ const Testimonials = () => {
           >
             {testimonials.map((testimonial, index) => (
               <div key={index} className="min-w-full gap-8 flex">
-                <div className="border border-white border-opacity-20  text-left rounded-[64px] p-24 flex flex-col gap-8 min-h-[200px] mx-[20px] lg:mx-[40px]">
+                <div className="border dark:border-white border-main border-opacity-20  text-left rounded-[64px] p-24 flex flex-col gap-8 min-h-[200px] mx-[20px] lg:mx-[40px]">
                   <div className="flex items-center gap-8">
                     <Image
                       src={testimonial.logo}

@@ -47,11 +47,11 @@ function Mission() {
       <div className="container flex flex-col gap-14 items-center m-auto h-full justify-between min-h-[80vh] z-20 relative">
         <div className="flex gap-4 items-center justify-center">
           <Shine />
-          <h4>
+          <h4 className="text-white">
             Our <span className="font-ramillas italic text-110">mission</span>
           </h4>
         </div>
-        <h5>
+        <h5 className="text-white">
           <span className="font-ramillas italic font-bold text-105">Grow</span>{" "}
           your{" "}
           <span className="text-main bg-pink inline px-5 !leading-none rounded-full font-ramillas italic font-bold text-110">
@@ -60,7 +60,7 @@ function Mission() {
         </h5>
         <div className="flex gap-4 items-center">
           <Star />
-          <h4>
+          <h4 className="text-white">
             Reject the commonplace
             <br />
             <span className="text-green font-ramillas font-medium text-105">

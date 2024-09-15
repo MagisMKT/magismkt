@@ -4,7 +4,7 @@ import Shine from "@/components/icons/Shine";
 
 function CTA() {
   return (
-    <section className="z-40 relative py-8 lg:py-10 flex pl-[20px] lg:pr-[200px] text-main">
+    <section className="z-40 relative py-8 lg:py-10 flex lg:pr-[200px] text-main">
       <div className="relative ml-auto bg-pinkSecondary flex flex-col gap-12 items-center w-full h-full justify-center py-12 lg:py-28 z-20 rounded-r-[120px] bg-[url('/images/bg-lines.svg')] bg-cover">
         <div className="absolute -top-[80px] left-0 w-[80px] h-[80px] bg-[url('/images/substract-pink.svg')] bg-no-repeat bg-contain"></div>
         <div className="absolute -bottom-[80px] left-0 rotate-90 w-[80px] h-[80px] bg-[url('/images/substract-pink.svg')] bg-no-repeat bg-contain"></div>
