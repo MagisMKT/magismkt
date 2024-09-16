@@ -1,33 +1,13 @@
-import { useEffect, useState } from "react";
-import Moon from "./icons/Moon"; // Componente de ícono de la Luna
-import Sun from "./icons/Sun"; // Componente de ícono del Sol
+// components/ThemeToggle.js
+import { useTheme } from "../context/ThemeContext"; // Import the useTheme hook
+import Moon from "./icons/Moon"; // Moon icon component
+import Sun from "./icons/Sun"; // Sun icon component
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState(null); // Inicializamos sin tema
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      setTheme(storedTheme);
-      document.documentElement.classList.add(storedTheme);
-    } else {
-      // Preferimos 'dark' si no hay tema guardado
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    document.documentElement.classList.remove("dark", "light");
-    document.documentElement.classList.add(newTheme);
-    localStorage.setItem("theme", newTheme);
-  };
+  const { theme, toggleTheme } = useTheme(); // Access theme and toggle from context
 
   if (theme === null) {
-    // Esperamos a que se defina el tema
-    return null;
+    return null; // Wait for the theme to be initialized
   }
 
   return (
@@ -35,7 +15,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       className="relative w-[90px] h-[45px] flex items-center cursor-pointer rounded-full bg-transparent border dark:border-white border-main !border-opacity-20"
     >
-      {/* Círculo que se desplaza */}
+      {/* Circle that moves */}
       <div
         className={`absolute w-[35px] h-[35px] top-[5px] bg-green rounded-full transition-transform duration-300 ease-in-out ${
           theme === "dark"
@@ -44,19 +24,19 @@ export default function ThemeToggle() {
         }`}
       ></div>
 
-      {/* Icono de la Luna */}
+      {/* Moon icon */}
       <div
         className={`w-[35px] h-[35px] absolute left-[11.5px] top-[10px] transition-colors duration-300 ${
-          theme === "dark" ? "text-black" : "text-white"
+          theme === "dark" ? "text-main" : "text-main"
         }`}
       >
         <Moon />
       </div>
 
-      {/* Icono del Sol */}
+      {/* Sun icon */}
       <div
         className={`w-6 h-6 absolute right-[11px] transition-colors duration-300 ${
-          theme === "light" ? "text-black" : "text-white"
+          theme === "light" ? "text-main" : "text-white"
         }`}
       >
         <Sun />

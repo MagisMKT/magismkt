@@ -30,18 +30,18 @@ function OurClients({ home }) {
           </span>
           <span className="text-main dark:text-light">work with</span>
         </h2>
-        <div className="w-full grid grid-cols-4 grid-rows-2 rounded-[64px] overflow-hidden border border-white border-opacity-10">
+        <div className="w-full grid grid-cols-4 grid-rows-2 rounded-[64px] overflow-hidden border dark:border-white border-main !border-opacity-10">
           {logos.map((logo, index) => (
             <div
               key={index}
-              className="flex items-center justify-center border border-white border-opacity-10 border-collapse p-4 aspect-square"
+              className="flex items-center justify-center border dark:border-white border-main !border-opacity-10 border-collapse p-4 aspect-square"
             >
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={150}
                 height={120}
-                className="min-w-[220px] max-h-[85px] object-contain"
+                className="min-w-[220px] max-h-[85px] object-contain mix-blend-difference"
               />
             </div>
           ))}

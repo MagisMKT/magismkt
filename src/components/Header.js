@@ -14,6 +14,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const router = useRouter(); // Para obtener la ruta actual
+  const isHomeOrAbout = router.pathname === "/" || router.pathname === "/about";
 
   // Cerrar el menú al cambiar de página
   useEffect(() => {
@@ -55,7 +56,9 @@ function Header() {
       {/* Logo solo visible si no has scrolleado */}
       {!scrolled && (
         <Link className="flex items-center" href="/" legacyBehavior>
-          <a>
+          <a
+            className={`${isHomeOrAbout ? "text-white" : "dark:text-white text-main"}`}
+          >
             <Logo />
           </a>
         </Link>
@@ -74,14 +77,22 @@ function Header() {
         {/* Botón del menú hamburguesa */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className={`text-xl focus:outline-none w-20 h-20 space-y-2 relative z-40 flex flex-col text-center justify-center items-center ${
+          className={`text-xl focus:outline-none w-20 h-20 dark:text-white text-main space-y-2 relative z-40 flex flex-col text-center justify-center items-center ${
             scrolled
-              ? "bg-main text-white rounded-full border border-white border-opacity-20"
+              ? "bg-main !text-white rounded-full border border-white border-opacity-20"
               : ""
           }`}
         >
-          <div className="h-[2px] w-[20px] bg-white mx-auto"></div>
-          <div className="h-[2px] w-[20px] bg-white mx-auto"></div>
+          <div
+            className={`h-[2px] w-[20px] mx-auto ${
+              isHomeOrAbout || scrolled ? "bg-white" : "dark:bg-white bg-main"
+            }`}
+          ></div>
+          <div
+            className={`h-[2px] w-[20px] mx-auto ${
+              isHomeOrAbout || scrolled ? "bg-white" : "dark:bg-white bg-main"
+            }`}
+          ></div>
         </button>
       </div>
 
@@ -120,7 +131,7 @@ function Header() {
                   <li key={item.id} className="flex space-x-2">
                     <Link href={item.href} legacyBehavior>
                       <a
-                        className={`hover:text-pinkSecondary duration-300 font-semibold ${
+                        className={`dark:hover:text-pinkSecondary hover:text-pink duration-300 font-semibold ${
                           router.pathname === item.href ? "text-green" : ""
                         }`}
                       >
@@ -141,11 +152,11 @@ function Header() {
             </div>
 
             {/* Footer con detalles, dentro del bg-main */}
-            <footer className="w-full flex items-center text-sm border-t border-white border-opacity-20">
-              <div className="flex items-center space-x-2 pr-8 py-8 pl-10 border-r border-white border-opacity-20">
+            <footer className="w-full flex items-center text-sm border-t dark:border-white border-main !border-opacity-20">
+              <div className="flex items-center space-x-2 pr-8 py-8 pl-10 border-r dark:border-white border-main !border-opacity-20">
                 <Link href="/" legacyBehavior>
                   <a>
-                    <Logo width={60} />
+                    <Logo width={60} className="dark:text-white text-main" />
                   </a>
                 </Link>
               </div>
@@ -184,7 +195,7 @@ function Header() {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-pinkSecondary"
+                      className="dark:hover:text-pinkSecondary hover:text-pink"
                     >
                       {icon}
                     </a>

@@ -6,7 +6,7 @@ import Arrow from "@/components/icons/Arrow";
 
 function WhoWeAre({ home }) {
   return (
-    <section className="min-h-[90vh] z-40 relative -mt-[13vh] flex justify-center items-end border-b border-white border-opacity-20 pt-64 px-[20px]">
+    <section className="min-h-[90vh] z-40 relative -mt-[13vh] flex justify-center items-end border-b dark:border-white border-main !border-opacity-20 pt-64 px-[20px]">
       <div className="absolute top-0 dark:bg-[url('/images/curve.svg')] bg-[url('/images/curve_light.svg')] min-h-[13vh] bg-[length:100vw] bg-bottom w-full z-20 bg-no-repeat"></div>
       <Image
         src="/images/logo_separator.svg"
@@ -44,8 +44,8 @@ function WhoWeAre({ home }) {
         </p>
         <Button
           text="More about us"
-          bgColor="bg-main"
-          textColor="text-white"
+          bgColor="dark:bg-main bg-light"
+          textColor="dark:text-white text-main"
           iconBgColor="bg-pink"
           hoverTextColor="text-white"
           icon={Arrow} // Pasamos el ícono Arrow

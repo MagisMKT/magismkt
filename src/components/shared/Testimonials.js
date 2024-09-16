@@ -71,7 +71,7 @@ const Testimonials = () => {
           >
             {testimonials.map((testimonial, index) => (
               <div key={index} className="min-w-full gap-8 flex">
-                <div className="border dark:border-white border-main border-opacity-20  text-left rounded-[64px] p-24 flex flex-col gap-8 min-h-[200px] mx-[20px] lg:mx-[40px]">
+                <div className="border dark:border-white border-main !border-opacity-20  text-left rounded-[64px] p-24 flex flex-col gap-8 min-h-[200px] mx-[20px] lg:mx-[40px]">
                   <div className="flex items-center gap-8">
                     <Image
                       src={testimonial.logo}
@@ -98,7 +98,7 @@ const Testimonials = () => {
           <Button
             text="Previous"
             bgColor="bg-transparent"
-            textColor={`${currentIndex === 0 ? "text-gray-400" : "text-white"}`}
+            textColor={`${currentIndex === 0 ? "text-gray-400" : "dark:text-white text-main"}`}
             iconBgColor={`${
               currentIndex === 0 ? "bg-gray-400" : "bg-lime-400"
             }`}
@@ -115,7 +115,9 @@ const Testimonials = () => {
             text="Next"
             bgColor="bg-transparent"
             textColor={`${
-              currentIndex === testimonials.length - 1 ? "" : "text-white"
+              currentIndex === testimonials.length - 1
+                ? ""
+                : "dark:text-white text-main"
             }`}
             iconBgColor={`${
               currentIndex === testimonials.length - 1

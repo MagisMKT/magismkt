@@ -1,25 +1,17 @@
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+// components/LanguageSwitcher.js
+import { useLanguage } from "../context/LanguageContext";
 
-function LanguageSwitcher() {
-  const router = useRouter();
-  const [currentLang, setCurrentLang] = useState(router.locale); // Inicializa con el idioma actual
+export default function LanguageSwitcher() {
+  const { currentLang, switchLanguage } = useLanguage(); // Access language and switch function from context
 
-  const switchLanguage = (language) => {
-    const { pathname, asPath, query } = router;
-    setCurrentLang(language);
-    router.push({ pathname, query }, asPath, { locale: language });
-  };
-
-  // Calcula la posición del círculo en función del idioma actual
-  const isEnglish = currentLang === "en"; // Suponiendo que los idiomas sean "en" y "es"
+  const isEnglish = currentLang === "en"; // Assuming 'en' for English and 'es' for Spanish
 
   return (
     <div
       onClick={() => switchLanguage(isEnglish ? "es" : "en")}
       className="relative w-[200px] h-[45px] flex items-center px-[28px] justify-between cursor-pointer rounded-full bg-transparent border dark:border-white border-main !border-opacity-20"
     >
-      {/* Círculo que se desplaza */}
+      {/* Circle that moves */}
       <div
         className={`absolute w-[100px] h-[35px] left-[5px] top-[5px] bg-green rounded-full transition-transform duration-300 ease-in-out ${
           isEnglish
@@ -28,7 +20,7 @@ function LanguageSwitcher() {
         }`}
       ></div>
 
-      {/* Texto de "Inglés" */}
+      {/* Text "English" */}
       <div
         className={` text-base font-ramillas italic tracking-tight transition-colors duration-300 relative z-20 ${
           isEnglish ? "text-main" : "dark:text-white text-main"
@@ -37,7 +29,7 @@ function LanguageSwitcher() {
         English
       </div>
 
-      {/* Texto de "Español" */}
+      {/* Text "Español" */}
       <div
         className={` text-base font-ramillas italic tracking-tight transition-colors duration-300 relative z-20 ${
           !isEnglish ? "text-main" : "dark:text-white text-main"
@@ -48,5 +40,3 @@ function LanguageSwitcher() {
     </div>
   );
 }
-
-export default LanguageSwitcher;

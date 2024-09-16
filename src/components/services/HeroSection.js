@@ -43,12 +43,9 @@ function HeroSection() {
   }, []);
 
   return (
-    <section className="relative z-20 text-white text-left p-8 min-h-[100vh] flex flex-col justify-center items-center w-full">
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-main via-[rgba(25,12,19,0.25)] to-transparent bg-opacity-60 z-20"></div>
-
+    <section className="relative z-20 text-left p-8 min-h-[100vh] flex flex-col justify-center items-center w-full">
       {/* Content */}
-      <div className="relative z-30 px-4 flex flex-col gap-10 w-full mx-auto max-w-7xl">
+      <div className="relative z-30 px-4 flex flex-col gap-14 w-full mx-auto max-w-7xl">
         <div className="flex gap-4">
           <Shine color="#BAE846" />
           <h4>
@@ -82,7 +79,7 @@ function HeroSection() {
         {grid.map((isGreen, index) => (
           <div
             key={index}
-            className="relative w-full h-full border border-white border-opacity-5 border-collapse"
+            className="relative w-full h-full border dark:border-white border-main !border-opacity-5 border-collapse"
           >
             <div
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${

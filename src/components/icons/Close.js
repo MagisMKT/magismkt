@@ -11,13 +11,13 @@ const Close = () => {
         width="25"
         height="2"
         transform="translate(0 18.1318) rotate(-45)"
-        fill="white"
+        fill="currentColor"
       />
       <rect
         width="25"
         height="2"
         transform="translate(1.50601) rotate(45)"
-        fill="white"
+        fill="currentColor"
       />
     </svg>
   );

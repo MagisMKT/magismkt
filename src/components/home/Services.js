@@ -63,7 +63,7 @@ function Services({ home }) {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="grid grid-cols-3  gap-12 items-center justify-between w-full py-[60px] dark:bg-main bg-light sticky top-0 border-t first:border-none  dark:border-white border-main border-opacity-20"
+                className="grid grid-cols-3  gap-12 items-center justify-between w-full py-[60px] dark:bg-main bg-light sticky top-0 border-t first:border-none  dark:border-white border-main !border-opacity-20"
               >
                 <div className="flex items-center">
                   <h3 className="font-semibold">
@@ -85,8 +85,8 @@ function Services({ home }) {
           </div>
           <Button
             text="Discover the power of Magis"
-            bgColor="bg-main"
-            textColor="text-white"
+            bgColor="dark:bg-main bg-light"
+            textColor="dark:text-white text-main"
             iconBgColor="bg-pink"
             hoverTextColor="text-white"
             icon={Arrow} // Pasamos el ícono Arrow

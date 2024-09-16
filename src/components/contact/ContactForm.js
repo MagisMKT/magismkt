@@ -168,8 +168,8 @@ function ContactForm() {
               (field.id !== "services" &&
                 field.id !== "budget" &&
                 inputValues[field.id])
-                ? "text-green"
-                : "text-white"
+                ? "dark:text-green text-blue"
+                : "dark:text-white text-main"
             }`}
           >
             <span className="italic font-light font-sans text-base">
@@ -185,7 +185,7 @@ function ContactForm() {
               required={field.required}
               rows={1}
               placeholder={field.placeholder}
-              className="appearance-none bg-transparent text-xl lg:text-2xl tracking-tight font-ramillas resize-none py-4 md:py-5 w-full placeholder-white placeholder-opacity-40 !outline-none"
+              className="appearance-none bg-transparent text-xl lg:text-2xl tracking-tight font-ramillas resize-none py-4 md:py-5 w-full dark:placeholder-white placeholder-main placeholder-opacity-40 !outline-none"
               onChange={handleInputChange}
             ></textarea>
           ) : field.type === "select" ? (
@@ -259,7 +259,7 @@ function ContactForm() {
               name={field.id}
               required={field.required}
               placeholder={field.placeholder}
-              className="appearance-none text-xl lg:text-2xl tracking-tight font-ramillas bg-transparent py-4 md:py-5 w-full placeholder-white placeholder-opacity-40 !outline-none"
+              className="appearance-none text-xl lg:text-2xl tracking-tight font-ramillas bg-transparent py-4 md:py-5 w-full dark:placeholder-white placeholder-main placeholder-opacity-40 !outline-none"
               onChange={handleInputChange}
             />
           )}
@@ -268,9 +268,10 @@ function ContactForm() {
       <div className="flex items-center justify-end col-span-1">
         <Button
           text="Request a Quote"
-          bgColor="bg-main"
-          textColor="text-white"
-          iconBgColor="bg-pink"
+          bgColor="dark:bg-main bg-light"
+          textColor="dark:text-white text-main"
+          hoverTextColor="dark:text-white text-main"
+          iconBgColor="dark:bg-pink bg-pinkSecondary"
           href="#contact"
           rotate={-90}
           icon={Arrow}

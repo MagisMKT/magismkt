@@ -45,7 +45,7 @@ function Footer() {
               <li key={id}>
                 <Link href={href} legacyBehavior>
                   <a
-                    className={`hover:text-pinkSecondary duration-300 font-semibold tracking-tight ${
+                    className={`dark:hover:text-pinkSecondary hover:text-pink duration-300 font-semibold tracking-tight ${
                       router.pathname === href ? "text-green" : ""
                     }`}
                   >
@@ -69,7 +69,6 @@ function Footer() {
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-pinkSecondary"
               >
                 <Instagram className="fill-white dark:fill-main" />
               </a>
@@ -77,7 +76,6 @@ function Footer() {
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-pinkSecondary"
               >
                 <Facebook className="fill-white dark:fill-main" />
               </a>
@@ -85,7 +83,6 @@ function Footer() {
                 href="https://www.tiktok.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-pinkSecondary"
               >
                 <Tiktok className="fill-white dark:fill-main" />
               </a>
@@ -95,7 +92,7 @@ function Footer() {
         </div>
       </div>
       {/* Derechos reservados */}
-      <div className="flex justify-between text-sm text-[#C6C6C6] container px-14 mt-24">
+      <div className="flex justify-between text-sm dark:text-light text-main opacity-50 container px-14 mt-24">
         <span>© Magis Marketing 2024. All Rights Reserved.</span>
         <span className="flex gap-1">
           Designed & developed by <Dev />

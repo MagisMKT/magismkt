@@ -79,7 +79,7 @@ function HeroSection() {
         {grid.map((isGreen, index) => (
           <div
             key={index}
-            className="relative w-full h-full border border-white border-opacity-5 border-collapse"
+            className="relative w-full h-full border border-white !border-opacity-5 border-collapse"
           >
             <div
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
