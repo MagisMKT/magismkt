@@ -13,7 +13,7 @@ export default function ThemeToggle() {
   return (
     <div
       onClick={toggleTheme}
-      className="relative w-[90px] h-[45px] flex items-center cursor-pointer rounded-full bg-transparent border dark:border-white border-main !border-opacity-20"
+      className="relative w-[90px] h-[45px] flex items-center cursor-pointer rounded-full bg-transparent border-[0.5px] dark:border-white border-main !border-opacity-20"
     >
       {/* Circle that moves */}
       <div

@@ -3,10 +3,6 @@ import Button from "@/components/Button";
 import Arrow from "@/components/icons/Arrow";
 import Shine from "@/components/icons/Shine";
 
-function getRandomBoolean() {
-  return Math.random() > 0.75;
-}
-
 function getRandomIndexes(size, numActive) {
   const indexes = [];
   while (indexes.length < numActive) {
@@ -17,45 +13,64 @@ function getRandomIndexes(size, numActive) {
   }
   return indexes;
 }
+
 function HeroSection() {
-  const gridSize = 84; // 5x4 grid
+  const desktopGridSize = 84; // Grid para pantallas grandes (12x7)
+  const mobileGridSize = 36; // Grid para pantallas móviles (6x6)
+  const [gridSize, setGridSize] = useState(desktopGridSize);
   const [grid, setGrid] = useState(Array(gridSize).fill(false));
-  const [isFading, setIsFading] = useState(Array(gridSize).fill(false)); // To control fade-out before the change
+  const [isFading, setIsFading] = useState(Array(gridSize).fill(false)); // Para controlar el fade-out
+
+  // Detectar cambios de tamaño de pantalla y ajustar gridSize dinámicamente
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setGridSize(mobileGridSize); // Pantallas móviles
+      } else {
+        setGridSize(desktopGridSize); // Pantallas grandes
+      }
+    };
+
+    handleResize(); // Ajustar el grid al cargar por primera vez
+    window.addEventListener("resize", handleResize); // Escuchar cambios de tamaño de ventana
+
+    return () => window.removeEventListener("resize", handleResize); // Cleanup al desmontar
+  }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       const activeIndexes = getRandomIndexes(
         gridSize,
-        3 + Math.floor(Math.random() * 3), // 3 to 5 active squares
+        3 + Math.floor(Math.random() * 3), // Entre 3 y 5 cuadros activos
       );
 
-      // Step 1: Fade out
+      // Paso 1: Fade out
       setIsFading(Array(gridSize).fill(true));
 
-      // Step 2: After short delay, change the background and fade back in
+      // Paso 2: Después de una pequeña espera, cambiar el fondo y hacer fade-in
       setTimeout(() => {
         setGrid(grid.map((_, idx) => activeIndexes.includes(idx)));
         setIsFading(Array(gridSize).fill(false));
-      }, 1000); // Wait 500ms to change background and start fading in
-    }, 3000); // Adjust the time for the entire cycle
+      }, 1000); // Esperar 1000ms antes de cambiar el fondo
+    }, 3000); // Ajustar el tiempo para el ciclo completo
 
-    return () => clearInterval(intervalId); // Cleanup on unmount
-  }, []);
+    return () => clearInterval(intervalId); // Limpiar intervalo al desmontar el componente
+  }, [gridSize]); // Escuchar cambios en gridSize
 
   return (
-    <section className="relative z-20 text-left p-8 min-h-[100vh] flex flex-col justify-center items-center w-full">
+    <section className="relative z-20 text-left py-48 p-[20px] lg:p-8 lg:min-h-[100vh] flex flex-col justify-center items-center w-full">
       {/* Content */}
-      <div className="relative z-30 px-4 flex flex-col gap-14 w-full mx-auto max-w-7xl">
-        <div className="flex gap-4">
+      <div className="relative z-30 px-4 flex flex-col gap-8 lg:gap-14 w-full mx-auto max-w-7xl">
+        <div className="flex gap-4 max-w-full items-center">
           <Shine color="#BAE846" />
           <h4>
             What <span className="font-ramillas italic text-110">we do</span>
           </h4>
         </div>
-        <h5>
+        <h5 className="max-w-full">
           <span className="font-ramillas italic">
             Bringing
-            <span className="text-main bg-blue inline px-2.5 py-1.5 rounded-full font-ramillas italic font-bold text-110">
+            <span className="text-main bg-blue inline !leading-none px-1.5 lg:px-2.5 py-0.25 lg:py-1.5 -z-10 relative rounded-full font-ramillas italic font-bold text-110">
               ambicious visions
             </span>{" "}
             to Life,
@@ -74,12 +89,18 @@ function HeroSection() {
           />
         </div>
       </div>
-      {/* 7x5 Grid */}
-      <div className="grid grid-cols-12 grid-rows-7 absolute w-full h-full top-0 z-20 left-0">
-        {grid.map((isGreen, index) => (
+      {/* 6x6 Grid en móvil y 12x7 en pantallas grandes */}
+      <div
+        className={`grid ${
+          gridSize === mobileGridSize
+            ? "grid-cols-6 grid-rows-6"
+            : "grid-cols-12 grid-rows-7"
+        } absolute w-full h-full top-0 z-20 left-0`}
+      >
+        {grid.slice(0, gridSize).map((isGreen, index) => (
           <div
             key={index}
-            className="relative w-full h-full border dark:border-white border-main !border-opacity-5 border-collapse"
+            className="relative w-full h-full border-[0.5px] dark:border-white border-main !border-opacity-5 border-collapse"
           >
             <div
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${

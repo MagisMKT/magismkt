@@ -48,8 +48,8 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="min-h-[90vh] z-40 relative flex justify-center items-center py-12 lg:py-24 px-[20px] gap-8">
-      <div className="container text-center flex flex-col gap-8 mx-auto max-w-[1200px]">
+    <section className="min-h-[90vh] z-40 relative flex justify-center items-center py-12 lg:py-24 gap-8">
+      <div className="container text-center flex flex-col gap-8 mx-auto lg:max-w-[1200px]">
         <div className="flex gap-4 items-center justify-center">
           <Shine color="#0074d9" />
           <h4>
@@ -71,7 +71,7 @@ const Testimonials = () => {
           >
             {testimonials.map((testimonial, index) => (
               <div key={index} className="min-w-full gap-8 flex">
-                <div className="border dark:border-white border-main !border-opacity-20  text-left rounded-[64px] p-24 flex flex-col gap-8 min-h-[200px] mx-[20px] lg:mx-[40px]">
+                <div className="border-[0.5px] dark:border-white border-main !border-opacity-20  text-left rounded-[64px] p-10 lg:p-24 flex flex-col gap-8 lg:min-h-[200px] mx-[20px] lg:mx-[40px]">
                   <div className="flex items-center gap-8">
                     <Image
                       src={testimonial.logo}
@@ -94,10 +94,11 @@ const Testimonials = () => {
         </div>
 
         {/* Pagination with Custom Button */}
-        <div className="flex justify-between items-center mt-8 w-full ox-[20px] lg:px-[40px]">
+        <div className="flex justify-between items-center lg:mt-8 w-full px-[20px] lg:px-[40px]">
           <Button
             text="Previous"
             bgColor="bg-transparent"
+            showTextMobile={false}
             textColor={`${currentIndex === 0 ? "text-gray-400" : "dark:text-white text-main"}`}
             iconBgColor={`${
               currentIndex === 0 ? "bg-gray-400" : "bg-lime-400"
@@ -108,12 +109,13 @@ const Testimonials = () => {
             onClick={prevSlide}
             disabled={currentIndex === 0}
           />
-          <span className="text-2xl font-ramillas italic ">{`0${
+          <span className="text-lg lg:text-2xl font-ramillas italic ">{`0${
             currentIndex + 1
           } of 0${testimonials.length}`}</span>
           <Button
             text="Next"
             bgColor="bg-transparent"
+            showTextMobile={false}
             textColor={`${
               currentIndex === testimonials.length - 1
                 ? ""

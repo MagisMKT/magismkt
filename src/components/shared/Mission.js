@@ -43,15 +43,15 @@ function Mission() {
   }, []);
 
   return (
-    <section className="bg-[url('/images/mission.jpg')] bg-cover bg-center min-h-[100vh] z-40 relative py-12 lg:py-24 flex px-[20px] bg-fixed">
-      <div className="container flex flex-col gap-14 items-center m-auto h-full justify-between min-h-[80vh] z-20 relative">
+    <section className="bg-[url('/images/mission.jpg')] bg-cover bg-center lg:min-h-[100vh] z-40 relative py-12 lg:py-24 flex px-[20px] lg:bg-fixed">
+      <div className="container flex flex-col gap-14 items-center m-auto h-full justify-between lg:min-h-[80vh] z-20 relative">
         <div className="flex gap-4 items-center justify-center">
           <Shine />
           <h4 className="text-white">
             Our <span className="font-ramillas italic text-110">mission</span>
           </h4>
         </div>
-        <h5 className="text-white">
+        <h5 className="text-white inline-flex gap-4 lg:gap-6 flex-wrap justify-center">
           <span className="font-ramillas italic font-bold text-105">Grow</span>{" "}
           your{" "}
           <span className="text-main bg-pink inline px-5 !leading-none rounded-full font-ramillas italic font-bold text-110">
@@ -74,7 +74,7 @@ function Mission() {
         {grid.map((isGreen, index) => (
           <div
             key={index}
-            className="relative w-full h-full border border-white border-opacity-20 border-collapse"
+            className="relative w-full h-full border-[0.5px] border-white border-opacity-20 border-collapse"
           >
             <div
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${

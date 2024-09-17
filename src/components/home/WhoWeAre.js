@@ -6,19 +6,19 @@ import Arrow from "@/components/icons/Arrow";
 
 function WhoWeAre({ home }) {
   return (
-    <section className="min-h-[90vh] z-40 relative -mt-[13vh] flex justify-center items-end border-b dark:border-white border-main !border-opacity-20 pt-64 px-[20px]">
+    <section className="lg:min-h-[70vh] z-40 relative -mt-[13vh] flex justify-center items-end border-b-[0.5px] dark:border-white border-main !border-opacity-20 pt-52 lg:pt-64 px-[20px]">
       <div className="absolute top-0 dark:bg-[url('/images/curve.svg')] bg-[url('/images/curve_light.svg')] min-h-[13vh] bg-[length:100vw] bg-bottom w-full z-20 bg-no-repeat"></div>
       <Image
         src="/images/logo_separator.svg"
         width="120"
         height="120"
-        className="dark:visible z-30 absolute top-[60px] left-auto right-auto"
+        className="dark:visible z-30 absolute top-[60px] 3xl:top-[130px] left-auto right-auto w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]"
       />
       <Image
         src="/images/logo_separator_light.svg"
         width="120"
         height="120"
-        className="dark:hidden z-30 absolute top-[60px] left-auto right-auto"
+        className="dark:hidden z-30 absolute top-[60px] 3xl:top-[130px] left-auto right-auto w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]"
       />
       <div className="container text-center flex flex-col gap-14 justify-center items-center mx-auto max-w-3xl">
         <div className="flex gap-4 items-center">
@@ -58,7 +58,7 @@ function WhoWeAre({ home }) {
           src="/images/about.png"
           width={1350}
           height={650}
-          className="bottom-0 h-full w-full object-contain -mt-28"
+          className="bottom-0 h-full w-full object-contain -mt-20 lg:-mt-28"
         />
       </div>
     </section>

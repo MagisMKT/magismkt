@@ -5,7 +5,7 @@ import Arrow from "@/components/icons/Arrow";
 function HeroSection({ home }) {
   return (
     <section className="relative flex justify-center w-full">
-      <div className="sticky top-0 z-20 text-white text-left p-8 min-h-[113vh] flex flex-col justify-center items-center w-full">
+      <div className="sticky top-0 z-20 text-white text-left pt-48 pb-24 lg:pb-8 lg:pt-8 lg:p-8 min-[70vh] lg:min-h-[113vh] flex flex-col justify-center items-center w-full">
         {/* Video Background */}
         <video
           width="100%"
@@ -25,24 +25,26 @@ function HeroSection({ home }) {
         {/* Content */}
         <div className="relative z-30 max-w-4xl px-4 flex flex-col justify-center text-center w-full">
           {/* Main Heading */}
-          <h1 className="text-9xl font-bold leading-tight mb-4 tracking-tighter lg:-ml-64">
+          <h1 className="text-4xl md:text-6xl lg:text-9xl font-bold leading-tight mb-4 tracking-tighter lg:-ml-64">
             {home.word1}.
           </h1>
-          <div className="flex gap-8 justify-end items-center">
+          <div className="flex gap-4 lg:gap-8 justify-end items-center mb-4">
             {/* Subtitle */}
-            <h2 className="text-3xl !leading-none font-medium text-right w-4/6">
+            <h2 className="text-lg md:text-2xl lg:text-3xl !leading-none font-medium text-right w-4/6">
               <span className="!leading-none">{home.subtitlePart1}</span>{" "}
               <span className="text-green font-ramillas italic font-medium text-110 !leading-none">
                 {home.subtitlePart2}
               </span>
             </h2>
-            <h1 className="block sm:inline font-ramillas font-extrabold italic text-9xl">
+            <h1 className="block sm:inline font-ramillas font-extrabold italic text-4xl md:text-6xl lg:text-9xl">
               <span className="text-105">{home.word2}.</span>
             </h1>
           </div>
 
-          <div className="flex gap-10 items-center">
-            <h1 className="text-9xl font-bold leading-tight">{home.word3}.</h1>
+          <div className="flex gap-4 lg:gap-10 items-center justify-center ">
+            <h1 className="text-4xl md:text-6xl lg:text-9xl font-bold leading-tight">
+              {home.word3}.
+            </h1>
             {/* Video Play Button */}
             <div className="flex items-center cursor-pointer">
               <div className="rounded-full">
@@ -61,7 +63,7 @@ function HeroSection({ home }) {
                   />
                 </svg>
               </div>
-              <span className="ml-2">{home.ctaVideoText}</span>
+              <span className="ml-2 hidden lg:flex">{home.ctaVideoText}</span>
             </div>
           </div>
 

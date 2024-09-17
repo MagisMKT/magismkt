@@ -12,22 +12,28 @@ const Button = ({
   iconFillColor = "#190C13", // Color del ícono
   hoverTextColor = "text-main", // Nuevo prop para el color del texto en hover
   onClick, // Add the onClick prop
+  showTextMobile = true, // Por defecto, los botones mostrarán texto en mobile
   ...props // Spread any other props like onMouseEnter, onMouseLeave, etc.
 }) => {
   const [hover, setHover] = useState(false);
 
-  const buttonClasses = `relative overflow-hidden flex items-center justify-between pl-8 gap-8 font-ramillas font-medium italic tracking-tight rounded-full ${bgColor} ${textColor} p-[5px] border dark:border-white border-main !border-opacity-20 transition-all duration-300 ease-in-out`;
+  // Condicionalmente asignar 'pl-6' si se muestra el texto en mobile
+  const paddingClass = showTextMobile ? "pl-6" : "";
+
+  const buttonClasses = `relative overflow-hidden flex items-center justify-between ${paddingClass} lg:pl-8 gap-6 lg:gap-8 font-ramillas font-medium italic tracking-tight rounded-full ${bgColor} ${textColor} p-[5px] border-[0.5px] dark:border-white border-main !border-opacity-20 transition-all duration-300 ease-in-out`;
 
   const expandingCircleClasses = `absolute right-[5px] top-1/2 transform -translate-y-1/2 transition-all duration-1000 ease-in-out bg-opacity-100 ${iconBgColor} rounded-full ${
-    hover ? "w-[calc(100%-10px)] h-[calc(100%-10px)]" : "w-[60px] h-[60px]"
+    hover
+      ? "w-[calc(100%-10px)] h-[calc(100%-10px)]"
+      : "w-[50px] h-[50px] lg:w-[60px] lg:h-[60px]"
   }`;
 
-  const iconWrapperClasses = `relative z-10 flex items-center justify-center w-[60px] h-[60px]`;
+  const iconWrapperClasses = `relative z-10 flex items-center justify-center w-[50px] h-[50px] lg:w-[60px] lg:h-[60px]`;
 
   // Aplicar el color de texto en hover si está en estado de hover
-  const textClasses = `relative z-10 text-xl py-4 transition-all duration-500 ${
+  const textClasses = `relative z-10 text-lg !leading-none lg:text-xl text-center py-2 lg:py-4 transition-all duration-500 ${
     hover ? hoverTextColor : textColor
-  }`;
+  } ${showTextMobile ? "" : "hidden lg:block"}`; // Controlar la visibilidad según el prop showTextMobile
 
   const handleMouseEnter = () => setHover(true);
   const handleMouseLeave = () => setHover(false);
@@ -46,6 +52,7 @@ const Button = ({
         onMouseLeave={handleMouseLeave}
         {...props} // Spread any other props (e.g., onClick for <a>)
       >
+        {/* Control de visibilidad del texto según el prop showTextMobile */}
         <span className={textClasses}>{text}</span>
         {/* Círculo expansivo */}
         <div className={expandingCircleClasses}></div>
@@ -66,6 +73,7 @@ const Button = ({
       onClick={onClick} // Pass the onClick handler to the button
       {...props} // Spread any other props like onClick for <button>
     >
+      {/* Control de visibilidad del texto según el prop showTextMobile */}
       <span className={textClasses}>{text}</span>
       {/* Círculo expansivo */}
       <div className={expandingCircleClasses}></div>

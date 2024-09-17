@@ -3,8 +3,8 @@ import Shine from "../icons/Shine";
 
 function ContactSection() {
   return (
-    <section className="flex justify-center min-h-[80vh] items-center">
-      <div className="container py-12 lg:py-32 max-w-[1200px] flex flex-col gap-10">
+    <section className="flex justify-center min-h-[80vh] items-center px-[20px]">
+      <div className="container pt-36 pb-12 lg:pt-40  max-w-[1200px] flex flex-col gap-8 lg:gap-12">
         <div className="flex gap-4">
           <Shine color="#DC0073" />
           <h4>
@@ -13,7 +13,7 @@ function ContactSection() {
         </div>
         <h5>
           Let's grow
-          <span className="text-main bg-green inline px-2.5 py-1.5 rounded-full font-ramillas italic font-bold text-110">
+          <span className="text-main bg-green inline px-1.5 lg:px-2.5 py-0.25 lg:py-1.5 -z-10 relative rounded-full font-ramillas italic font-bold text-110 ">
             your sales!
           </span>{" "}
         </h5>

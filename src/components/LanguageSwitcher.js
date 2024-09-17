@@ -9,7 +9,7 @@ export default function LanguageSwitcher() {
   return (
     <div
       onClick={() => switchLanguage(isEnglish ? "es" : "en")}
-      className="relative w-[200px] h-[45px] flex items-center px-[28px] justify-between cursor-pointer rounded-full bg-transparent border dark:border-white border-main !border-opacity-20"
+      className="relative w-[200px] h-[45px] flex items-center px-[28px] justify-between cursor-pointer rounded-full bg-transparent border-[0.5px] dark:border-white border-main !border-opacity-20"
     >
       {/* Circle that moves */}
       <div

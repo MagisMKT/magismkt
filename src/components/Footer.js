@@ -19,16 +19,16 @@ function Footer() {
   ];
 
   return (
-    <footer className="py-14 px-14">
-      <div className="flex justify-between items-center container px-14">
+    <footer className="p-12 lg:p-14 flex flex-col items-center">
+      <div className="flex flex-col md:flex-row gap-12 justify-between items-center lg:container">
         {/* Sección izquierda */}
-        <div className="flex flex-col space-y-8">
+        <div className="flex flex-col text-center md:text-left items-center md:items-start space-y-8">
           <LogoAlt />
-          <div className="text-lg space-y-8">
+          <div className="text-base lg:text-lg space-y-8">
             <Link className="opacity-80" href="mailto:hello@magismarketing.com">
               hello@magismarketing.com
             </Link>
-            <p className="opacity-80 !leading-none">
+            <p className="text-base lg:text-lg  opacity-80 !leading-none">
               2617 Bissonnet St #493,
               <br /> Houston, TX 77005
             </p>
@@ -38,9 +38,9 @@ function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-14 items-end">
+        <div className="flex flex-col gap-10 lg:gap-14 items-center lg:items-end">
           {/* Menú central mapeado */}
-          <ul className="flex space-x-12 text-2xl">
+          <ul className="flex flex-col lg:flex-row gap-6 space-x-1 lg:space-x-12 text-xl !leading-none lg:text-2xl">
             {menuItems.map(({ href, label, id }) => (
               <li key={id}>
                 <Link href={href} legacyBehavior>
@@ -63,7 +63,7 @@ function Footer() {
           </ul>
 
           {/* Redes sociales y lenguaje */}
-          <div className="flex flex-col items-end space-y-6">
+          <div className="flex flex-col items-center lg:items-end space-y-6">
             <div className="flex space-x-4">
               <a
                 href="https://www.instagram.com"
@@ -92,7 +92,7 @@ function Footer() {
         </div>
       </div>
       {/* Derechos reservados */}
-      <div className="flex justify-between text-sm dark:text-light text-main opacity-50 container px-14 mt-24">
+      <div className="flex flex-col md:flex-row gap-4 text-center items-center justify-center md:justify-between md:text-left text-sm dark:text-light text-main opacity-50 lg:container w-full mt-12 lg:mt-24">
         <span>© Magis Marketing 2024. All Rights Reserved.</span>
         <span className="flex gap-1">
           Designed & developed by <Dev />

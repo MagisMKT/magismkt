@@ -38,14 +38,14 @@ const services = [
 function Services({ home }) {
   return (
     <section className="min-h-[90vh] z-40 relative flex items-center py-12 lg:py-24 px-[20px]">
-      <div className="container flex flex-col gap-14 items-start mx-auto">
+      <div className="container flex flex-col gap-4 lg:gap-14 items-start mx-auto">
         <div className="flex gap-4 items-center justify-center">
           <Shine color="#BAE846" />
           <h4>
             What <span className="font-ramillas italic text-110">we do</span>
           </h4>
         </div>
-        <div className="grid lg:grid-cols-2 gap-12 items-end">
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 items-end">
           <h2>
             Transforming brands with our
             <span className="text-blue dark:text-green px-2.5 py-1.5 rounded-full font-ramillas italic font-bold text-110">
@@ -58,21 +58,21 @@ function Services({ home }) {
             excellence with our customized approach to reaching your objectives.
           </p>
         </div>
-        <div className="max-w-[1400px] mx-auto py-16 px-4 flex flex-col items-center">
+        <div className="max-w-[1400px] mx-auto py-4 lg:py-16 px-4 flex flex-col items-center">
           <div className="w-full relative">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="grid grid-cols-3  gap-12 items-center justify-between w-full py-[60px] dark:bg-main bg-light sticky top-0 border-t first:border-none  dark:border-white border-main !border-opacity-20"
+                className="grid md:grid-cols-3 grid-flow-row-dense gap-6 md:gap-12 items-center justify-between w-full py-[60px] dark:bg-main bg-light sticky top-0 border-t-[0.5px] first:border-none  dark:border-white border-main !border-opacity-20"
               >
-                <div className="flex items-center">
+                <div className="flex items-center order-2">
                   <h3 className="font-semibold">
                     <span className="font-light italic">{service.number} </span>
                     {service.title}
                   </h3>
                 </div>
-                <p className="text-95">{service.description}</p>
-                <div className="flex justify-end">
+                <p className="text-95 order-2">{service.description}</p>
+                <div className="flex justify-start lg:justify-end order-1 md:order-3">
                   <Image
                     src={service.imgSrc}
                     alt={service.title}

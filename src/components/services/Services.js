@@ -59,14 +59,14 @@ const services = [
 
 function Services({ home }) {
   return (
-    <section className="min-h-[90vh] z-40 relative flex items-center py-12 lg:py-24 px-[20px]">
+    <section className="min-h-[90vh] z-40 relative flex items-center lg:py-24 px-[20px]">
       <div className="container flex flex-col gap-14 items-start mx-auto">
         <div className="max-w-[1400px] mx-auto py-16 px-4 flex flex-col items-center">
           <div className="w-full relative">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`sticky top-0 dark:bg-main bg-light grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-between w-full py-[60px]  border-t first:border-none dark:border-white border-main !border-opacity-20`}
+                className={`sticky top-0 dark:bg-main bg-light grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-between w-full py-[60px]  border-t-[0.5px] first:border-none dark:border-white border-main !border-opacity-20`}
               >
                 {/* Controlamos el orden con lg:order-1 y lg:order-2 */}
                 <div

@@ -59,7 +59,7 @@ const teamMembers = [
 function Team() {
   return (
     <section className="min-h-[90vh] z-40 relative flex flex-col gap-12 justify-center items-end py-12 lg:py-24">
-      <div className="container text-center flex flex-col gap-8 justify-center items-center mx-auto">
+      <div className="container text-center flex flex-col gap-8 justify-center items-center mx-auto px-[20px]">
         <div className="flex gap-4 items-center">
           <Shine color="#DC0073" />
           <h4>
@@ -78,12 +78,12 @@ function Team() {
         </p>
       </div>
 
-      <div className="w-full grid grid-cols-3 grid-rows-3 border-collapse overflow-hidden border dark:border-white border-main  !border-opacity-10">
+      <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 grid-rows-3 border-collapse overflow-hidden border-[0.5px] dark:border-white border-main  !border-opacity-10">
         {/* First row with 3 team members */}
         {teamMembers.slice(0, 3).map((member) => (
           <div
             key={member.id}
-            className="relative p-[30px] border dark:border-white border-main  !border-opacity-10 aspect-vertical"
+            className="relative p-[30px] border-[0.5px] dark:border-white border-main  !border-opacity-10 aspect-vertical"
           >
             <div className="relative bg-cover flex flex-col items-center justify-end rounded-[32px] overflow-hidden group aspect-vertical">
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(255,255,255,0.45)] via-transparent to-transparent bg-opacity-40 z-10"></div>
@@ -118,7 +118,7 @@ function Team() {
         {/* Fourth member */}
         <div
           key={teamMembers[3].id}
-          className="relative p-[30px] border dark:border-white border-main  !border-opacity-10 aspect-vertical"
+          className="relative p-[30px] border-[0.5px] dark:border-white border-main  !border-opacity-10 aspect-vertical"
         >
           <div className="relative bg-cover flex flex-col items-center justify-end rounded-[32px] overflow-hidden group aspect-vertical">
             <div className="absolute inset-0 bg-gradient-to-t from-[rgba(255,255,255,0.45)] via-transparent to-transparent bg-opacity-40 z-10"></div>
@@ -150,7 +150,7 @@ function Team() {
         </div>
 
         {/* Central phrase with aspect-vertical */}
-        <div className="relative p-[30px] border dark:border-white border-main  !border-opacity-10  text-center">
+        <div className="relative p-[30px] border-[0.5px] dark:border-white border-main  !border-opacity-10  text-center">
           <div className="relative inset-0 overflow-hidden aspect-vertical bg-pinkSecondary w-full h-full rounded-[32px] flex items-center justify-center">
             <h3 className="text-main">
               <span className="font-bold italic font-ramillas text-pink">
@@ -166,7 +166,7 @@ function Team() {
         {/* Fifth member */}
         <div
           key={teamMembers[4].id}
-          className="relative p-[30px] border dark:border-white border-main  !border-opacity-10 aspect-vertical"
+          className="relative p-[30px] border-[0.5px] dark:border-white border-main  !border-opacity-10 aspect-vertical"
         >
           <div className="relative bg-cover flex flex-col items-center justify-end rounded-[32px] overflow-hidden group aspect-vertical">
             <div className="absolute inset-0 bg-gradient-to-t from-[rgba(255,255,255,0.45)] via-transparent to-transparent bg-opacity-40 z-10"></div>
@@ -201,7 +201,7 @@ function Team() {
         {teamMembers.slice(5, 7).map((member) => (
           <div
             key={member.id}
-            className="relative p-[30px] border dark:border-white border-main  !border-opacity-10 aspect-vertical"
+            className="relative p-[30px] border-[0.5px] dark:border-white border-main  !border-opacity-10 aspect-vertical"
           >
             <div className="relative bg-cover flex flex-col items-center justify-end rounded-[32px] overflow-hidden group aspect-vertical">
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(255,255,255,0.45)] via-transparent to-transparent bg-opacity-40 z-10"></div>
@@ -234,7 +234,7 @@ function Team() {
         ))}
 
         {/* CTA Grid Item with aspect-vertical */}
-        <div className="p-[30px] border dark:border-white border-main  !border-opacity-10 aspect-vertical">
+        <div className="p-[30px] border-[0.5px] dark:border-white border-main  !border-opacity-10 aspect-vertical">
           <div className="relative bg-[url('/images/bg-lines.svg')] bg-cover bg-pink w-full h-full rounded-[32px] flex flex-col gap-6 items-center justify-center">
             <h3 className="text-main">
               Join our{" "}

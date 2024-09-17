@@ -30,11 +30,11 @@ function OurClients({ home }) {
           </span>
           <span className="text-main dark:text-light">work with</span>
         </h2>
-        <div className="w-full grid grid-cols-4 grid-rows-2 rounded-[64px] overflow-hidden border dark:border-white border-main !border-opacity-10">
+        <div className="w-full grid lg:grid-cols-4 grid-rows-2 rounded-[64px] overflow-hidden border-[0.75px] dark:border-white border-main !border-opacity-10">
           {logos.map((logo, index) => (
             <div
               key={index}
-              className="flex items-center justify-center border dark:border-white border-main !border-opacity-10 border-collapse p-4 aspect-square"
+              className="flex items-center justify-center border-[0.5px] dark:border-white border-main !border-opacity-10 border-collapse p-4 aspect-square"
             >
               <Image
                 src={logo.src}

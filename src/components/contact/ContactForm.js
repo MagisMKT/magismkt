@@ -185,7 +185,7 @@ function ContactForm() {
               required={field.required}
               rows={1}
               placeholder={field.placeholder}
-              className="appearance-none bg-transparent text-xl lg:text-2xl tracking-tight font-ramillas resize-none py-4 md:py-5 w-full dark:placeholder-white placeholder-main placeholder-opacity-40 !outline-none"
+              className="appearance-none bg-transparent text-xl lg:text-2xl tracking-tight font-ramillas resize-none py-4 md:py-5 w-full dark:placeholder-white placeholder-main !placeholder-opacity-40 !outline-none"
               onChange={handleInputChange}
             ></textarea>
           ) : field.type === "select" ? (
@@ -229,25 +229,25 @@ function ContactForm() {
               {/* Mostrar Chevron o Check según selección */}
               {field.id === "services" && !selectedServices && (
                 <Chevron
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 dark:text-green text-pink"
                   onClick={() => handleChevronClick(field.id)}
                 />
               )}
               {field.id === "budget" && !selectedBudget && (
                 <Chevron
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 dark:text-green text-pink"
                   onClick={() => handleChevronClick(field.id)}
                 />
               )}
               {field.id === "services" && selectedServices && (
                 <Check
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 dark:text-green text-pink"
                   onClick={() => handleChevronClick(field.id)}
                 />
               )}
               {field.id === "budget" && selectedBudget && (
                 <Check
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 dark:text-green text-pink"
                   onClick={() => handleChevronClick(field.id)}
                 />
               )}
@@ -259,7 +259,7 @@ function ContactForm() {
               name={field.id}
               required={field.required}
               placeholder={field.placeholder}
-              className="appearance-none text-xl lg:text-2xl tracking-tight font-ramillas bg-transparent py-4 md:py-5 w-full dark:placeholder-white placeholder-main placeholder-opacity-40 !outline-none"
+              className="appearance-none text-xl lg:text-2xl tracking-tight font-ramillas bg-transparent py-4 md:py-5 w-full dark:placeholder-white placeholder-main !placeholder-opacity-40 !outline-none"
               onChange={handleInputChange}
             />
           )}
