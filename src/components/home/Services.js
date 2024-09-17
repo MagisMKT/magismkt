@@ -38,14 +38,14 @@ const services = [
 function Services({ home }) {
   return (
     <section className="min-h-[90vh] z-40 relative flex items-center py-12 lg:py-24 px-[20px]">
-      <div className="container flex flex-col gap-4 lg:gap-14 items-start mx-auto">
+      <div className="container flex flex-col gap-5 lg:gap-14 items-start mx-auto">
         <div className="flex gap-4 items-center justify-center">
           <Shine color="#BAE846" />
           <h4>
             What <span className="font-ramillas italic text-110">we do</span>
           </h4>
         </div>
-        <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 items-end">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-end">
           <h2>
             Transforming brands with our
             <span className="text-blue dark:text-green px-2.5 py-1.5 rounded-full font-ramillas italic font-bold text-110">
@@ -92,7 +92,7 @@ function Services({ home }) {
             icon={Arrow} // Pasamos el ícono Arrow
             iconFillColor="#ffffff" // El color del ícono es "main"
             rotate={-90}
-            href="#"
+            href="/services"
           />
         </div>
       </div>

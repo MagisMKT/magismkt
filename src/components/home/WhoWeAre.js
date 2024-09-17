@@ -20,7 +20,7 @@ function WhoWeAre({ home }) {
         height="120"
         className="dark:hidden z-30 absolute top-[60px] 3xl:top-[130px] left-auto right-auto w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]"
       />
-      <div className="container text-center flex flex-col gap-14 justify-center items-center mx-auto max-w-3xl">
+      <div className="container text-center flex flex-col gap-8 lg:gap-14 justify-center items-center mx-auto max-w-3xl">
         <div className="flex gap-4 items-center">
           <Shine />
           <h4>
@@ -51,7 +51,7 @@ function WhoWeAre({ home }) {
           icon={Arrow} // Pasamos el ícono Arrow
           iconFillColor="#ffffff" // El color del ícono es "main"
           rotate={-90}
-          href="#"
+          href="/about"
         />
 
         <Image

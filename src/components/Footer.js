@@ -66,21 +66,21 @@ function Footer() {
           <div className="flex flex-col items-center lg:items-end space-y-6">
             <div className="flex space-x-4">
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/magis.mkt/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Instagram className="fill-white dark:fill-main" />
               </a>
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/magis.mkt"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Facebook className="fill-white dark:fill-main" />
               </a>
               <a
-                href="https://www.tiktok.com"
+                href="https://www.tiktok.com/@magis.mkt"
                 target="_blank"
                 rel="noopener noreferrer"
               >

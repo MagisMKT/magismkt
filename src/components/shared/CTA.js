@@ -31,7 +31,7 @@ function CTA() {
           iconBgColor="bg-pink"
           iconFillColor="white"
           hoverTextColor="text-white"
-          href="#services"
+          href="/contact"
           rotate={-90}
           icon={Arrow}
         />
