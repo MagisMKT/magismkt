@@ -89,7 +89,7 @@ function OurClients({ home }) {
               bgColor="bg-black"
               textColor="text-white"
               iconBgColor="bg-blue"
-              href="#services"
+              href="/contact"
               rotate={-90}
               icon={Arrow}
             />
