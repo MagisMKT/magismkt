@@ -5,7 +5,7 @@ function ContactSection() {
   return (
     <section className="flex justify-center min-h-[80vh] items-center px-[20px]">
       <div className="container pt-36 pb-12 lg:pt-40  max-w-[1200px] flex flex-col gap-8 lg:gap-12">
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
           <Shine color="#DC0073" />
           <h4>
             Contact <span className="font-ramillas italic text-110">Us</span>

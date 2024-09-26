@@ -66,7 +66,7 @@ function OurClients({ home }) {
           {logos.map((logo, index) => (
             <div
               key={index}
-              className="flex items-center justify-center border-[0.5px] dark:border-white border-main !border-opacity-10 border-collapse p-4 aspect-square"
+              className="flex items-center justify-center border-[0.5px] dark:border-white border-main !border-opacity-10 border-collapse p-4 min-h-40 md:aspect-square"
             >
               {/* Usamos la versión blanca o negra según el tema */}
               <Image

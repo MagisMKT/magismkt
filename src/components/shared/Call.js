@@ -32,7 +32,7 @@ function Call() {
           bgColor="bg-black"
           textColor="text-white"
           iconBgColor="bg-green"
-          href="#services"
+          href="https://calendar.app.google/2XSAC9QZP51gC4Jv6"
           icon={Calendar}
         />
       </div>

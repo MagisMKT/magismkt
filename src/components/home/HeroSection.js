@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button from "@/components/Button";
 import Arrow from "@/components/icons/Arrow";
+import Close from "@/components/icons/Close";
 
 function HeroSection({ home }) {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  // Función para manejar el cierre con la tecla ESC
+  useEffect(() => {
+    const handleEsc = (event) => {
+      if (event.key === "Escape") {
+        setIsVideoOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEsc);
+
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, []);
+
   return (
     <section className="relative flex justify-center w-full">
       <div className="sticky top-0 z-20 text-white text-left pt-48 pb-24 lg:pb-8 lg:pt-8 lg:p-8 min-[70vh] lg:min-h-[113vh] flex flex-col justify-center items-center w-full">
@@ -13,7 +31,7 @@ function HeroSection({ home }) {
           loop
           autoPlay
           muted
-          className="absolute h-full w-full top-0 left-0 object-cover z-10 top-0"
+          className="absolute h-full w-full top-0 left-0 object-cover z-10"
         >
           <source src={home.videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
@@ -46,8 +64,11 @@ function HeroSection({ home }) {
               {home.word3}.
             </h1>
             {/* Video Play Button */}
-            <div className="flex items-center cursor-pointer">
-              <div className="rounded-full">
+            <div
+              className="flex items-center cursor-pointer hover:text-pinkSecondary transition duration-300 fill-white hover:fill-main"
+              onClick={() => setIsVideoOpen(true)}
+            >
+              <div className="rounded-full ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="46"
@@ -56,14 +77,14 @@ function HeroSection({ home }) {
                   fill="none"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M23 45C35.4264 45 45.5 34.9264 45.5 22.5C45.5 10.0736 35.4264 0 23 0C10.5736 0 0.5 10.0736 0.5 22.5C0.5 34.9264 10.5736 45 23 45ZM17.2371 14.8592C17.2371 13.8629 18.3212 13.2452 19.1783 13.7531L32.0716 21.3936C32.912 21.8916 32.912 23.1078 32.0716 23.6058L19.1783 31.2463C18.3212 31.7542 17.2371 31.1364 17.2371 30.1402V14.8592Z"
-                    fill="white"
+                    fill="currentColor"
                   />
                 </svg>
               </div>
-              <span className="ml-2 hidden lg:flex">{home.ctaVideoText}</span>
+              <span className="ml-2.5 hidden lg:flex">{home.ctaVideoText}</span>
             </div>
           </div>
 
@@ -80,6 +101,27 @@ function HeroSection({ home }) {
           </div>
         </div>
       </div>
+
+      {/* Fullscreen Video Modal */}
+      {isVideoOpen && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center">
+          <div className="relative w-full h-full flex items-center justify-center">
+            <video
+              controls
+              autoPlay
+              className="w-full h-auto md:h-full object-cover"
+              src="/images/fullvideo.mp4"
+            />
+            {/* Close Button */}
+            <button
+              className="absolute top-4 right-4 text-white"
+              onClick={() => setIsVideoOpen(false)}
+            >
+              <Close />
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

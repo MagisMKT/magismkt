@@ -37,7 +37,10 @@ const services = [
 
 function Services({ home }) {
   return (
-    <section className="min-h-[90vh] z-40 relative flex items-center py-12 lg:py-24 px-[20px]">
+    <section
+      className="md:min-h-[90vh] z-40 relative flex items-center py-8 lg:py-24 px-[20px]"
+      id="services"
+    >
       <div className="container flex flex-col gap-5 lg:gap-14 items-start mx-auto">
         <div className="flex gap-4 items-center justify-center">
           <Shine color="#BAE846" />

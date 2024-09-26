@@ -112,7 +112,7 @@ function ContactForm() {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        access_key: "2591a97a-9754-456e-a33b-5b876a0e370e",
+        access_key: "83730523-63a3-4bdc-beee-371b152d8a53",
         name: inputValues.name,
         email: inputValues.email,
         company: inputValues.company,
@@ -135,10 +135,10 @@ function ContactForm() {
   if (formSubmitted) {
     return (
       <div
-        className="p-5 text-2xl lg:text-7xl -tracking-[2.5px] lg:-tracking-[5px]"
+        className="p-5 text-2xl lg:text-5xl font-semibold -tracking-[2.5px] lg:-tracking-[5px]"
         role="alert"
       >
-        Thank you for contacting me, I will respond to your request as soon as
+        Thank you for contacting us, We'll reply to your request as soon as
         possible!
       </div>
     );
@@ -272,7 +272,6 @@ function ContactForm() {
           textColor="dark:text-white text-main"
           hoverTextColor="dark:text-white text-main"
           iconBgColor="dark:bg-pink bg-pinkSecondary"
-          href="#contact"
           rotate={-90}
           icon={Arrow}
           type="submit"

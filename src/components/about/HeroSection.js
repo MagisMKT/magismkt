@@ -58,12 +58,12 @@ function HeroSection() {
   }, [gridSize]); // Escuchar cambios en gridSize
 
   return (
-    <section className="relative z-20 text-white text-left px-[20px] py-32 lg:p-8 lg:min-h-[100vh] flex flex-col justify-center items-center w-full bg-[url('/images/team.jpg')] bg-cover bg-center lg:bg-fixed">
+    <section className="relative z-20 text-white text-left px-[15px] py-48 md:py-32 lg:p-8 min-h-[85vh] md:min-h-[100vh] flex flex-col md:justify-center items-center w-full bg-[url('/images/team_mobile.jpg')] md:bg-[url('/images/team.jpg')] bg-cover bg-center lg:bg-fixed">
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-main via-[rgba(25,12,19,0.25)] to-transparent bg-opacity-60 z-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(25,12,19,0.15)] via-[rgba(25,12,19,0.15)] to-transparent bg-opacity-60 z-20"></div>
 
       {/* Contenido */}
-      <div className="relative z-30 px-4 flex flex-col gap-4 lg:gap-10 w-full mx-auto max-w-7xl">
+      <div className="relative z-30 px-0 lg:px-4 flex flex-col gap-4 lg:gap-10 w-full mx-auto max-w-7xl">
         <div className="flex gap-4 items-center">
           <Shine color="#DC0073" />
           <h4>
@@ -72,7 +72,7 @@ function HeroSection() {
         </div>
         <h5>
           We are a{" "}
-          <span className="text-main bg-pink inline px-1.5 lg:px-2.5 py-0.25 lg:py-1.5 -z-10 relative rounded-full font-ramillas italic font-bold text-110">
+          <span className="font-ramillas italic font-bold text-110">
             100% women-led
           </span>{" "}
           multidisciplinary team.
@@ -84,7 +84,7 @@ function HeroSection() {
             bgColor="bg-black"
             textColor="text-white"
             iconBgColor="bg-green"
-            href="#services"
+            href="#team"
             icon={Arrow}
           />
         </div>
@@ -93,7 +93,7 @@ function HeroSection() {
       <div
         className={`grid ${
           gridSize === mobileGridSize
-            ? "grid-cols-6 grid-rows-6"
+            ? "grid-cols-6 grid-rows-10"
             : "grid-cols-12 grid-rows-7"
         } absolute w-full h-full top-0 z-20 left-0`}
       >
@@ -109,20 +109,6 @@ function HeroSection() {
             />
           </div>
         ))}
-      </div>
-      <div className="flex gap-4 items-center absolute bottom-[10vh] lg:bottom-[18vh] z-20">
-        <h3
-          className="text-pinkSecondary flex items-center gap-2
-          "
-        >
-          Magis <span className="font-light">=</span>
-          <span className="text-green font-ramillas font-bold text-105 italic">
-            More
-          </span>{" "}
-          <span className="text-50 font-ramillas font-medium italic text-white tracking-normal -mb-1">
-            in Latin
-          </span>
-        </h3>
       </div>
     </section>
   );

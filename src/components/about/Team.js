@@ -22,7 +22,7 @@ const teamMembers = [
   {
     id: 3,
     name: "Miranda Valencia",
-    role: "Sales Executive",
+    role: "Engagement Specialist",
     imageUrl: "/images/team/miranda.jpg",
     videoUrl: "/images/team/miranda.mp4",
   },
@@ -49,16 +49,19 @@ const teamMembers = [
   },
   {
     id: 7,
-    name: "Miranda Valencia",
+    name: "Paola Valencia",
     role: "Sales Executive",
-    imageUrl: "/images/team/miranda.jpg",
-    videoUrl: "/images/team/miranda.mp4",
+    imageUrl: "/images/team/paola.jpg",
+    videoUrl: "/images/team/paola.mp4",
   },
 ];
 
 function Team() {
   return (
-    <section className="min-h-[90vh] z-40 relative flex flex-col gap-12 justify-center items-end py-12 lg:py-24">
+    <section
+      className="min-h-[90vh] z-40 relative flex flex-col gap-12 justify-center items-end py-12 lg:py-24"
+      id="team"
+    >
       <div className="container text-center flex flex-col gap-8 justify-center items-center mx-auto px-[20px]">
         <div className="flex gap-4 items-center">
           <Shine color="#DC0073" />
@@ -245,7 +248,7 @@ function Team() {
               bgColor="bg-black"
               textColor="text-white"
               iconBgColor="bg-pink"
-              href="#contact"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfOiSTzU-uiIUNREEGhetrr0OEI1iXqDIUYwYNUXJlrimvCkQ/viewform"
               rotate={-90}
               icon={Arrow}
             />

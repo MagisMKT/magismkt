@@ -59,7 +59,10 @@ const services = [
 
 function Services({ home }) {
   return (
-    <section className="min-h-[90vh] z-40 relative flex items-center lg:py-24 px-[20px]">
+    <section
+      className="min-h-[90vh] z-40 relative flex items-center lg:py-24 px-[20px]"
+      id="services"
+    >
       <div className="container flex flex-col gap-14 items-start mx-auto">
         <div className="max-w-[1400px] mx-auto py-16 px-4 flex flex-col items-center">
           <div className="w-full relative">
