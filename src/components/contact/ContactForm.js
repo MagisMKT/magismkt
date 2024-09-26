@@ -135,7 +135,7 @@ function ContactForm() {
   if (formSubmitted) {
     return (
       <div
-        className="p-5 text-2xl lg:text-5xl font-semibold -tracking-[2.5px] lg:-tracking-[5px]"
+        className="p-5 text-2xl lg:text-5xl font-semibold -tracking-[1.5px]"
         role="alert"
       >
         Thank you for contacting us, We'll reply to your request as soon as
