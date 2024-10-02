@@ -1,6 +1,6 @@
 const Tiktok = ({ className }) => {
   return (
-    <div className="bg-pink p-2 rounded-full">
+    <div className="bg-pink p-2 rounded-full w-[34px] h-[34px] flex justify-center items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"

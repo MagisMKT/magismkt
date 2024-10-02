@@ -21,6 +21,11 @@ function HeroSection({ home }) {
     };
   }, []);
 
+  // URL del video con autoplay
+  const videoUrl = isVideoOpen
+    ? "https://www.youtube.com/embed/s3SVUFwNun8?autoplay=1&si=vuhMutNccdNqgYOR&rel=0&controls=0"
+    : "https://www.youtube.com/embed/s3SVUFwNun8?si=vuhMutNccdNqgYOR";
+
   return (
     <section className="relative flex justify-center w-full">
       <div className="sticky top-0 z-20 text-white text-left pt-48 pb-24 lg:pb-8 lg:pt-8 lg:p-8 min-[70vh] lg:min-h-[113vh] flex flex-col justify-center items-center w-full">
@@ -106,12 +111,17 @@ function HeroSection({ home }) {
       {isVideoOpen && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center">
           <div className="relative w-full h-full flex items-center justify-center">
-            <video
-              controls
-              autoPlay
-              className="w-full h-auto md:h-full object-cover"
-              src="/images/fullvideo.mp4"
-            />
+            <iframe
+              width="95%"
+              height="auto"
+              className="aspect-video outline-0! rounded-[24px]"
+              src={videoUrl}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             {/* Close Button */}
             <button
               className="absolute top-4 right-4 text-white"

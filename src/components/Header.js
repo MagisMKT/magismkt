@@ -9,6 +9,9 @@ import Close from "./icons/Close";
 import Tiktok from "./icons/Tiktok";
 import Instagram from "./icons/Instagram";
 import Facebook from "./icons/Facebook";
+import Pinterest from "./icons/Pinterest";
+import Linkedin from "./icons/Linkedin";
+import Youtube from "./icons/Youtube";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -104,10 +107,10 @@ function Header() {
       >
         <div className="mx-auto flex flex-col-reverse lg:flex-col justify-between w-full h-full">
           {/* Imagen de equipo */}
-          <div className="w-full lg:w-[calc(40%+64px)] min-h-[calc(40vh+64px)] relative -mt-[64px] lg:-mt-[0px] bg-cover bg-center lg:absolute h-full left-0 lg:top-0 bg-[url('/images/team_menu.jpg')] z-10"></div>
+          <div className="w-full lg:w-[calc(40%+64px)] min-h-[calc(40%+64px)] relative -mt-[64px] lg:-mt-[0px] bg-cover bg-center lg:absolute h-full left-0 lg:top-0 bg-[url('/images/team_menu.jpg')] z-10"></div>
 
           {/* Sección de menú */}
-          <div className="w-full lg:w-3/5 min-h-[60vh] lg:h-full dark:bg-main bg-light ml-auto z-20 rounded-b-[32px] lg:rounded-l-[64px] flex flex-col justify-between relative">
+          <div className="w-full lg:w-3/5 min-h-[60%] lg:h-full dark:bg-main bg-light ml-auto z-20 rounded-b-[32px] lg:rounded-l-[64px] flex flex-col justify-between relative">
             {/* LanguageSwitcher y ThemeToggle en la parte superior derecha */}
             <div className="flex justify-between items-center px-6 py-8 lg:px-20 lg:py-12">
               <ThemeToggle />
@@ -163,40 +166,57 @@ function Header() {
                   </a>
                 </Link>
               </div>
-              <div className="flex items-center justify-between space-x-2 p-4 lg:p-8 w-full">
+              <div className="flex items-center justify-between space-x-2 p-4 lg:p-6 w-full">
                 <Link href="mailto:hello@magismarketing.com" legacyBehavior>
-                  <span className="opacity-80 text-xs lg:text-base">
+                  <span className="opacity-80 text-xs lg:text-sm">
                     hello@magismarketing.com
                   </span>
                 </Link>
-                <span className="opacity-80 hidden xl:flex text-xs lg:text-base">
+                <span className="opacity-80 hidden xl:flex text-xs lg:text-sm">
                   2617 Bissonnet St #493, Houston, TX 77005
                 </span>
-                <div className="flex gap-1.5 lg:gap-6">
+                <div className="flex gap-1.5 lg:gap-2.5">
                   {/* Redes sociales */}
                   {[
                     {
-                      href: "https://www.instagram.com",
+                      href: "https://www.instagram.com/magis.mkt/",
                       icon: <Instagram className="fill-white dark:fill-main" />,
                       label: "Instagram",
                     },
                     {
-                      href: "https://www.facebook.com",
+                      href: "https://www.facebook.com/magis.mkt",
                       icon: <Facebook className="fill-white dark:fill-main" />,
                       label: "Facebook",
                     },
                     {
-                      href: "https://www.tiktok.com",
+                      href: "https://www.tiktok.com/@magis.mkt",
                       icon: <Tiktok className="fill-white dark:fill-main" />,
                       label: "Tiktok",
                     },
-                  ].map(({ href, icon, label }) => (
+                    {
+                      href: "https://www.youtube.com/@MAGISMARKETING",
+                      icon: <Youtube className="fill-white dark:fill-main" />,
+                      label: "Youtube",
+                    },
+                    {
+                      href: "https://www.linkedin.com/company/magis-mktg",
+                      icon: <Linkedin className="fill-white dark:fill-main" />,
+                      label: "Linkedin",
+                    },
+                    {
+                      href: "https://mx.pinterest.com/magismarketing/",
+                      icon: <Pinterest className="fill-white dark:fill-main" />,
+                      label: "Pinterest",
+                    },
+                  ].map(({ href, icon, label }, index) => (
                     <a
                       key={label}
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="dark:hover:text-pinkSecondary hover:text-pink"
+                      className={`dark:hover:text-pinkSecondary hover:text-pink ${
+                        index >= 3 ? "hidden lg:flex" : ""
+                      }`}
                     >
                       {icon}
                     </a>

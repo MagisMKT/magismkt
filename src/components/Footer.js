@@ -1,15 +1,18 @@
-import { useRouter } from "next/router"; // Importamos useRouter
+import { useRouter } from "next/router";
 import LogoAlt from "./LogoAlt";
 import Link from "next/link";
 import Tiktok from "./icons/Tiktok";
 import Instagram from "./icons/Instagram";
 import Facebook from "./icons/Facebook";
+import Pinterest from "./icons/Pinterest";
+import Linkedin from "./icons/Linkedin";
+import Youtube from "./icons/Youtube";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Dev from "./icons/Dev";
 
 function Footer() {
-  const router = useRouter(); // Para obtener la ruta actual
+  const router = useRouter();
 
   // Definimos los elementos del menú con sus respectivas rutas
   const menuItems = [
@@ -85,6 +88,27 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <Tiktok className="fill-white dark:fill-main" />
+              </a>
+              <a
+                href="https://www.youtube.com/@MAGISMARKETING"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Youtube className="fill-white dark:fill-main" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/magis-mktg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="fill-white dark:fill-main" />
+              </a>
+              <a
+                href="https://mx.pinterest.com/magismarketing/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Pinterest className="fill-white dark:fill-main" />
               </a>
             </div>
             <LanguageSwitcher />
