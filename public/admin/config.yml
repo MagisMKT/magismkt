@@ -22,14 +22,13 @@ collections:
           - { label: "Subtitle Part2", name: "subtitlePart2", widget: "string" }
           - { label: "CTA Text", name: "ctaText", widget: "string" }
           - { label: "CTA Video Text", name: "ctaVideoText", widget: "string" }
-          - { label: "Upload Video", name: "videoUrl", widget: "file" } # Campo para subir video
+          - { label: "Upload Video", name: "videoUrl", widget: "file" }
           - {
               label: "Full Video",
               name: "fullVideo",
               widget: "string",
               hint: "URL of the full YouTube video",
-            } # URL del video completo
-          # WHO WE ARE Section
+            }
           - {
               label: "Who We Are Title",
               name: "whoWeAreTitle",
@@ -39,18 +38,17 @@ collections:
               label: "Who We Are Subtitle",
               name: "whoWeAreSubtitle",
               widget: "markdown",
-            } # Rich text for spans with class styles
+            }
           - {
               label: "Who We Are Paragraph",
               name: "whoWeAreParagraph",
               widget: "markdown",
-            } # Rich text for spans with class styles
+            }
           - {
               label: "Who We Are Button Text",
               name: "whoWeAreButtonText",
               widget: "string",
             }
-          # WHAT WE DO Section
           - {
               label: "What We Do Title",
               name: "whatWeDoTitle",
@@ -60,7 +58,7 @@ collections:
               label: "What We Do Subtitle",
               name: "whatWeDoSubtitle",
               widget: "markdown",
-            } # Rich text
+            }
           - {
               label: "What We Do Paragraph",
               name: "whatWeDoParagraph",
@@ -71,7 +69,6 @@ collections:
               name: "whatWeDoButtonText",
               widget: "string",
             }
-          # OUR CLIENTS Section
           - {
               label: "Our Clients Title",
               name: "ourClientsTitle",
@@ -81,25 +78,125 @@ collections:
               label: "Our Clients Subtitle",
               name: "ourClientsSubtitle",
               widget: "markdown",
-            } # Rich text
+            }
           - label: "Clients"
             name: "clients"
             widget: "list"
             fields:
               - { label: "Client Image", name: "clientImage", widget: "image" }
               - { label: "Client Name", name: "clientName", widget: "string" }
-          - { label: "CTA Title", name: "ctaTitle", widget: "markdown" } # Rich text
+          - { label: "CTA Title", name: "ctaTitle", widget: "markdown" }
           - {
               label: "CTA Button Text",
               name: "ctaButtonText",
               widget: "string",
             }
 
-      - name: "shared"
-        label: "Shared Sections"
-        file: "content/shared.md"
+      - name: "home_es"
+        label: "Home Page (Spanish)"
+        file: "content/home_es.md"
         fields:
-          # SERVICIOS Section
+          - { label: "Palabra 1", name: "word1", widget: "string" }
+          - { label: "Palabra 2", name: "word2", widget: "string" }
+          - { label: "Palabra 3", name: "word3", widget: "string" }
+          - {
+              label: "Subtítulo Parte 1",
+              name: "subtitlePart1",
+              widget: "string",
+            }
+          - {
+              label: "Subtítulo Parte 2",
+              name: "subtitlePart2",
+              widget: "string",
+            }
+          - { label: "Texto del CTA", name: "ctaText", widget: "string" }
+          - {
+              label: "Texto del Video CTA",
+              name: "ctaVideoText",
+              widget: "string",
+            }
+          - { label: "Subir Video", name: "videoUrl", widget: "file" }
+          - {
+              label: "Video Completo",
+              name: "fullVideo",
+              widget: "string",
+              hint: "URL del video completo en YouTube",
+            }
+          - {
+              label: "Título ¿Quiénes Somos?",
+              name: "whoWeAreTitle",
+              widget: "string",
+            }
+          - {
+              label: "Subtítulo ¿Quiénes Somos?",
+              name: "whoWeAreSubtitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Párrafo ¿Quiénes Somos?",
+              name: "whoWeAreParagraph",
+              widget: "markdown",
+            }
+          - {
+              label: "Texto del Botón ¿Quiénes Somos?",
+              name: "whoWeAreButtonText",
+              widget: "string",
+            }
+          - {
+              label: "Título ¿Qué Hacemos?",
+              name: "whatWeDoTitle",
+              widget: "string",
+            }
+          - {
+              label: "Subtítulo ¿Qué Hacemos?",
+              name: "whatWeDoSubtitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Descripción ¿Qué Hacemos?",
+              name: "whatWeDoParagraph",
+              widget: "text",
+            }
+          - {
+              label: "Texto del Botón ¿Qué Hacemos?",
+              name: "whatWeDoButtonText",
+              widget: "string",
+            }
+          - {
+              label: "Título Nuestros Clientes",
+              name: "ourClientsTitle",
+              widget: "string",
+            }
+          - {
+              label: "Subtítulo Nuestros Clientes",
+              name: "ourClientsSubtitle",
+              widget: "markdown",
+            }
+          - label: "Clientes"
+            name: "clients"
+            widget: "list"
+            fields:
+              - {
+                  label: "Imagen del Cliente",
+                  name: "clientImage",
+                  widget: "image",
+                }
+              - {
+                  label: "Nombre del Cliente",
+                  name: "clientName",
+                  widget: "string",
+                }
+          - { label: "Título CTA", name: "ctaTitle", widget: "markdown" }
+          - {
+              label: "Texto del Botón CTA",
+              name: "ctaButtonText",
+              widget: "string",
+            }
+
+      - name: "shared_en"
+        label: "Shared Sections (English)"
+        file: "content/shared_en.md"
+        fields:
           - { label: "Services Title", name: "servicesTitle", widget: "string" }
           - {
               label: "Services Description",
@@ -116,20 +213,18 @@ collections:
                   name: "serviceImage",
                   widget: "image",
                 }
-          # OUR MISSION Section
           - { label: "Mission Title", name: "missionTitle", widget: "string" }
           - {
               label: "Mission Subtitle",
               name: "missionSubtitle",
               widget: "markdown",
-            } # Rich text
-          - { label: "Third Title", name: "thirdTitle", widget: "string" } # Can be renamed
+            }
+          - { label: "Third Title", name: "thirdTitle", widget: "string" }
           - {
               label: "Background Photo",
               name: "backgroundPhoto",
               widget: "image",
             }
-          # TESTIMONIALS Section
           - {
               label: "Testimonials Title",
               name: "testimonialsTitle",
@@ -139,7 +234,7 @@ collections:
               label: "Testimonials Subtitle",
               name: "testimonialsSubtitle",
               widget: "markdown",
-            } # Rich text
+            }
           - label: "Testimonials"
             name: "testimonials"
             widget: "list"
@@ -164,25 +259,23 @@ collections:
                   name: "testimonialText",
                   widget: "text",
                 }
-          # MAIN CTA Section
           - { label: "Main CTA Title", name: "mainCtaTitle", widget: "string" }
           - {
               label: "Main CTA Subtitle",
               name: "mainCtaSubtitle",
               widget: "markdown",
-            } # Rich text
+            }
           - {
               label: "Main CTA Button Text",
               name: "mainCtaButtonText",
               widget: "string",
             }
-          # FREE SESSION Section
           - { label: "Avatar Photo", name: "avatarPhoto", widget: "image" }
           - {
               label: "Free Session Title",
               name: "freeSessionTitle",
               widget: "markdown",
-            } # Rich text
+            }
           - {
               label: "Free Session Subtitle",
               name: "freeSessionSubtitle",
@@ -199,136 +292,112 @@ collections:
               widget: "string",
             }
 
-      - name: "about"
-        label: "Who We Are Page"
-        file: "content/about.md"
+      - name: "shared_es"
+        label: "Shared Sections (Spanish)"
+        file: "content/shared_es.md"
         fields:
-          # HERO SECTION
-          - { label: "Hero Title", name: "heroTitle", widget: "string" }
-          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "markdown" } # Rich text
           - {
-              label: "Hero Button Text",
-              name: "heroButtonText",
+              label: "Título Servicios",
+              name: "servicesTitle",
               widget: "string",
             }
-          # STORY Section
-          - { label: "Story Title", name: "storyTitle", widget: "markdown" } # Rich text
           - {
-              label: "Story Subtitle",
-              name: "storySubtitle",
-              widget: "markdown",
-            } # Rich text
-          - {
-              label: "Story Paragraph 1",
-              name: "storyParagraph1",
+              label: "Descripción Servicios",
+              name: "servicesDescription",
               widget: "text",
             }
-          - {
-              label: "Story Paragraph 2",
-              name: "storyParagraph2",
-              widget: "text",
-            }
-          # TEAM Section
-          - { label: "Team Title", name: "teamTitle", widget: "markdown" } # Rich text
-          - { label: "Team Subtitle", name: "teamSubtitle", widget: "markdown" } # Rich text
-          - {
-              label: "Team Description",
-              name: "teamDescription",
-              widget: "text",
-            }
-          - label: "Team Members"
-            name: "teamMembers"
+          - label: "Subservicios"
+            name: "subservices"
             widget: "list"
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Full Name", name: "fullName", widget: "string" }
-              - { label: "Role", name: "role", widget: "string" }
-              - { label: "Photo", name: "photo", widget: "image" }
-              - { label: "Video", name: "video", widget: "string" }
+              - { label: "Subservicio", name: "subservice", widget: "string" }
+              - {
+                  label: "Imagen del Servicio",
+                  name: "serviceImage",
+                  widget: "image",
+                }
+          - { label: "Título Misión", name: "missionTitle", widget: "string" }
           - {
-              label: "Team CTA Title",
-              name: "teamCtaTitle",
+              label: "Subtítulo Misión",
+              name: "missionSubtitle",
               widget: "markdown",
-            } # Rich text
+            }
+          - { label: "Tercer Título", name: "thirdTitle", widget: "string" }
+          - { label: "Foto de Fondo", name: "backgroundPhoto", widget: "image" }
           - {
-              label: "Team CTA Button Text",
-              name: "teamCtaButtonText",
+              label: "Título Testimonios",
+              name: "testimonialsTitle",
               widget: "string",
             }
           - {
-              label: "Team CTA Button Link",
-              name: "teamCtaButtonLink",
-              widget: "string",
+              label: "Subtítulo Testimonios",
+              name: "testimonialsSubtitle",
+              widget: "markdown",
             }
-          # GALLERY TEAM Section
-          - { label: "Gallery Photo 1", name: "galleryPhoto1", widget: "image" }
-          - { label: "Gallery Photo 2", name: "galleryPhoto2", widget: "image" }
-          - { label: "Gallery Photo 3", name: "galleryPhoto3", widget: "image" }
-
-      - name: "services"
-        label: "What We Do Page"
-        file: "content/services.md"
-        fields:
-          # HERO SECTION
-          - { label: "Hero Title", name: "heroTitle", widget: "string" }
-          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
-          - {
-              label: "Hero Button Text",
-              name: "heroButtonText",
-              widget: "string",
-            }
-
-      - name: "contact"
-        label: "Contact Page"
-        file: "content/contact.md"
-        fields:
-          # HEADER AND FORM
-          - { label: "Contact Title", name: "contactTitle", widget: "markdown" } # Rich text
-          - {
-              label: "Contact Subtitle",
-              name: "contactSubtitle",
-              widget: "string",
-            }
-          - label: "Form"
-            name: "form"
-            widget: "object"
+          - label: "Testimonios"
+            name: "testimonials"
+            widget: "list"
             fields:
-              - { label: "Full Name", name: "fullName", widget: "string" }
-              - { label: "Email", name: "email", widget: "string" }
-              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
-              - { label: "Company Name", name: "companyName", widget: "string" }
               - {
-                  label: "Services You Are Looking For",
-                  name: "services",
-                  widget: "list",
-                  field:
-                    { label: "Service", name: "service", widget: "string" },
-                } # Dynamic options
-              - {
-                  label: "Budget",
-                  name: "budget",
-                  widget: "list",
-                  field:
-                    {
-                      label: "Budget Option",
-                      name: "budgetOption",
-                      widget: "string",
-                    },
-                } # Dynamic options
-              - {
-                  label: "Project Details",
-                  name: "projectDetails",
-                  widget: "text",
+                  label: "Imagen del Testimonio",
+                  name: "testimonialImage",
+                  widget: "image",
                 }
               - {
-                  label: "Form Button Text",
-                  name: "formButtonText",
+                  label: "Nombre del Testimonio",
+                  name: "testimonialName",
                   widget: "string",
                 }
+              - {
+                  label: "Rol del Testimonio",
+                  name: "testimonialRole",
+                  widget: "string",
+                }
+              - {
+                  label: "Texto del Testimonio",
+                  name: "testimonialText",
+                  widget: "text",
+                }
+          - {
+              label: "Título CTA Principal",
+              name: "mainCtaTitle",
+              widget: "string",
+            }
+          - {
+              label: "Subtítulo CTA Principal",
+              name: "mainCtaSubtitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Texto del Botón CTA Principal",
+              name: "mainCtaButtonText",
+              widget: "string",
+            }
+          - { label: "Foto Avatar", name: "avatarPhoto", widget: "image" }
+          - {
+              label: "Título Sesión Gratis",
+              name: "freeSessionTitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Subtítulo Sesión Gratis",
+              name: "freeSessionSubtitle",
+              widget: "string",
+            }
+          - {
+              label: "Texto del Botón Sesión Gratis",
+              name: "freeSessionButtonText",
+              widget: "string",
+            }
+          - {
+              label: "Enlace del Botón Sesión Gratis",
+              name: "freeSessionButtonLink",
+              widget: "string",
+            }
 
-      - name: "navigation"
-        label: "Navigation"
-        file: "content/navigation.md"
+      - name: "navigation_en"
+        label: "Navigation (English)"
+        file: "content/navigation_en.md"
         fields:
           - {
               label: "Header Button Text",
@@ -342,12 +411,46 @@ collections:
               - { label: "Page Title", name: "pageTitle", widget: "string" }
               - { label: "Page Link", name: "pageLink", widget: "string" }
 
-      - name: "footer"
-        label: "Footer"
-        file: "content/footer.md"
+      - name: "navigation_es"
+        label: "Navigation (Spanish)"
+        file: "content/navigation_es.md"
+        fields:
+          - {
+              label: "Texto del Botón del Encabezado",
+              name: "headerButtonText",
+              widget: "string",
+            }
+          - label: "Páginas"
+            name: "pages"
+            widget: "list"
+            fields:
+              - {
+                  label: "Título de la Página",
+                  name: "pageTitle",
+                  widget: "string",
+                }
+              - {
+                  label: "Enlace de la Página",
+                  name: "pageLink",
+                  widget: "string",
+                }
+
+      - name: "footer_en"
+        label: "Footer (English)"
+        file: "content/footer_en.md"
         fields:
           - {
               label: "Developer Signature",
+              name: "developerSignature",
+              widget: "string",
+            }
+
+      - name: "footer_es"
+        label: "Footer (Spanish)"
+        file: "content/footer_es.md"
+        fields:
+          - {
+              label: "Firma del Desarrollador",
               name: "developerSignature",
               widget: "string",
             }
