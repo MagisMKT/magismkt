@@ -6,15 +6,18 @@ media_folder: "public/images"
 public_folder: "/images"
 
 collections:
+  # Colección para las páginas individuales (Home, Who We Are, Contact, etc.)
   - name: "pages"
     label: "Pages"
     create: true
     delete: false
     files:
+      # Home Page English
       - name: "home_en"
         label: "Home Page (English)"
         file: "content/home_en.md"
         fields:
+          # HERO SECTION
           - { label: "Word 1", name: "word1", widget: "string" }
           - { label: "Word 2", name: "word2", widget: "string" }
           - { label: "Word 3", name: "word3", widget: "string" }
@@ -23,12 +26,8 @@ collections:
           - { label: "CTA Text", name: "ctaText", widget: "string" }
           - { label: "CTA Video Text", name: "ctaVideoText", widget: "string" }
           - { label: "Upload Video", name: "videoUrl", widget: "file" }
-          - {
-              label: "Full Video",
-              name: "fullVideo",
-              widget: "string",
-              hint: "URL of the full YouTube video",
-            }
+          - { label: "Full Video", name: "fullVideo", widget: "string" }
+          # WHO WE ARE
           - {
               label: "Who We Are Title",
               name: "whoWeAreTitle",
@@ -49,6 +48,7 @@ collections:
               name: "whoWeAreButtonText",
               widget: "string",
             }
+          # WHAT WE DO
           - {
               label: "What We Do Title",
               name: "whatWeDoTitle",
@@ -69,6 +69,7 @@ collections:
               name: "whatWeDoButtonText",
               widget: "string",
             }
+          # OUR CLIENTS
           - {
               label: "Our Clients Title",
               name: "ourClientsTitle",
@@ -85,6 +86,7 @@ collections:
             fields:
               - { label: "Client Image", name: "clientImage", widget: "image" }
               - { label: "Client Name", name: "clientName", widget: "string" }
+          # CALL TO ACTION (CTA)
           - { label: "CTA Title", name: "ctaTitle", widget: "markdown" }
           - {
               label: "CTA Button Text",
@@ -92,10 +94,12 @@ collections:
               widget: "string",
             }
 
+      # Home Page Spanish
       - name: "home_es"
         label: "Home Page (Spanish)"
         file: "content/home_es.md"
         fields:
+          # HERO SECTION
           - { label: "Palabra 1", name: "word1", widget: "string" }
           - { label: "Palabra 2", name: "word2", widget: "string" }
           - { label: "Palabra 3", name: "word3", widget: "string" }
@@ -116,12 +120,8 @@ collections:
               widget: "string",
             }
           - { label: "Subir Video", name: "videoUrl", widget: "file" }
-          - {
-              label: "Video Completo",
-              name: "fullVideo",
-              widget: "string",
-              hint: "URL del video completo en YouTube",
-            }
+          - { label: "Video Completo", name: "fullVideo", widget: "string" }
+          # WHO WE ARE
           - {
               label: "Título ¿Quiénes Somos?",
               name: "whoWeAreTitle",
@@ -142,6 +142,7 @@ collections:
               name: "whoWeAreButtonText",
               widget: "string",
             }
+          # WHAT WE DO
           - {
               label: "Título ¿Qué Hacemos?",
               name: "whatWeDoTitle",
@@ -162,6 +163,7 @@ collections:
               name: "whatWeDoButtonText",
               widget: "string",
             }
+          # OUR CLIENTS
           - {
               label: "Título Nuestros Clientes",
               name: "ourClientsTitle",
@@ -186,6 +188,7 @@ collections:
                   name: "clientName",
                   widget: "string",
                 }
+          # CALL TO ACTION (CTA)
           - { label: "Título CTA", name: "ctaTitle", widget: "markdown" }
           - {
               label: "Texto del Botón CTA",
@@ -193,10 +196,267 @@ collections:
               widget: "string",
             }
 
+      # WHO WE ARE Page English
+      - name: "who_we_are_en"
+        label: "Who We Are Page (English)"
+        file: "content/who_we_are_en.md"
+        fields:
+          # HERO SECTION
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "markdown" }
+          - {
+              label: "Hero Button Text",
+              name: "heroButtonText",
+              widget: "string",
+            }
+          # STORY
+          - { label: "Story Title", name: "storyTitle", widget: "markdown" }
+          - {
+              label: "Story Subtitle",
+              name: "storySubtitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Story Paragraph 1",
+              name: "storyParagraph1",
+              widget: "text",
+            }
+          - {
+              label: "Story Paragraph 2",
+              name: "storyParagraph2",
+              widget: "text",
+            }
+          # TEAM
+          - { label: "Team Title", name: "teamTitle", widget: "markdown" }
+          - { label: "Team Subtitle", name: "teamSubtitle", widget: "markdown" }
+          - {
+              label: "Team Description",
+              name: "teamDescription",
+              widget: "text",
+            }
+          - label: "Team Members"
+            name: "teamMembers"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Full Name", name: "fullName", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Photo", name: "photo", widget: "image" }
+              - { label: "Video", name: "video", widget: "string" }
+          - {
+              label: "Team CTA Title",
+              name: "teamCtaTitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Team CTA Button Text",
+              name: "teamCtaButtonText",
+              widget: "string",
+            }
+          - {
+              label: "Team CTA Button Link",
+              name: "teamCtaButtonLink",
+              widget: "string",
+            }
+          # GALLERY
+          - { label: "Gallery Photo 1", name: "galleryPhoto1", widget: "image" }
+          - { label: "Gallery Photo 2", name: "galleryPhoto2", widget: "image" }
+          - { label: "Gallery Photo 3", name: "galleryPhoto3", widget: "image" }
+
+      # WHO WE ARE Page Spanish
+      - name: "who_we_are_es"
+        label: "Quiénes Somos (Spanish)"
+        file: "content/who_we_are_es.md"
+        fields:
+          # HERO SECTION
+          - { label: "Título Principal", name: "heroTitle", widget: "string" }
+          - {
+              label: "Subtítulo Principal",
+              name: "heroSubtitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Texto del Botón Principal",
+              name: "heroButtonText",
+              widget: "string",
+            }
+          # STORY
+          - {
+              label: "Título de la Historia",
+              name: "storyTitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Subtítulo de la Historia",
+              name: "storySubtitle",
+              widget: "markdown",
+            }
+          - { label: "Párrafo 1", name: "storyParagraph1", widget: "text" }
+          - { label: "Párrafo 2", name: "storyParagraph2", widget: "text" }
+          # TEAM
+          - {
+              label: "Título del Equipo",
+              name: "teamTitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Subtítulo del Equipo",
+              name: "teamSubtitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Descripción del Equipo",
+              name: "teamDescription",
+              widget: "text",
+            }
+          - label: "Miembros del Equipo"
+            name: "teamMembers"
+            widget: "list"
+            fields:
+              - { label: "Nombre", name: "name", widget: "string" }
+              - { label: "Nombre Completo", name: "fullName", widget: "string" }
+              - { label: "Rol", name: "role", widget: "string" }
+              - { label: "Foto", name: "photo", widget: "image" }
+              - { label: "Video", name: "video", widget: "string" }
+          - {
+              label: "Título CTA del Equipo",
+              name: "teamCtaTitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Texto del Botón CTA",
+              name: "teamCtaButtonText",
+              widget: "string",
+            }
+          - {
+              label: "Enlace del Botón CTA",
+              name: "teamCtaButtonLink",
+              widget: "string",
+            }
+          # GALLERY
+          - { label: "Foto Galería 1", name: "galleryPhoto1", widget: "image" }
+          - { label: "Foto Galería 2", name: "galleryPhoto2", widget: "image" }
+          - { label: "Foto Galería 3", name: "galleryPhoto3", widget: "image" }
+
+      # Contact Page English
+      - name: "contact_en"
+        label: "Contact Page (English)"
+        file: "content/contact_en.md"
+        fields:
+          - { label: "Contact Title", name: "contactTitle", widget: "markdown" }
+          - {
+              label: "Contact Subtitle",
+              name: "contactSubtitle",
+              widget: "string",
+            }
+          - label: "Form"
+            name: "form"
+            widget: "object"
+            fields:
+              - { label: "Full Name", name: "fullName", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+              - { label: "Company Name", name: "companyName", widget: "string" }
+              - {
+                  label: "Services You Are Looking For",
+                  name: "services",
+                  widget: "list",
+                  field:
+                    { label: "Service", name: "service", widget: "string" },
+                }
+              - {
+                  label: "Budget",
+                  name: "budget",
+                  widget: "list",
+                  field:
+                    {
+                      label: "Budget Option",
+                      name: "budgetOption",
+                      widget: "string",
+                    },
+                }
+              - {
+                  label: "Project Details",
+                  name: "projectDetails",
+                  widget: "text",
+                }
+              - {
+                  label: "Form Button Text",
+                  name: "formButtonText",
+                  widget: "string",
+                }
+
+      # Contact Page Spanish
+      - name: "contact_es"
+        label: "Página de Contacto (Spanish)"
+        file: "content/contact_es.md"
+        fields:
+          - {
+              label: "Título de Contacto",
+              name: "contactTitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Subtítulo de Contacto",
+              name: "contactSubtitle",
+              widget: "string",
+            }
+          - label: "Formulario"
+            name: "form"
+            widget: "object"
+            fields:
+              - { label: "Nombre Completo", name: "fullName", widget: "string" }
+              - { label: "Correo Electrónico", name: "email", widget: "string" }
+              - {
+                  label: "Número de Teléfono",
+                  name: "phoneNumber",
+                  widget: "string",
+                }
+              - {
+                  label: "Nombre de la Empresa",
+                  name: "companyName",
+                  widget: "string",
+                }
+              - {
+                  label: "Servicios Que Busca",
+                  name: "services",
+                  widget: "list",
+                  field:
+                    { label: "Servicio", name: "service", widget: "string" },
+                }
+              - {
+                  label: "Presupuesto",
+                  name: "budget",
+                  widget: "list",
+                  field:
+                    {
+                      label: "Opción de Presupuesto",
+                      name: "budgetOption",
+                      widget: "string",
+                    },
+                }
+              - {
+                  label: "Detalles del Proyecto",
+                  name: "projectDetails",
+                  widget: "text",
+                }
+              - {
+                  label: "Texto del Botón",
+                  name: "formButtonText",
+                  widget: "string",
+                }
+
+  # Colección para Secciones Compartidas
+  - name: "shared"
+    label: "Shared Sections"
+    create: true
+    delete: false
+    files:
       - name: "shared_en"
         label: "Shared Sections (English)"
         file: "content/shared_en.md"
         fields:
+          # SERVICIOS Section
           - { label: "Services Title", name: "servicesTitle", widget: "string" }
           - {
               label: "Services Description",
@@ -213,6 +473,7 @@ collections:
                   name: "serviceImage",
                   widget: "image",
                 }
+          # OUR MISSION Section
           - { label: "Mission Title", name: "missionTitle", widget: "string" }
           - {
               label: "Mission Subtitle",
@@ -225,6 +486,7 @@ collections:
               name: "backgroundPhoto",
               widget: "image",
             }
+          # TESTIMONIALS Section
           - {
               label: "Testimonials Title",
               name: "testimonialsTitle",
@@ -259,43 +521,12 @@ collections:
                   name: "testimonialText",
                   widget: "text",
                 }
-          - { label: "Main CTA Title", name: "mainCtaTitle", widget: "string" }
-          - {
-              label: "Main CTA Subtitle",
-              name: "mainCtaSubtitle",
-              widget: "markdown",
-            }
-          - {
-              label: "Main CTA Button Text",
-              name: "mainCtaButtonText",
-              widget: "string",
-            }
-          - { label: "Avatar Photo", name: "avatarPhoto", widget: "image" }
-          - {
-              label: "Free Session Title",
-              name: "freeSessionTitle",
-              widget: "markdown",
-            }
-          - {
-              label: "Free Session Subtitle",
-              name: "freeSessionSubtitle",
-              widget: "string",
-            }
-          - {
-              label: "Free Session Button Text",
-              name: "freeSessionButtonText",
-              widget: "string",
-            }
-          - {
-              label: "Free Session Button Link",
-              name: "freeSessionButtonLink",
-              widget: "string",
-            }
 
       - name: "shared_es"
         label: "Shared Sections (Spanish)"
         file: "content/shared_es.md"
         fields:
+          # SERVICIOS Section
           - {
               label: "Título Servicios",
               name: "servicesTitle",
@@ -316,6 +547,7 @@ collections:
                   name: "serviceImage",
                   widget: "image",
                 }
+          # OUR MISSION Section
           - { label: "Título Misión", name: "missionTitle", widget: "string" }
           - {
               label: "Subtítulo Misión",
@@ -324,6 +556,7 @@ collections:
             }
           - { label: "Tercer Título", name: "thirdTitle", widget: "string" }
           - { label: "Foto de Fondo", name: "backgroundPhoto", widget: "image" }
+          # TESTIMONIALS Section
           - {
               label: "Título Testimonios",
               name: "testimonialsTitle",
@@ -358,99 +591,59 @@ collections:
                   name: "testimonialText",
                   widget: "text",
                 }
-          - {
-              label: "Título CTA Principal",
-              name: "mainCtaTitle",
-              widget: "string",
-            }
-          - {
-              label: "Subtítulo CTA Principal",
-              name: "mainCtaSubtitle",
-              widget: "markdown",
-            }
-          - {
-              label: "Texto del Botón CTA Principal",
-              name: "mainCtaButtonText",
-              widget: "string",
-            }
-          - { label: "Foto Avatar", name: "avatarPhoto", widget: "image" }
-          - {
-              label: "Título Sesión Gratis",
-              name: "freeSessionTitle",
-              widget: "markdown",
-            }
-          - {
-              label: "Subtítulo Sesión Gratis",
-              name: "freeSessionSubtitle",
-              widget: "string",
-            }
-          - {
-              label: "Texto del Botón Sesión Gratis",
-              name: "freeSessionButtonText",
-              widget: "string",
-            }
-          - {
-              label: "Enlace del Botón Sesión Gratis",
-              name: "freeSessionButtonLink",
-              widget: "string",
-            }
 
-      - name: "navigation_en"
-        label: "Navigation (English)"
-        file: "content/navigation_en.md"
+  # Colección General para Header y Footer
+  - name: "general"
+    label: "General"
+    create: true
+    delete: false
+    files:
+      # Header Configuration
+      - name: "header"
+        label: "Header"
+        file: "content/header.md"
         fields:
           - {
               label: "Header Button Text",
               name: "headerButtonText",
               widget: "string",
             }
-          - label: "Pages"
-            name: "pages"
-            widget: "list"
-            fields:
-              - { label: "Page Title", name: "pageTitle", widget: "string" }
-              - { label: "Page Link", name: "pageLink", widget: "string" }
+          - {
+              label: "Header Social Links",
+              name: "socialLinks",
+              widget: "object",
+              fields:
+                [
+                  { label: "Instagram", name: "instagram", widget: "string" },
+                  { label: "Facebook", name: "facebook", widget: "string" },
+                  { label: "TikTok", name: "tiktok", widget: "string" },
+                  { label: "YouTube", name: "youtube", widget: "string" },
+                  { label: "Pinterest", name: "pinterest", widget: "string" },
+                  { label: "LinkedIn", name: "linkedin", widget: "string" },
+                ],
+            }
 
-      - name: "navigation_es"
-        label: "Navigation (Spanish)"
-        file: "content/navigation_es.md"
+      # Footer Configuration
+      - name: "footer"
+        label: "Footer"
+        file: "content/footer.md"
         fields:
           - {
-              label: "Texto del Botón del Encabezado",
-              name: "headerButtonText",
-              widget: "string",
+              label: "Footer Social Links",
+              name: "socialLinks",
+              widget: "object",
+              fields:
+                [
+                  { label: "Instagram", name: "instagram", widget: "string" },
+                  { label: "Facebook", name: "facebook", widget: "string" },
+                  { label: "TikTok", name: "tiktok", widget: "string" },
+                  { label: "YouTube", name: "youtube", widget: "string" },
+                  { label: "Pinterest", name: "pinterest", widget: "string" },
+                  { label: "LinkedIn", name: "linkedin", widget: "string" },
+                ],
             }
-          - label: "Páginas"
-            name: "pages"
-            widget: "list"
-            fields:
-              - {
-                  label: "Título de la Página",
-                  name: "pageTitle",
-                  widget: "string",
-                }
-              - {
-                  label: "Enlace de la Página",
-                  name: "pageLink",
-                  widget: "string",
-                }
-
-      - name: "footer_en"
-        label: "Footer (English)"
-        file: "content/footer_en.md"
-        fields:
           - {
               label: "Developer Signature",
-              name: "developerSignature",
-              widget: "string",
-            }
-
-      - name: "footer_es"
-        label: "Footer (Spanish)"
-        file: "content/footer_es.md"
-        fields:
-          - {
-              label: "Firma del Desarrollador",
               name: "developerSignature",
               widget: "string",
             }
