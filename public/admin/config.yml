@@ -452,11 +452,11 @@ collections:
     create: true
     delete: false
     files:
-      - name: "shared_en"
-        label: "Shared Sections (English)"
-        file: "content/shared_en.md"
+      # Servicios Section
+      - name: "services_en"
+        label: "Services Section (English)"
+        file: "content/services_en.md"
         fields:
-          # SERVICIOS Section
           - { label: "Services Title", name: "servicesTitle", widget: "string" }
           - {
               label: "Services Description",
@@ -473,7 +473,37 @@ collections:
                   name: "serviceImage",
                   widget: "image",
                 }
-          # OUR MISSION Section
+
+      - name: "services_es"
+        label: "Servicios Section (Spanish)"
+        file: "content/services_es.md"
+        fields:
+          - {
+              label: "Título Servicios",
+              name: "servicesTitle",
+              widget: "string",
+            }
+          - {
+              label: "Descripción Servicios",
+              name: "servicesDescription",
+              widget: "text",
+            }
+          - label: "Subservicios"
+            name: "subservices"
+            widget: "list"
+            fields:
+              - { label: "Subservicio", name: "subservice", widget: "string" }
+              - {
+                  label: "Imagen del Servicio",
+                  name: "serviceImage",
+                  widget: "image",
+                }
+
+      # Mission Section
+      - name: "mission_en"
+        label: "Mission Section (English)"
+        file: "content/mission_en.md"
+        fields:
           - { label: "Mission Title", name: "missionTitle", widget: "string" }
           - {
               label: "Mission Subtitle",
@@ -486,7 +516,25 @@ collections:
               name: "backgroundPhoto",
               widget: "image",
             }
-          # TESTIMONIALS Section
+
+      - name: "mission_es"
+        label: "Misión Section (Spanish)"
+        file: "content/mission_es.md"
+        fields:
+          - { label: "Título Misión", name: "missionTitle", widget: "string" }
+          - {
+              label: "Subtítulo Misión",
+              name: "missionSubtitle",
+              widget: "markdown",
+            }
+          - { label: "Tercer Título", name: "thirdTitle", widget: "string" }
+          - { label: "Foto de Fondo", name: "backgroundPhoto", widget: "image" }
+
+      # Testimonials Section
+      - name: "testimonials_en"
+        label: "Testimonials Section (English)"
+        file: "content/testimonials_en.md"
+        fields:
           - {
               label: "Testimonials Title",
               name: "testimonialsTitle",
@@ -522,41 +570,10 @@ collections:
                   widget: "text",
                 }
 
-      - name: "shared_es"
-        label: "Shared Sections (Spanish)"
-        file: "content/shared_es.md"
+      - name: "testimonials_es"
+        label: "Testimonios Section (Spanish)"
+        file: "content/testimonials_es.md"
         fields:
-          # SERVICIOS Section
-          - {
-              label: "Título Servicios",
-              name: "servicesTitle",
-              widget: "string",
-            }
-          - {
-              label: "Descripción Servicios",
-              name: "servicesDescription",
-              widget: "text",
-            }
-          - label: "Subservicios"
-            name: "subservices"
-            widget: "list"
-            fields:
-              - { label: "Subservicio", name: "subservice", widget: "string" }
-              - {
-                  label: "Imagen del Servicio",
-                  name: "serviceImage",
-                  widget: "image",
-                }
-          # OUR MISSION Section
-          - { label: "Título Misión", name: "missionTitle", widget: "string" }
-          - {
-              label: "Subtítulo Misión",
-              name: "missionSubtitle",
-              widget: "markdown",
-            }
-          - { label: "Tercer Título", name: "thirdTitle", widget: "string" }
-          - { label: "Foto de Fondo", name: "backgroundPhoto", widget: "image" }
-          # TESTIMONIALS Section
           - {
               label: "Título Testimonios",
               name: "testimonialsTitle",
