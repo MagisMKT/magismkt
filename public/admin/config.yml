@@ -33,12 +33,12 @@ collections:
             }
           - { label: "CTA Text", name: "ctaText", widget: "string" }
           - { label: "CTA Video Text", name: "ctaVideoText", widget: "string" }
-          # VIDEO (Compartido)
+          # VIDEO (Referenciado desde general)
           - {
               label: "Upload Video",
               name: "videoUrl",
               widget: "relation",
-              collection: "shared",
+              collection: "general",
               file: "video",
               value_field: "videoUrl",
               search_fields: ["videoUrl"],
@@ -47,7 +47,7 @@ collections:
               label: "Full Video",
               name: "fullVideo",
               widget: "relation",
-              collection: "shared",
+              collection: "general",
               file: "video",
               value_field: "fullVideo",
               search_fields: ["fullVideo"],
@@ -95,12 +95,12 @@ collections:
               name: "ctaVideoText",
               widget: "string",
             }
-          # VIDEO (Compartido)
+          # VIDEO (Referenciado desde general)
           - {
               label: "Subir Video",
               name: "videoUrl",
               widget: "relation",
-              collection: "shared",
+              collection: "general",
               file: "video",
               value_field: "videoUrl",
               search_fields: ["videoUrl"],
@@ -109,7 +109,7 @@ collections:
               label: "Video Completo",
               name: "fullVideo",
               widget: "relation",
-              collection: "shared",
+              collection: "general",
               file: "video",
               value_field: "fullVideo",
               search_fields: ["fullVideo"],
@@ -417,26 +417,41 @@ collections:
             fields:
               - { label: "Photo", name: "photo", widget: "image" }
 
-      # Video Compartido
-      - name: "video"
-        label: "Video"
-        file: "content/video.md"
-        fields:
-          - { label: "Upload Video", name: "videoUrl", widget: "file" }
-          - { label: "Full Video", name: "fullVideo", widget: "string" }
-
       # Misión (Mission Section)
       - name: "mission"
         label: "Mission Section"
         file: "content/mission.md"
         fields:
-          - { label: "Mission Title", name: "missionTitle", widget: "markdown" }
           - {
-              label: "Mission Subtitle",
-              name: "missionSubtitle",
+              label: "Mission Title (English)",
+              name: "missionTitleEn",
               widget: "markdown",
             }
-          - { label: "Third Title", name: "thirdTitle", widget: "markdown" }
+          - {
+              label: "Mission Subtitle (English)",
+              name: "missionSubtitleEn",
+              widget: "markdown",
+            }
+          - {
+              label: "Third Title (English)",
+              name: "thirdTitleEn",
+              widget: "markdown",
+            }
+          - {
+              label: "Mission Title (Spanish)",
+              name: "missionTitleEs",
+              widget: "markdown",
+            }
+          - {
+              label: "Mission Subtitle (Spanish)",
+              name: "missionSubtitleEs",
+              widget: "markdown",
+            }
+          - {
+              label: "Third Title (Spanish)",
+              name: "thirdTitleEs",
+              widget: "markdown",
+            }
           - {
               label: "Background Photo",
               name: "backgroundPhoto",
@@ -449,13 +464,23 @@ collections:
         file: "content/testimonials.md"
         fields:
           - {
-              label: "Testimonials Title",
-              name: "testimonialsTitle",
+              label: "Testimonials Title (English)",
+              name: "testimonialsTitleEn",
               widget: "markdown",
             }
           - {
-              label: "Testimonials Subtitle",
-              name: "testimonialsSubtitle",
+              label: "Testimonials Subtitle (English)",
+              name: "testimonialsSubtitleEn",
+              widget: "markdown",
+            }
+          - {
+              label: "Testimonials Title (Spanish)",
+              name: "testimonialsTitleEs",
+              widget: "markdown",
+            }
+          - {
+              label: "Testimonials Subtitle (Spanish)",
+              name: "testimonialsSubtitleEs",
               widget: "markdown",
             }
           - label: "Testimonials"
@@ -473,8 +498,13 @@ collections:
                   widget: "string",
                 }
               - {
-                  label: "Testimonial Role",
-                  name: "testimonialRole",
+                  label: "Testimonial Role (English)",
+                  name: "testimonialRoleEn",
+                  widget: "string",
+                }
+              - {
+                  label: "Testimonial Role (Spanish)",
+                  name: "testimonialRoleEs",
                   widget: "string",
                 }
               - {
@@ -488,11 +518,34 @@ collections:
         label: "Main CTA Section"
         file: "content/main_cta.md"
         fields:
-          - { label: "CTA Title", name: "ctaTitle", widget: "markdown" }
-          - { label: "CTA Subtitle", name: "ctaSubtitle", widget: "markdown" }
           - {
-              label: "CTA Button Text",
-              name: "ctaButtonText",
+              label: "CTA Title (English)",
+              name: "ctaTitleEn",
+              widget: "markdown",
+            }
+          - {
+              label: "CTA Subtitle (English)",
+              name: "ctaSubtitleEn",
+              widget: "markdown",
+            }
+          - {
+              label: "CTA Title (Spanish)",
+              name: "ctaTitleEs",
+              widget: "markdown",
+            }
+          - {
+              label: "CTA Subtitle (Spanish)",
+              name: "ctaSubtitleEs",
+              widget: "markdown",
+            }
+          - {
+              label: "CTA Button Text (English)",
+              name: "ctaButtonTextEn",
+              widget: "string",
+            }
+          - {
+              label: "CTA Button Text (Spanish)",
+              name: "ctaButtonTextEs",
               widget: "string",
             }
 
@@ -502,9 +555,28 @@ collections:
         file: "content/free_session_cta.md"
         fields:
           - { label: "Avatar Photo", name: "avatarPhoto", widget: "image" }
-          - { label: "Title", name: "title", widget: "markdown" }
-          - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Title (English)", name: "titleEn", widget: "markdown" }
+          - { label: "Title (Spanish)", name: "titleEs", widget: "markdown" }
+          - {
+              label: "Subtitle (English)",
+              name: "subtitleEn",
+              widget: "string",
+            }
+          - {
+              label: "Subtitle (Spanish)",
+              name: "subtitleEs",
+              widget: "string",
+            }
+          - {
+              label: "Button Text (English)",
+              name: "buttonTextEn",
+              widget: "string",
+            }
+          - {
+              label: "Button Text (Spanish)",
+              name: "buttonTextEs",
+              widget: "string",
+            }
           - { label: "Button Link", name: "buttonLink", widget: "string" }
 
   # Colección General para Header y Footer
@@ -553,3 +625,11 @@ collections:
               name: "developerSignatureEs",
               widget: "string",
             }
+
+      # Video Compartido
+      - name: "video"
+        label: "Video"
+        file: "content/video.md"
+        fields:
+          - { label: "Upload Video", name: "videoUrl", widget: "file" }
+          - { label: "Full Video", name: "fullVideo", widget: "string" }
