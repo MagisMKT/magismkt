@@ -616,17 +616,17 @@ collections:
     delete: false
     files:
       # Header Configuration
-      - name: "header"
-        label: "Header"
+      - name: "general"
+        label: "General"
         file: "content/header.md"
         fields:
           - {
-              label: "Header Button Text",
-              name: "headerButtonText",
+              label: "Contact Button Text",
+              name: "contactButtonText",
               widget: "string",
             }
           - {
-              label: "Header Social Links",
+              label: "Social Links",
               name: "socialLinks",
               widget: "object",
               fields:
@@ -645,20 +645,6 @@ collections:
         label: "Footer"
         file: "content/footer.md"
         fields:
-          - {
-              label: "Footer Social Links",
-              name: "socialLinks",
-              widget: "object",
-              fields:
-                [
-                  { label: "Instagram", name: "instagram", widget: "string" },
-                  { label: "Facebook", name: "facebook", widget: "string" },
-                  { label: "TikTok", name: "tiktok", widget: "string" },
-                  { label: "YouTube", name: "youtube", widget: "string" },
-                  { label: "Pinterest", name: "pinterest", widget: "string" },
-                  { label: "LinkedIn", name: "linkedin", widget: "string" },
-                ],
-            }
           - {
               label: "Developer Signature",
               name: "developerSignature",
