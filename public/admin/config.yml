@@ -425,6 +425,88 @@ collections:
           - { label: "Upload Video", name: "videoUrl", widget: "file" }
           - { label: "Full Video", name: "fullVideo", widget: "string" }
 
+      # Misión (Mission Section)
+      - name: "mission"
+        label: "Mission Section"
+        file: "content/mission.md"
+        fields:
+          - { label: "Mission Title", name: "missionTitle", widget: "markdown" }
+          - {
+              label: "Mission Subtitle",
+              name: "missionSubtitle",
+              widget: "markdown",
+            }
+          - { label: "Third Title", name: "thirdTitle", widget: "markdown" }
+          - {
+              label: "Background Photo",
+              name: "backgroundPhoto",
+              widget: "image",
+            }
+
+      # Testimonials Section
+      - name: "testimonials"
+        label: "Testimonials Section"
+        file: "content/testimonials.md"
+        fields:
+          - {
+              label: "Testimonials Title",
+              name: "testimonialsTitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Testimonials Subtitle",
+              name: "testimonialsSubtitle",
+              widget: "markdown",
+            }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - {
+                  label: "Testimonial Image",
+                  name: "testimonialImage",
+                  widget: "image",
+                }
+              - {
+                  label: "Testimonial Name",
+                  name: "testimonialName",
+                  widget: "string",
+                }
+              - {
+                  label: "Testimonial Role",
+                  name: "testimonialRole",
+                  widget: "string",
+                }
+              - {
+                  label: "Testimonial Text",
+                  name: "testimonialText",
+                  widget: "text",
+                }
+
+      # Main CTA Section
+      - name: "main_cta"
+        label: "Main CTA Section"
+        file: "content/main_cta.md"
+        fields:
+          - { label: "CTA Title", name: "ctaTitle", widget: "markdown" }
+          - { label: "CTA Subtitle", name: "ctaSubtitle", widget: "markdown" }
+          - {
+              label: "CTA Button Text",
+              name: "ctaButtonText",
+              widget: "string",
+            }
+
+      # Free Session CTA
+      - name: "free_session_cta"
+        label: "Free Session CTA"
+        file: "content/free_session_cta.md"
+        fields:
+          - { label: "Avatar Photo", name: "avatarPhoto", widget: "image" }
+          - { label: "Title", name: "title", widget: "markdown" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Button Link", name: "buttonLink", widget: "string" }
+
   # Colección General para Header y Footer
   - name: "general"
     label: "General"
@@ -461,20 +543,6 @@ collections:
         label: "Footer"
         file: "content/footer.md"
         fields:
-          - {
-              label: "Footer Social Links",
-              name: "socialLinks",
-              widget: "object",
-              fields:
-                [
-                  { label: "Instagram", name: "instagram", widget: "string" },
-                  { label: "Facebook", name: "facebook", widget: "string" },
-                  { label: "TikTok", name: "tiktok", widget: "string" },
-                  { label: "YouTube", name: "youtube", widget: "string" },
-                  { label: "Pinterest", name: "pinterest", widget: "string" },
-                  { label: "LinkedIn", name: "linkedin", widget: "string" },
-                ],
-            }
           - {
               label: "Developer Signature (English)",
               name: "developerSignatureEn",
