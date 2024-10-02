@@ -52,13 +52,34 @@ collections:
               value_field: "fullVideo",
               search_fields: ["fullVideo"],
             }
+          # WHO WE ARE
+          - {
+              label: "Who We Are Title",
+              name: "whoWeAreTitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Who We Are Subtitle",
+              name: "whoWeAreSubtitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Who We Are Paragraph",
+              name: "whoWeAreParagraph",
+              widget: "markdown",
+            }
+          - {
+              label: "Who We Are Button Text",
+              name: "whoWeAreButtonText",
+              widget: "string",
+            }
           # OUR CLIENTS (Referenciado desde la colección "shared")
           - {
               label: "Clients",
               name: "clients",
               widget: "relation",
               collection: "shared",
-              file: "clients",
+              file: "clients_en",
               value_field: "clients",
               search_fields: ["clientName"],
             }
@@ -114,13 +135,34 @@ collections:
               value_field: "fullVideo",
               search_fields: ["fullVideo"],
             }
+          # WHO WE ARE
+          - {
+              label: "Título ¿Quiénes Somos?",
+              name: "whoWeAreTitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Subtítulo ¿Quiénes Somos?",
+              name: "whoWeAreSubtitle",
+              widget: "markdown",
+            }
+          - {
+              label: "Párrafo ¿Quiénes Somos?",
+              name: "whoWeAreParagraph",
+              widget: "markdown",
+            }
+          - {
+              label: "Texto del Botón ¿Quiénes Somos?",
+              name: "whoWeAreButtonText",
+              widget: "string",
+            }
           # OUR CLIENTS (Referenciado desde la colección "shared")
           - {
               label: "Clientes",
               name: "clients",
               widget: "relation",
               collection: "shared",
-              file: "clients",
+              file: "clients_es",
               value_field: "clients",
               search_fields: ["clientName"],
             }
@@ -380,10 +422,10 @@ collections:
     create: true
     delete: false
     files:
-      # Clientes Compartidos
-      - name: "clients"
-        label: "Clients"
-        file: "content/clients.md"
+      # Clientes Compartidos (separados por idioma)
+      - name: "clients_en"
+        label: "Clients (English)"
+        file: "content/clients_en.md"
         fields:
           - label: "Clients"
             name: "clients"
@@ -391,6 +433,25 @@ collections:
             fields:
               - { label: "Client Name", name: "clientName", widget: "string" }
               - { label: "Client Image", name: "clientImage", widget: "image" }
+
+      - name: "clients_es"
+        label: "Clientes (Spanish)"
+        file: "content/clients_es.md"
+        fields:
+          - label: "Clientes"
+            name: "clients"
+            widget: "list"
+            fields:
+              - {
+                  label: "Nombre del Cliente",
+                  name: "clientName",
+                  widget: "string",
+                }
+              - {
+                  label: "Imagen del Cliente",
+                  name: "clientImage",
+                  widget: "image",
+                }
 
       # Team Members Compartidos
       - name: "team"
