@@ -21,8 +21,16 @@ collections:
           - { label: "Word 1", name: "word1", widget: "string" }
           - { label: "Word 2", name: "word2", widget: "string" }
           - { label: "Word 3", name: "word3", widget: "string" }
-          - { label: "Subtitle Part1", name: "subtitlePart1", widget: "string" }
-          - { label: "Subtitle Part2", name: "subtitlePart2", widget: "string" }
+          - {
+              label: "Subtitle Part1",
+              name: "subtitlePart1",
+              widget: "markdown",
+            }
+          - {
+              label: "Subtitle Part2",
+              name: "subtitlePart2",
+              widget: "markdown",
+            }
           - { label: "CTA Text", name: "ctaText", widget: "string" }
           - { label: "CTA Video Text", name: "ctaVideoText", widget: "string" }
           - { label: "Upload Video", name: "videoUrl", widget: "file" }
@@ -31,7 +39,7 @@ collections:
           - {
               label: "Who We Are Title",
               name: "whoWeAreTitle",
-              widget: "string",
+              widget: "markdown",
             }
           - {
               label: "Who We Are Subtitle",
@@ -52,7 +60,7 @@ collections:
           - {
               label: "What We Do Title",
               name: "whatWeDoTitle",
-              widget: "string",
+              widget: "markdown",
             }
           - {
               label: "What We Do Subtitle",
@@ -73,7 +81,7 @@ collections:
           - {
               label: "Our Clients Title",
               name: "ourClientsTitle",
-              widget: "string",
+              widget: "markdown",
             }
           - {
               label: "Our Clients Subtitle",
@@ -106,12 +114,12 @@ collections:
           - {
               label: "Subtítulo Parte 1",
               name: "subtitlePart1",
-              widget: "string",
+              widget: "markdown",
             }
           - {
               label: "Subtítulo Parte 2",
               name: "subtitlePart2",
-              widget: "string",
+              widget: "markdown",
             }
           - { label: "Texto del CTA", name: "ctaText", widget: "string" }
           - {
@@ -125,7 +133,7 @@ collections:
           - {
               label: "Título ¿Quiénes Somos?",
               name: "whoWeAreTitle",
-              widget: "string",
+              widget: "markdown",
             }
           - {
               label: "Subtítulo ¿Quiénes Somos?",
@@ -146,7 +154,7 @@ collections:
           - {
               label: "Título ¿Qué Hacemos?",
               name: "whatWeDoTitle",
-              widget: "string",
+              widget: "markdown",
             }
           - {
               label: "Subtítulo ¿Qué Hacemos?",
@@ -167,7 +175,7 @@ collections:
           - {
               label: "Título Nuestros Clientes",
               name: "ourClientsTitle",
-              widget: "string",
+              widget: "markdown",
             }
           - {
               label: "Subtítulo Nuestros Clientes",
@@ -202,7 +210,7 @@ collections:
         file: "content/who_we_are_en.md"
         fields:
           # HERO SECTION
-          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Title", name: "heroTitle", widget: "markdown" }
           - { label: "Hero Subtitle", name: "heroSubtitle", widget: "markdown" }
           - {
               label: "Hero Button Text",
@@ -242,7 +250,7 @@ collections:
               - { label: "Full Name", name: "fullName", widget: "string" }
               - { label: "Role", name: "role", widget: "string" }
               - { label: "Photo", name: "photo", widget: "image" }
-              - { label: "Video", name: "video", widget: "string" }
+              - { label: "Video", name: "video", widget: "file" }
           - {
               label: "Team CTA Title",
               name: "teamCtaTitle",
@@ -269,7 +277,7 @@ collections:
         file: "content/who_we_are_es.md"
         fields:
           # HERO SECTION
-          - { label: "Título Principal", name: "heroTitle", widget: "string" }
+          - { label: "Título Principal", name: "heroTitle", widget: "markdown" }
           - {
               label: "Subtítulo Principal",
               name: "heroSubtitle",
@@ -317,7 +325,7 @@ collections:
               - { label: "Nombre Completo", name: "fullName", widget: "string" }
               - { label: "Rol", name: "role", widget: "string" }
               - { label: "Foto", name: "photo", widget: "image" }
-              - { label: "Video", name: "video", widget: "string" }
+              - { label: "Video", name: "video", widget: "file" }
           - {
               label: "Título CTA del Equipo",
               name: "teamCtaTitle",
@@ -347,7 +355,7 @@ collections:
           - {
               label: "Contact Subtitle",
               name: "contactSubtitle",
-              widget: "string",
+              widget: "markdown",
             }
           - label: "Form"
             name: "form"
@@ -399,7 +407,7 @@ collections:
           - {
               label: "Subtítulo de Contacto",
               name: "contactSubtitle",
-              widget: "string",
+              widget: "markdown",
             }
           - label: "Formulario"
             name: "form"
@@ -457,7 +465,11 @@ collections:
         label: "Services Section (English)"
         file: "content/services_en.md"
         fields:
-          - { label: "Services Title", name: "servicesTitle", widget: "string" }
+          - {
+              label: "Services Title",
+              name: "servicesTitle",
+              widget: "markdown",
+            }
           - {
               label: "Services Description",
               name: "servicesDescription",
@@ -481,7 +493,7 @@ collections:
           - {
               label: "Título Servicios",
               name: "servicesTitle",
-              widget: "string",
+              widget: "markdown",
             }
           - {
               label: "Descripción Servicios",
@@ -504,13 +516,13 @@ collections:
         label: "Mission Section (English)"
         file: "content/mission_en.md"
         fields:
-          - { label: "Mission Title", name: "missionTitle", widget: "string" }
+          - { label: "Mission Title", name: "missionTitle", widget: "markdown" }
           - {
               label: "Mission Subtitle",
               name: "missionSubtitle",
               widget: "markdown",
             }
-          - { label: "Third Title", name: "thirdTitle", widget: "string" }
+          - { label: "Third Title", name: "thirdTitle", widget: "markdown" }
           - {
               label: "Background Photo",
               name: "backgroundPhoto",
@@ -521,13 +533,13 @@ collections:
         label: "Misión Section (Spanish)"
         file: "content/mission_es.md"
         fields:
-          - { label: "Título Misión", name: "missionTitle", widget: "string" }
+          - { label: "Título Misión", name: "missionTitle", widget: "markdown" }
           - {
               label: "Subtítulo Misión",
               name: "missionSubtitle",
               widget: "markdown",
             }
-          - { label: "Tercer Título", name: "thirdTitle", widget: "string" }
+          - { label: "Tercer Título", name: "thirdTitle", widget: "markdown" }
           - { label: "Foto de Fondo", name: "backgroundPhoto", widget: "image" }
 
       # Testimonials Section
@@ -538,7 +550,7 @@ collections:
           - {
               label: "Testimonials Title",
               name: "testimonialsTitle",
-              widget: "string",
+              widget: "markdown",
             }
           - {
               label: "Testimonials Subtitle",
@@ -577,7 +589,7 @@ collections:
           - {
               label: "Título Testimonios",
               name: "testimonialsTitle",
-              widget: "string",
+              widget: "markdown",
             }
           - {
               label: "Subtítulo Testimonios",
@@ -616,17 +628,17 @@ collections:
     delete: false
     files:
       # Header Configuration
-      - name: "general"
-        label: "General"
+      - name: "header"
+        label: "Header"
         file: "content/header.md"
         fields:
           - {
-              label: "Contact Button Text",
-              name: "contactButtonText",
+              label: "Header Button Text",
+              name: "headerButtonText",
               widget: "string",
             }
           - {
-              label: "Social Links",
+              label: "Header Social Links",
               name: "socialLinks",
               widget: "object",
               fields:
@@ -646,7 +658,26 @@ collections:
         file: "content/footer.md"
         fields:
           - {
-              label: "Developer Signature",
-              name: "developerSignature",
+              label: "Footer Social Links",
+              name: "socialLinks",
+              widget: "object",
+              fields:
+                [
+                  { label: "Instagram", name: "instagram", widget: "string" },
+                  { label: "Facebook", name: "facebook", widget: "string" },
+                  { label: "TikTok", name: "tiktok", widget: "string" },
+                  { label: "YouTube", name: "youtube", widget: "string" },
+                  { label: "Pinterest", name: "pinterest", widget: "string" },
+                  { label: "LinkedIn", name: "linkedin", widget: "string" },
+                ],
+            }
+          - {
+              label: "Developer Signature (English)",
+              name: "developerSignatureEn",
+              widget: "string",
+            }
+          - {
+              label: "Firma del Desarrollador (Español)",
+              name: "developerSignatureEs",
               widget: "string",
             }
