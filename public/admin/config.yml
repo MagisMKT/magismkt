@@ -88,13 +88,13 @@ collections:
               - { label: "Client Image", name: "clientImage", widget: "image" }
           # CALL TO ACTION (CTA)
           - {
-              label: "CTA Title",
+              label: "Our clients CTA Title",
               name: "ctaTitle",
               widget: "markdown",
               i18n: true,
             }
           - {
-              label: "CTA Button Text",
+              label: "Our clients CTA Button Text",
               name: "ctaButtonText",
               widget: "string",
               i18n: true,
