@@ -25,10 +25,14 @@ function HomePage({ home }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const home = await getMarkdownContent(`home_${locale}`);
+  const home = await getMarkdownContent("home");
+
+  // Seleccionamos el contenido basado en el idioma
+  const localizedContent = home[locale]; // Asume que los campos tienen un objeto con las traducciones
+
   return {
     props: {
-      home,
+      home: localizedContent, // Cargamos solo el contenido relevante para el idioma
     },
   };
 }

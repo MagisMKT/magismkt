@@ -49,7 +49,7 @@ function HeroSection({ home }) {
         <div className="relative z-30 max-w-4xl px-4 flex flex-col justify-center text-center w-full">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-9xl font-bold leading-tight mb-4 tracking-tighter lg:-ml-64">
-            {home.word1}.
+            {home.word1}
           </h1>
           <div className="flex gap-4 lg:gap-8 justify-end items-center mb-4">
             {/* Subtitle */}
@@ -60,13 +60,13 @@ function HeroSection({ home }) {
               </span>
             </h2>
             <h1 className="block sm:inline font-ramillas font-extrabold italic text-4xl md:text-6xl lg:text-9xl">
-              <span className="text-105">{home.word2}.</span>
+              <span className="text-105">{home.word2}</span>
             </h1>
           </div>
 
           <div className="flex gap-4 lg:gap-10 items-center justify-center ">
             <h1 className="text-4xl md:text-6xl lg:text-9xl font-bold leading-tight">
-              {home.word3}.
+              {home.word3}
             </h1>
             {/* Video Play Button */}
             <div
