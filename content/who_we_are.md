@@ -5,10 +5,10 @@ en:
   heroTitle: Who *we are*
   heroButtonText: Meet the Team
   storyTitle: Our *Story*
-  storySubtitle: Driving Success with a <span class="text-pink dark:text-pink
+  storySubtitle: '`Driving Success with a <span class="text-pink dark:text-pink
     font-ramillas italic font-bold text-110"><span
     class="text-pinkSecondary">Feminine Touch:</span><br>Meet Magis
-    Marketing</span>
+    Marketing</span> `'
   storyParagraph1: Founded in 2019 and based in Texas, Magis has embarked on an
     incredible journey marked by challenges and obstacles. Through it all, our
     team has risen to the occasion, demonstrating resilience, creativity, and
@@ -24,10 +24,10 @@ es:
   heroSubtitle: Somos un equipo multidisciplinario *100% liderado por mujeres.*
   heroButtonText: Conoce al Team
   storyTitle: Nuestra *historia*
-  storySubtitle: Impulsando el éxito con un <span class="text-pink dark:text-pink
-    font-ramillas italic font-bold text-110"><span
+  storySubtitle: '`Impulsando el éxito con un <span class="text-pink
+    dark:text-pink font-ramillas italic font-bold text-110"><span
     class="text-pinkSecondary">Toque Femenino:</span><br>Conoce Magis
-    Marketing</span>
+    Marketing</span>`'
   storyParagraph1: Fundada en 2019 y con sede en Texas, Magis ha emprendido un
     increíble viaje lleno de desafíos y obstáculos. A lo largo de todo este
     recorrido, nuestro equipo ha estado a la altura, demostrando resiliencia,
