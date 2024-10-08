@@ -5,323 +5,194 @@ backend:
 media_folder: "public/images"
 public_folder: "/images"
 
+i18n:
+  structure: multiple_files # Usaremos varios archivos para diferentes idiomas
+  locales:
+    - en
+    - es
+
 collections:
   # Colección para las páginas individuales (Home, Who We Are, Contact, etc.)
   - name: "pages"
     label: "Pages"
+    folder: "content/pages"
     create: true
-    delete: false
+    i18n: true # Habilitamos soporte para i18n en la colección
     files:
-      # Home Page English
-      - name: "home_en"
-        label: "Home Page (English)"
-        file: "content/home_en.md"
+      - name: "home"
+        label: "Home Page"
+        file: "content/home.md"
+        i18n: true
         fields:
           # HERO SECTION
-          - { label: "Word 1", name: "word1", widget: "string" }
-          - { label: "Word 2", name: "word2", widget: "string" }
-          - { label: "Word 3", name: "word3", widget: "string" }
+          - { label: "Word 1", name: "word1", widget: "string", i18n: true }
+          - { label: "Word 2", name: "word2", widget: "string", i18n: true }
+          - { label: "Word 3", name: "word3", widget: "string", i18n: true }
           - {
               label: "Subtitle Part1",
               name: "subtitlePart1",
               widget: "markdown",
+              i18n: true,
             }
           - {
               label: "Subtitle Part2",
               name: "subtitlePart2",
               widget: "markdown",
+              i18n: true,
             }
-          - { label: "CTA Text", name: "ctaText", widget: "string" }
-          - { label: "CTA Video Text", name: "ctaVideoText", widget: "string" }
-          # VIDEO (Referenciado desde general)
+          - { label: "CTA Text", name: "ctaText", widget: "string", i18n: true }
           - {
-              label: "Upload Video",
-              name: "videoUrl",
-              widget: "relation",
-              collection: "general",
-              file: "video",
-              value_field: "videoUrl",
-              search_fields: ["videoUrl"],
-            }
-          - {
-              label: "Full Video",
-              name: "fullVideo",
-              widget: "relation",
-              collection: "general",
-              file: "video",
-              value_field: "fullVideo",
-              search_fields: ["fullVideo"],
+              label: "CTA Video Text",
+              name: "ctaVideoText",
+              widget: "string",
+              i18n: true,
             }
           # WHO WE ARE
           - {
               label: "Who We Are Title",
               name: "whoWeAreTitle",
               widget: "markdown",
+              i18n: true,
             }
           - {
               label: "Who We Are Subtitle",
               name: "whoWeAreSubtitle",
               widget: "markdown",
+              i18n: true,
             }
           - {
               label: "Who We Are Paragraph",
               name: "whoWeAreParagraph",
               widget: "markdown",
+              i18n: true,
             }
           - {
               label: "Who We Are Button Text",
               name: "whoWeAreButtonText",
               widget: "string",
+              i18n: true,
             }
-          # OUR CLIENTS (Referenciado desde la colección "shared")
-          - {
-              label: "Clients",
-              name: "clients",
-              widget: "relation",
-              collection: "shared",
-              file: "clients_en",
-              value_field: "clients",
-              search_fields: ["clientName"],
-            }
+          # OUR CLIENTS (Separa imagen y nombre por idioma)
+          - label: "Clients"
+            name: "clients"
+            widget: "list"
+            i18n: true
+            fields:
+              - {
+                  label: "Client Name",
+                  name: "clientName",
+                  widget: "string",
+                  i18n: true,
+                }
+              - {
+                  label: "Client Image",
+                  name: "clientImage",
+                  widget: "image",
+                  i18n: true,
+                }
           # CALL TO ACTION (CTA)
-          - { label: "CTA Title", name: "ctaTitle", widget: "markdown" }
+          - {
+              label: "CTA Title",
+              name: "ctaTitle",
+              widget: "markdown",
+              i18n: true,
+            }
           - {
               label: "CTA Button Text",
               name: "ctaButtonText",
               widget: "string",
+              i18n: true,
             }
 
-      # Home Page Spanish
-      - name: "home_es"
-        label: "Home Page (Spanish)"
-        file: "content/home_es.md"
+      - name: "who_we_are"
+        label: "Who We Are Page"
+        file: "content/who_we_are.md"
+        i18n: true
         fields:
           # HERO SECTION
-          - { label: "Palabra 1", name: "word1", widget: "string" }
-          - { label: "Palabra 2", name: "word2", widget: "string" }
-          - { label: "Palabra 3", name: "word3", widget: "string" }
           - {
-              label: "Subtítulo Parte 1",
-              name: "subtitlePart1",
+              label: "Hero Title",
+              name: "heroTitle",
               widget: "markdown",
+              i18n: true,
             }
           - {
-              label: "Subtítulo Parte 2",
-              name: "subtitlePart2",
+              label: "Hero Subtitle",
+              name: "heroSubtitle",
               widget: "markdown",
+              i18n: true,
             }
-          - { label: "Texto del CTA", name: "ctaText", widget: "string" }
-          - {
-              label: "Texto del Video CTA",
-              name: "ctaVideoText",
-              widget: "string",
-            }
-          # VIDEO (Referenciado desde general)
-          - {
-              label: "Subir Video",
-              name: "videoUrl",
-              widget: "relation",
-              collection: "general",
-              file: "video",
-              value_field: "videoUrl",
-              search_fields: ["videoUrl"],
-            }
-          - {
-              label: "Video Completo",
-              name: "fullVideo",
-              widget: "relation",
-              collection: "general",
-              file: "video",
-              value_field: "fullVideo",
-              search_fields: ["fullVideo"],
-            }
-          # WHO WE ARE
-          - {
-              label: "Título ¿Quiénes Somos?",
-              name: "whoWeAreTitle",
-              widget: "markdown",
-            }
-          - {
-              label: "Subtítulo ¿Quiénes Somos?",
-              name: "whoWeAreSubtitle",
-              widget: "markdown",
-            }
-          - {
-              label: "Párrafo ¿Quiénes Somos?",
-              name: "whoWeAreParagraph",
-              widget: "markdown",
-            }
-          - {
-              label: "Texto del Botón ¿Quiénes Somos?",
-              name: "whoWeAreButtonText",
-              widget: "string",
-            }
-          # OUR CLIENTS (Referenciado desde la colección "shared")
-          - {
-              label: "Clientes",
-              name: "clients",
-              widget: "relation",
-              collection: "shared",
-              file: "clients_es",
-              value_field: "clients",
-              search_fields: ["clientName"],
-            }
-          # CALL TO ACTION (CTA)
-          - { label: "Título CTA", name: "ctaTitle", widget: "markdown" }
-          - {
-              label: "Texto del Botón CTA",
-              name: "ctaButtonText",
-              widget: "string",
-            }
-
-      # WHO WE ARE Page English
-      - name: "who_we_are_en"
-        label: "Who We Are Page (English)"
-        file: "content/who_we_are_en.md"
-        fields:
-          # HERO SECTION
-          - { label: "Hero Title", name: "heroTitle", widget: "markdown" }
-          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "markdown" }
           - {
               label: "Hero Button Text",
               name: "heroButtonText",
               widget: "string",
+              i18n: true,
             }
           # STORY
-          - { label: "Story Title", name: "storyTitle", widget: "markdown" }
+          - {
+              label: "Story Title",
+              name: "storyTitle",
+              widget: "markdown",
+              i18n: true,
+            }
           - {
               label: "Story Subtitle",
               name: "storySubtitle",
               widget: "markdown",
+              i18n: true,
             }
           - {
               label: "Story Paragraph 1",
               name: "storyParagraph1",
               widget: "text",
+              i18n: true,
             }
           - {
               label: "Story Paragraph 2",
               name: "storyParagraph2",
               widget: "text",
+              i18n: true,
             }
-          # TEAM MEMBERS (Compartido, pero con role específico)
-          - {
-              label: "Team Members",
-              name: "teamMembers",
-              widget: "relation",
-              collection: "shared",
-              file: "team",
-              value_field: "name",
-              search_fields: ["name"],
-            }
-          - { label: "Role (English)", name: "role", widget: "string" }
-          # GALLERY (Compartido)
-          - {
-              label: "Gallery",
-              name: "gallery",
-              widget: "relation",
-              collection: "shared",
-              file: "gallery",
-              value_field: "photos",
-              search_fields: ["photos"],
-            }
-          - {
-              label: "Team CTA Title",
-              name: "teamCtaTitle",
-              widget: "markdown",
-            }
-          - {
-              label: "Team CTA Button Text",
-              name: "teamCtaButtonText",
-              widget: "string",
-            }
-          - {
-              label: "Team CTA Button Link",
-              name: "teamCtaButtonLink",
-              widget: "string",
-            }
+          # TEAM MEMBERS (Nombre compartido, rol en ambos idiomas)
+          - label: "Team Members"
+            name: "teamMembers"
+            widget: "list"
+            i18n: false # El nombre no necesita traducción
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Full Name", name: "fullName", widget: "string" }
+              - { label: "Role", name: "role", widget: "string", i18n: true } # El rol sí se traduce
+              - { label: "Photo", name: "photo", widget: "image" }
+              - { label: "Video", name: "video", widget: "file" }
+          # GALLERY (Compartida entre idiomas)
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            i18n: false # No requiere traducción
+            fields:
+              - { label: "Photo", name: "photo", widget: "image" }
 
-      # WHO WE ARE Page Spanish
-      - name: "who_we_are_es"
-        label: "Quiénes Somos (Spanish)"
-        file: "content/who_we_are_es.md"
+      - name: "contact"
+        label: "Contact Page"
+        file: "content/contact.md"
+        i18n: true
         fields:
-          # HERO SECTION
-          - { label: "Título Principal", name: "heroTitle", widget: "markdown" }
           - {
-              label: "Subtítulo Principal",
-              name: "heroSubtitle",
+              label: "Contact Title",
+              name: "contactTitle",
               widget: "markdown",
+              i18n: true,
             }
-          - {
-              label: "Texto del Botón Principal",
-              name: "heroButtonText",
-              widget: "string",
-            }
-          # STORY
-          - {
-              label: "Título de la Historia",
-              name: "storyTitle",
-              widget: "markdown",
-            }
-          - {
-              label: "Subtítulo de la Historia",
-              name: "storySubtitle",
-              widget: "markdown",
-            }
-          - { label: "Párrafo 1", name: "storyParagraph1", widget: "text" }
-          - { label: "Párrafo 2", name: "storyParagraph2", widget: "text" }
-          # TEAM MEMBERS (Compartido, pero con role específico)
-          - {
-              label: "Miembros del Equipo",
-              name: "teamMembers",
-              widget: "relation",
-              collection: "shared",
-              file: "team",
-              value_field: "name",
-              search_fields: ["name"],
-            }
-          - { label: "Rol (Español)", name: "role", widget: "string" }
-          # GALLERY (Compartido)
-          - {
-              label: "Galería",
-              name: "gallery",
-              widget: "relation",
-              collection: "shared",
-              file: "gallery",
-              value_field: "photos",
-              search_fields: ["photos"],
-            }
-          - {
-              label: "Título CTA del Equipo",
-              name: "teamCtaTitle",
-              widget: "markdown",
-            }
-          - {
-              label: "Texto del Botón CTA",
-              name: "teamCtaButtonText",
-              widget: "string",
-            }
-          - {
-              label: "Enlace del Botón CTA",
-              name: "teamCtaButtonLink",
-              widget: "string",
-            }
-
-      # Contact Page English
-      - name: "contact_en"
-        label: "Contact Page (English)"
-        file: "content/contact_en.md"
-        fields:
-          - { label: "Contact Title", name: "contactTitle", widget: "markdown" }
           - {
               label: "Contact Subtitle",
               name: "contactSubtitle",
               widget: "markdown",
+              i18n: true,
             }
           - label: "Form"
             name: "form"
             widget: "object"
+            i18n: true
             fields:
               - { label: "Full Name", name: "fullName", widget: "string" }
               - { label: "Email", name: "email", widget: "string" }
@@ -354,164 +225,37 @@ collections:
                   label: "Form Button Text",
                   name: "formButtonText",
                   widget: "string",
-                }
-
-      # Contact Page Spanish
-      - name: "contact_es"
-        label: "Página de Contacto (Spanish)"
-        file: "content/contact_es.md"
-        fields:
-          - {
-              label: "Título de Contacto",
-              name: "contactTitle",
-              widget: "markdown",
-            }
-          - {
-              label: "Subtítulo de Contacto",
-              name: "contactSubtitle",
-              widget: "markdown",
-            }
-          - label: "Formulario"
-            name: "form"
-            widget: "object"
-            fields:
-              - { label: "Nombre Completo", name: "fullName", widget: "string" }
-              - { label: "Correo Electrónico", name: "email", widget: "string" }
-              - {
-                  label: "Número de Teléfono",
-                  name: "phoneNumber",
-                  widget: "string",
-                }
-              - {
-                  label: "Nombre de la Empresa",
-                  name: "companyName",
-                  widget: "string",
-                }
-              - {
-                  label: "Servicios Que Busca",
-                  name: "services",
-                  widget: "list",
-                  field:
-                    { label: "Servicio", name: "service", widget: "string" },
-                }
-              - {
-                  label: "Presupuesto",
-                  name: "budget",
-                  widget: "list",
-                  field:
-                    {
-                      label: "Opción de Presupuesto",
-                      name: "budgetOption",
-                      widget: "string",
-                    },
-                }
-              - {
-                  label: "Detalles del Proyecto",
-                  name: "projectDetails",
-                  widget: "text",
-                }
-              - {
-                  label: "Texto del Botón",
-                  name: "formButtonText",
-                  widget: "string",
+                  i18n: true,
                 }
 
   # Colección para Secciones Compartidas
   - name: "shared"
     label: "Shared Sections"
-    create: true
-    delete: false
+    i18n: true
     files:
-      # Clientes Compartidos (separados por idioma)
-      - name: "clients_en"
-        label: "Clients (English)"
-        file: "content/clients_en.md"
-        fields:
-          - label: "Clients"
-            name: "clients"
-            widget: "list"
-            fields:
-              - { label: "Client Name", name: "clientName", widget: "string" }
-              - { label: "Client Image", name: "clientImage", widget: "image" }
-
-      - name: "clients_es"
-        label: "Clientes (Spanish)"
-        file: "content/clients_es.md"
-        fields:
-          - label: "Clientes"
-            name: "clients"
-            widget: "list"
-            fields:
-              - {
-                  label: "Nombre del Cliente",
-                  name: "clientName",
-                  widget: "string",
-                }
-              - {
-                  label: "Imagen del Cliente",
-                  name: "clientImage",
-                  widget: "image",
-                }
-
-      # Team Members Compartidos
-      - name: "team"
-        label: "Team"
-        file: "content/team.md"
-        fields:
-          - label: "Team Members"
-            name: "teamMembers"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Full Name", name: "fullName", widget: "string" }
-              - { label: "Photo", name: "photo", widget: "image" }
-              - { label: "Video", name: "video", widget: "file" }
-
-      # Gallery Compartida
-      - name: "gallery"
-        label: "Gallery"
-        file: "content/gallery.md"
-        fields:
-          - label: "Photos"
-            name: "photos"
-            widget: "list"
-            fields:
-              - { label: "Photo", name: "photo", widget: "image" }
-
       # Misión (Mission Section)
       - name: "mission"
         label: "Mission Section"
         file: "content/mission.md"
+        i18n: true
         fields:
           - {
-              label: "Mission Title (English)",
-              name: "missionTitleEn",
+              label: "Mission Title",
+              name: "missionTitle",
               widget: "markdown",
+              i18n: true,
             }
           - {
-              label: "Mission Subtitle (English)",
-              name: "missionSubtitleEn",
+              label: "Mission Subtitle",
+              name: "missionSubtitle",
               widget: "markdown",
+              i18n: true,
             }
           - {
-              label: "Third Title (English)",
-              name: "thirdTitleEn",
+              label: "Third Title",
+              name: "thirdTitle",
               widget: "markdown",
-            }
-          - {
-              label: "Mission Title (Spanish)",
-              name: "missionTitleEs",
-              widget: "markdown",
-            }
-          - {
-              label: "Mission Subtitle (Spanish)",
-              name: "missionSubtitleEs",
-              widget: "markdown",
-            }
-          - {
-              label: "Third Title (Spanish)",
-              name: "thirdTitleEs",
-              widget: "markdown",
+              i18n: true,
             }
           - {
               label: "Background Photo",
@@ -523,30 +267,24 @@ collections:
       - name: "testimonials"
         label: "Testimonials Section"
         file: "content/testimonials.md"
+        i18n: true
         fields:
           - {
-              label: "Testimonials Title (English)",
-              name: "testimonialsTitleEn",
+              label: "Testimonials Title",
+              name: "testimonialsTitle",
               widget: "markdown",
+              i18n: true,
             }
           - {
-              label: "Testimonials Subtitle (English)",
-              name: "testimonialsSubtitleEn",
+              label: "Testimonials Subtitle",
+              name: "testimonialsSubtitle",
               widget: "markdown",
-            }
-          - {
-              label: "Testimonials Title (Spanish)",
-              name: "testimonialsTitleEs",
-              widget: "markdown",
-            }
-          - {
-              label: "Testimonials Subtitle (Spanish)",
-              name: "testimonialsSubtitleEs",
-              widget: "markdown",
+              i18n: true,
             }
           - label: "Testimonials"
             name: "testimonials"
             widget: "list"
+            i18n: true
             fields:
               - {
                   label: "Testimonial Image",
@@ -559,102 +297,81 @@ collections:
                   widget: "string",
                 }
               - {
-                  label: "Testimonial Role (English)",
-                  name: "testimonialRoleEn",
+                  label: "Testimonial Role",
+                  name: "testimonialRole",
                   widget: "string",
-                }
-              - {
-                  label: "Testimonial Role (Spanish)",
-                  name: "testimonialRoleEs",
-                  widget: "string",
+                  i18n: true,
                 }
               - {
                   label: "Testimonial Text",
                   name: "testimonialText",
                   widget: "text",
+                  i18n: true,
                 }
 
       # Main CTA Section
       - name: "main_cta"
         label: "Main CTA Section"
         file: "content/main_cta.md"
+        i18n: true
         fields:
           - {
-              label: "CTA Title (English)",
-              name: "ctaTitleEn",
+              label: "CTA Title",
+              name: "ctaTitle",
               widget: "markdown",
+              i18n: true,
             }
           - {
-              label: "CTA Subtitle (English)",
-              name: "ctaSubtitleEn",
+              label: "CTA Subtitle",
+              name: "ctaSubtitle",
               widget: "markdown",
+              i18n: true,
             }
           - {
-              label: "CTA Title (Spanish)",
-              name: "ctaTitleEs",
-              widget: "markdown",
-            }
-          - {
-              label: "CTA Subtitle (Spanish)",
-              name: "ctaSubtitleEs",
-              widget: "markdown",
-            }
-          - {
-              label: "CTA Button Text (English)",
-              name: "ctaButtonTextEn",
+              label: "CTA Button Text",
+              name: "ctaButtonText",
               widget: "string",
-            }
-          - {
-              label: "CTA Button Text (Spanish)",
-              name: "ctaButtonTextEs",
-              widget: "string",
+              i18n: true,
             }
 
       # Free Session CTA
       - name: "free_session_cta"
         label: "Free Session CTA"
         file: "content/free_session_cta.md"
+        i18n: true
         fields:
           - { label: "Avatar Photo", name: "avatarPhoto", widget: "image" }
-          - { label: "Title (English)", name: "titleEn", widget: "markdown" }
-          - { label: "Title (Spanish)", name: "titleEs", widget: "markdown" }
+          - { label: "Title", name: "title", widget: "markdown", i18n: true }
           - {
-              label: "Subtitle (English)",
-              name: "subtitleEn",
+              label: "Subtitle",
+              name: "subtitle",
               widget: "string",
+              i18n: true,
             }
           - {
-              label: "Subtitle (Spanish)",
-              name: "subtitleEs",
+              label: "Button Text",
+              name: "buttonText",
               widget: "string",
-            }
-          - {
-              label: "Button Text (English)",
-              name: "buttonTextEn",
-              widget: "string",
-            }
-          - {
-              label: "Button Text (Spanish)",
-              name: "buttonTextEs",
-              widget: "string",
+              i18n: true,
             }
           - { label: "Button Link", name: "buttonLink", widget: "string" }
 
   # Colección General para Header y Footer
   - name: "general"
     label: "General"
-    create: true
-    delete: false
+    i18n: true
     files:
       # Header Configuration
       - name: "header"
         label: "Header"
         file: "content/header.md"
+        i18n: false # Social Links no requieren traducción
         fields:
           - {
               label: "Header Button Text",
               name: "headerButtonText",
               widget: "string",
+              i18n: true,
             }
           - {
               label: "Header Social Links",
@@ -677,20 +394,17 @@ collections:
         file: "content/footer.md"
         fields:
           - {
-              label: "Developer Signature (English)",
-              name: "developerSignatureEn",
+              label: "Developer Signature",
+              name: "developerSignature",
               widget: "string",
-            }
-          - {
-              label: "Firma del Desarrollador (Español)",
-              name: "developerSignatureEs",
-              widget: "string",
+              i18n: true,
             }
 
-      # Video Compartido
+      # Video Compartido (General)
       - name: "video"
         label: "Video"
         file: "content/video.md"
+        i18n: false # El video no requiere traducción
         fields:
           - { label: "Upload Video", name: "videoUrl", widget: "file" }
           - { label: "Full Video", name: "fullVideo", widget: "string" }
