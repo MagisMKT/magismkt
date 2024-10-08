@@ -71,23 +71,19 @@ collections:
               i18n: true,
             }
           # OUR CLIENTS (Separa imagen y nombre por idioma)
-          - label: "Clients"
-            name: "clients"
+          - label: "Clients for Dark Mode"
+            name: "clientsDark"
             widget: "list"
-            i18n: true
             fields:
-              - {
-                  label: "Client Name",
-                  name: "clientName",
-                  widget: "string",
-                  i18n: true,
-                }
-              - {
-                  label: "Client Image",
-                  name: "clientImage",
-                  widget: "image",
-                  i18n: true,
-                }
+              - { label: "Client Name", name: "clientName", widget: "string" }
+              - { label: "Client Image", name: "clientImage", widget: "image" }
+
+          - label: "Clients for Light Mode"
+            name: "clientsLight"
+            widget: "list"
+            fields:
+              - { label: "Client Name", name: "clientName", widget: "string" }
+              - { label: "Client Image", name: "clientImage", widget: "image" }
           # CALL TO ACTION (CTA)
           - {
               label: "CTA Title",
