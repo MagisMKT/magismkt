@@ -56,6 +56,20 @@ en:
         es: Diseñadora Junior
       photo: /images/ana.jpg
       video: /images/ana.mp4
+    - role:
+        en: Key Account Holder
+        es: Key Account Holder
+      name: Laritza
+      fullName: Martínez
+      photo: /images/laritza.jpg
+      video: /images/laritza.mp4
+    - name: Paola
+      fullName: Valencia
+      role:
+        en: Sales Executive
+        es: Ejecutiva de Ventas
+      photo: /images/paola.jpg
+      video: /images/paola.mp4
   heroTitle: Who *we are*
 es:
   storyTitle: Nuestra *historia*
