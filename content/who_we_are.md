@@ -35,6 +35,27 @@ en:
         es: Líder de Estrategia de Contenidos
       photo: /images/brenda.jpg
       video: /images/brenda.mp4
+    - name: Miranda
+      fullName: Valencia
+      role:
+        en: Engagement Specialist
+        es: Especialista en Engagement
+      photo: /images/miranda.jpg
+      video: /images/miranda.mp4
+    - name: Brenda
+      fullName: Báez
+      role:
+        en: Senior Designer
+        es: Diseñadora Senior
+      photo: /images/brenda_b.jpg
+      video: /images/brenda_b.mp4
+    - name: Ana
+      fullName: Franco
+      role:
+        en: Junior Designer
+        es: Diseñadora Junior
+      photo: /images/ana.jpg
+      video: /images/ana.mp4
   heroTitle: Who *we are*
 es:
   storyTitle: Nuestra *historia*
