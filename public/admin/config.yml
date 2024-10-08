@@ -296,7 +296,7 @@ collections:
           - label: "Testimonials"
             name: "testimonials"
             widget: "list"
-            i18n: true
+            i18n: false # No se traduce la lista completa, solo el testimonial
             fields:
               - {
                   label: "Testimonial Image",
@@ -312,13 +312,25 @@ collections:
                   label: "Testimonial Role",
                   name: "testimonialRole",
                   widget: "string",
-                  i18n: true,
                 }
               - {
                   label: "Testimonial Text",
                   name: "testimonialText",
-                  widget: "text",
-                  i18n: true,
+                  widget: "object",
+                  i18n: true, # Solo el texto del testimonio se traduce
+                  fields:
+                    [
+                      {
+                        label: "Testimonial (English)",
+                        name: "en",
+                        widget: "markdown",
+                      },
+                      {
+                        label: "Testimonial (Spanish)",
+                        name: "es",
+                        widget: "markdown",
+                      },
+                    ],
                 }
 
       # Main CTA Section
