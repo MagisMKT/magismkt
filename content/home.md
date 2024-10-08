@@ -17,6 +17,18 @@ en:
   clientsLight:
     - clientName: Tepatitlán
       clientImage: /images/tepatitlan_white.png
+    - clientName: Hugo Balderas Ibarra
+      clientImage: /images/hugo-balderas_white.png
+    - clientName: Azteca Farmers Market
+      clientImage: /images/azteca_white.png
+    - clientName: Mueblerias el triunfo
+      clientImage: /images/muebleria_white.png
+    - clientName: The Gonzalez Law Group
+      clientImage: /images/the-gonzalez-law-group_white.png
+    - clientName: Carnitas Mexican Grill
+      clientImage: /images/carnitas_white.png
+    - clientName: Alex Transmissions
+      clientImage: /images/alex_white.png
   ctaButtonText: test
   whoWeAreTitle: Who *we are*
   ctaVideoText: Watch full video
@@ -34,6 +46,8 @@ en:
       clientImage: /images/the-gonzalez-law-group.png
     - clientName: Carnitas Mexican Grill
       clientImage: /images/carnitas.png
+    - clientName: Alex Transmissions
+      clientImage: /images/alex.png
 es:
   whoWeAreSubtitle: Somos un equipo multidisciplinario  <span class="text-main
     bg-pink inline px-2.5 py-1.5 rounded-full font-ramillas italic font-bold
