@@ -157,16 +157,19 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Full Name", name: "fullName", widget: "string" }
-              - { label: "Role", name: "role", widget: "string", i18n: true } # El rol sí se traduce
+              - {
+                  label: "Role",
+                  name: "role",
+                  widget: "object",
+                  i18n: true, # El rol se traduce
+                  fields:
+                    [
+                      { label: "Role (English)", name: "en", widget: "string" },
+                      { label: "Role (Spanish)", name: "es", widget: "string" },
+                    ],
+                }
               - { label: "Photo", name: "photo", widget: "image" }
               - { label: "Video", name: "video", widget: "file" }
-          # GALLERY (Compartida entre idiomas)
-          - label: "Gallery"
-            name: "gallery"
-            widget: "list"
-            i18n: false # No requiere traducción
-            fields:
-              - { label: "Photo", name: "photo", widget: "image" }
 
       - name: "contact"
         label: "Contact Page"
