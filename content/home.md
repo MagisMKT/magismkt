@@ -14,10 +14,26 @@ en:
   ctaTitle: test
   word2: Women.
   word3: Creative.
+  clientsLight:
+    - clientName: Tepatitlán
+      clientImage: /images/tepatitlan_white.png
   ctaButtonText: test
   whoWeAreTitle: Who *we are*
   ctaVideoText: Watch full video
   ctaText: Discover Magis
+  clientsDark:
+    - clientImage: /images/tepatitlan.png
+      clientName: Tepatitlán
+    - clientName: Hugo Balderas
+      clientImage: /images/hugo-balderas.png
+    - clientName: Azteca Farmers Market
+      clientImage: /images/azteca_opacity.png
+    - clientName: Muebleria el triunfo
+      clientImage: /images/muebleria.png
+    - clientName: The Gonzalez Law Group
+      clientImage: /images/the-gonzalez-law-group.png
+    - clientName: Carnitas Mexican Grill
+      clientImage: /images/carnitas.png
 es:
   whoWeAreSubtitle: Somos un equipo multidisciplinario  <span class="text-main
     bg-pink inline px-2.5 py-1.5 rounded-full font-ramillas italic font-bold
