@@ -74,6 +74,7 @@ collections:
           - label: "Clients for Dark Mode"
             name: "clientsDark"
             widget: "list"
+            max: 7
             fields:
               - { label: "Client Name", name: "clientName", widget: "string" }
               - { label: "Client Image", name: "clientImage", widget: "image" }
@@ -81,6 +82,7 @@ collections:
           - label: "Clients for Light Mode"
             name: "clientsLight"
             widget: "list"
+            max: 7
             fields:
               - { label: "Client Name", name: "clientName", widget: "string" }
               - { label: "Client Image", name: "clientImage", widget: "image" }
