@@ -6,7 +6,7 @@ media_folder: "public/images"
 public_folder: "/images"
 
 i18n:
-  structure: multiple_files # Usaremos varios archivos para diferentes idiomas
+  structure: single_file # Cambiar a single_file para colecciones de tipo files
   locales:
     - en
     - es
@@ -15,9 +15,7 @@ collections:
   # Colección para las páginas individuales (Home, Who We Are, Contact, etc.)
   - name: "pages"
     label: "Pages"
-    folder: "content/pages"
-    create: true
-    i18n: true # Habilitamos soporte para i18n en la colección
+    i18n: true # Habilitamos i18n para la colección
     files:
       - name: "home"
         label: "Home Page"
