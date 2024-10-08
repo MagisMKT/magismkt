@@ -149,6 +149,19 @@ collections:
               widget: "text",
               i18n: true,
             }
+            # STORY
+            - {
+                label: "Story Title",
+                name: "storyTitle",
+                widget: "markdown",
+                i18n: true,
+              }
+            - {
+                label: "Story Subtitle",
+                name: "storySubtitle",
+                widget: "markdown",
+                i18n: true,
+              }
           # TEAM MEMBERS (Nombre compartido, rol en ambos idiomas)
           - label: "Team Members"
             name: "teamMembers"
