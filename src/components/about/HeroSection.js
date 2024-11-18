@@ -14,7 +14,7 @@ function getRandomIndexes(size, numActive) {
   return indexes;
 }
 
-function HeroSection() {
+function HeroSection({whoWeAre}) {
   const desktopGridSize = 84; // Grid para pantallas grandes (12x7)
   const mobileGridSize = 36; // Grid reducido para pantallas móviles (4x4)
   const [gridSize, setGridSize] = useState(desktopGridSize);
@@ -67,20 +67,16 @@ function HeroSection() {
         <div className="flex gap-4 items-center">
           <Shine color="#DC0073" />
           <h4>
-            Who <span className="font-ramillas italic text-110">we are</span>
+            {whoWeAre.heroTitlePart1} <span className="font-ramillas italic text-110">{whoWeAre.heroTitlePart2}</span>
           </h4>
         </div>
-        <h5>
-          We are a{" "}
-          <span className="font-ramillas italic font-bold text-110">
-            100% women-led
-          </span>{" "}
-          multidisciplinary team.
-        </h5>
+        <h5 dangerouslySetInnerHTML={{
+            __html: whoWeAre.heroSubtitle.replace(/`/g, ''), // Elimina las comillas inversas si están presentes
+          }}/>
 
         <div className="flex items-center">
           <Button
-            text="Meet the team"
+            text={whoWeAre.heroButtonText}
             bgColor="bg-black"
             textColor="text-white"
             iconBgColor="bg-green"

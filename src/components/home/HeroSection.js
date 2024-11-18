@@ -3,8 +3,13 @@ import Button from "@/components/Button";
 import Arrow from "@/components/icons/Arrow";
 import Close from "@/components/icons/Close";
 
-function HeroSection({ home }) {
+function HeroSection({ home, video }) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  useEffect(() => {
+    console.log(video);
+  }, [video]);
+
 
   // Función para manejar el cierre con la tecla ESC
   useEffect(() => {
@@ -25,6 +30,7 @@ function HeroSection({ home }) {
   const videoUrl = isVideoOpen
     ? "https://www.youtube.com/embed/s3SVUFwNun8?autoplay=1&si=vuhMutNccdNqgYOR&rel=0&controls=0"
     : "https://www.youtube.com/embed/s3SVUFwNun8?si=vuhMutNccdNqgYOR";
+  // const videoUrl = '/images/video.mp4';
 
   return (
     <section className="relative flex justify-center w-full">
@@ -38,7 +44,7 @@ function HeroSection({ home }) {
           muted
           className="absolute h-full w-full top-0 left-0 object-cover z-10"
         >
-          <source src={home.videoUrl} type="video/mp4" />
+          <source src={video.videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 

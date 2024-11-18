@@ -107,8 +107,14 @@ collections:
         fields:
           # HERO SECTION
           - {
-              label: "Hero Title",
-              name: "heroTitle",
+              label: "Hero Title Part1",
+              name: "heroTitlePart1",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "Hero Title Part2",
+              name: "heroTitlePart2",
               widget: "markdown",
               i18n: true,
             }
@@ -126,14 +132,32 @@ collections:
             }
           # STORY
           - {
-              label: "Story Title",
-              name: "storyTitle",
+              label: "Story Title Part1",
+              name: "storyTitlePart1",
               widget: "markdown",
               i18n: true,
             }
           - {
-              label: "Story Subtitle",
-              name: "storySubtitle",
+              label: "Story Title Part2",
+              name: "storyTitlePart2",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "Story Subtitle Part1",
+              name: "storySubtitlePart1",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "Story Subtitle Part2",
+              name: "storySubtitlePart2",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "Story Subtitle Part3",
+              name: "storySubtitlePart3",
               widget: "markdown",
               i18n: true,
             }
@@ -157,8 +181,26 @@ collections:
               i18n: true,
             }
           - {
-              label: "Team Subtitle",
-              name: "teamSubtitle",
+              label: "Team Subtitle Part1",
+              name: "teamSubtitlePart1",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "Team Subtitle Part2",
+              name: "teamSubtitlePart2",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "Team Central Phrase Part1",
+              name: "teamCentralPhrasePart1",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "Team Central Phrase Part2",
+              name: "teamCentralPhrasePart2",
               widget: "markdown",
               i18n: true,
             }

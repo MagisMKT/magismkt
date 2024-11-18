@@ -17,7 +17,12 @@ function getRandomIndexes(size, numActive) {
   return indexes;
 }
 
-function Mission() {
+function Mission({ mission }) {
+
+  useEffect(() => {
+    console.log('Mision:', mission);
+  }, [mission]);
+  
   const gridSize = 25; // 5x4 grid
   const [grid, setGrid] = useState(Array(gridSize).fill(false));
   const [isFading, setIsFading] = useState(Array(gridSize).fill(false)); // To control fade-out before the change
@@ -47,26 +52,20 @@ function Mission() {
       <div className="container flex flex-col gap-14 items-center m-auto h-full justify-between lg:min-h-[80vh] z-20 relative">
         <div className="flex gap-4 items-center justify-center">
           <Shine />
-          <h4 className="text-white">
-            Our <span className="font-ramillas italic text-110">mission</span>
-          </h4>
+          <h4 className="text-white" dangerouslySetInnerHTML={{
+            __html: mission.missionTitle.replace(/`/g, ''), // Elimina las comillas inversas si están presentes
+          }}/>
         </div>
-        <h5 className="text-white inline-flex gap-4 lg:gap-6 flex-wrap justify-center">
-          <span className="font-ramillas italic font-bold text-105">Grow</span>{" "}
-          your{" "}
-          <span className="text-main bg-pink inline px-5 !leading-none rounded-full font-ramillas italic font-bold text-110">
-            business
-          </span>{" "}
-        </h5>
+        <h5 className="text-white inline-flex gap-4 lg:gap-6 flex-wrap justify-center" dangerouslySetInnerHTML={
+        {  __html: mission.missionSubtitle.replace(/`/g, ''),}
+        }/>
         <div className="flex gap-4 items-center">
           <Star />
-          <h4 className="text-white">
-            Reject the commonplace
-            <br />
-            <span className="text-green font-ramillas font-medium text-105">
-              & embrace women’s talent.
-            </span>{" "}
-          </h4>
+          <h4 className="text-white" dangerouslySetInnerHTML={{
+            __html: mission.thirdTitle.replace(/`/g, ''), // Elimina las comillas inversas si están presentes
+          }}/>
+
+            
         </div>
       </div>
       {/* 5x4 Grid */}

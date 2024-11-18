@@ -1,13 +1,14 @@
 ---
 en:
-  storyTitle: Our *Story*
-  storySubtitle: '`Driving Success with a <span class="text-pink dark:text-pink
-    font-ramillas italic font-bold text-110"><span
-    class="text-pinkSecondary">Feminine Touch:</span><br>Meet Magis
-    Marketing</span> `'
-  heroSubtitle: We are a *100% women-led* multidisciplinary team.
-  teamSubtitle: The faces <span class="text-110 font-ramillas italic
-    font-extrabold text-pink">behind the Magic</span>
+  storyTitlePart1: 'Our'
+  storyTitlePart2: 'Story'
+  storySubtitlePart1: 'Driving Success with a '
+  storySubtitlePart2: 'Feminine Touch:'
+  storySubtitlePart3: 'Meet Magis Marketing'
+  heroSubtitle: '`We are a 
+<span class="font-ramillas italic font-bold text-110"> 100% women-led</span>
+multidisciplinary team.`'
+  
   storyParagraph1: Founded in 2019 and based in Texas, Magis has embarked on an
     incredible journey marked by challenges and obstacles. Through it all, our
     team has risen to the occasion, demonstrating resilience, creativity, and
@@ -19,7 +20,12 @@ en:
     stronger and more committed to achieving outstanding results for our
     clients. At Magis, we believe that every obstacle is an opportunity to
     innovate and excel.
-  teamTitle: The Team
+  teamTitle: '`The <span class="font-ramillas italic text-110">Team</span>`'
+  teamSubtitlePart1: 'The faces '
+  teamSubtitlePart2: 'behind the Magic'
+  teamParagraph: 'Finding a capable team to achieve great things can be quite challenging, but we can offer you the best.'
+  teamCentralPhrasePart1: 'Womans that work '
+  teamCentralPhrasePart2: 'with love'
   teamMembers:
     - name: Jessica
       fullName: Briones
@@ -70,16 +76,17 @@ en:
         es: Ejecutiva de Ventas
       photo: /images/paola.jpg
       video: /images/paola.mp4
-  heroTitle: Who *we are*
+  heroTitlePart1: 'Who'
+  heroTitlePart2: 'we are'
 es:
-  storyTitle: Nuestra *historia*
-  storySubtitle: '`Impulsando el éxito con un <span class="text-pink
-    dark:text-pink font-ramillas italic font-bold text-110"><span
-    class="text-pinkSecondary">Toque Femenino:</span><br>Conoce Magis
-    Marketing</span>`'
-  heroSubtitle: Somos un equipo multidisciplinario *100% liderado por mujeres.*
-  teamSubtitle: Los rostros <span class="text-110 font-ramillas italic
-    font-extrabold text-pink">detrás de la Magía</span>
+  storyTitlePart1: 'Nustra '
+  storyTitlePart2: 'historia'
+  storySubtitlePart1: 'Impulsando el éxito con un '
+  storySubtitlePart2: 'Toque Femenino:'
+  storySubtitlePart3: 'Conoce Magis Marketing'
+  heroSubtitle: '`Somos un equipo multidisciplinario 
+<span class="font-ramillas italic font-bold text-110">100% liderado por mujeres.</span>`'
+
   storyParagraph1: Fundada en 2019 y con sede en Texas, Magis ha emprendido un
     increíble viaje lleno de desafíos y obstáculos. A lo largo de todo este
     recorrido, nuestro equipo ha estado a la altura, demostrando resiliencia,
@@ -92,6 +99,12 @@ es:
     fortalecido y nos ha comprometido aún más a lograr resultados sobresalientes
     para nuestros clientes. En Magis, creemos que cada obstáculo es una
     oportunidad para innovar y sobresalir.
-  teamTitle: El Team
-  heroTitle: Quiénes *somos*
+  teamTitle: '`El <span class="font-ramillas italic text-110">Team</span>`'
+  teamSubtitlePart1: 'Los rostros '
+  teamSubtitlePart2: 'detrás de la Magía'
+  teamParagraph: 'Encontrar un equipo capaz de lograr grandes cosas puede ser todo un reto, pero nosotros podemos ofrecerle lo mejor.'
+  teamCentralPhrasePart1: 'Mujeres que trabajan '
+  teamCentralPhrasePart2: 'con amor'
+  heroTitlePart1: 'Quiénes'
+  heroTitlePart2: 'somos'
 ---

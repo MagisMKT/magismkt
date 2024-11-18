@@ -12,8 +12,10 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "gray-matter": "^4.0.3",
     "next": "14.2.9",
+    "next-video": "^1.3.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-youtube": "^10.1.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
   },

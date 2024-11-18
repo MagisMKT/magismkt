@@ -6,13 +6,13 @@ import Story from "@/components/about/Story";
 import ImageGrid from "@/components/about/ImageGrid";
 import Team from "@/components/about/Team";
 
-function About() {
+function About({ whoWeAre, teamMembers, mission }) {
   return (
     <div className="relative">
-      <HeroSection />
-      <Story />
-      <Team />
-      <Mission />
+      <HeroSection whoWeAre={whoWeAre}/>
+      <Story whoWeAre={whoWeAre}/>
+      <Team whoWeAre={whoWeAre} teamMembers={teamMembers}/>
+      <Mission mission={mission}/>
       <ImageGrid />
       <Call />
     </div>
@@ -20,10 +20,27 @@ function About() {
 }
 
 export async function getStaticProps({ locale }) {
-  const home = await getMarkdownContent(`home_${locale}`);
+  const whoWeAre = await getMarkdownContent("who_we_are");
+  const WhoWeAre = whoWeAre[locale];
+  const mission = await getMarkdownContent("mission");
+  console.log('Mision:', mission);
+
+  const localizedMission = mission[locale];
+
+  // Mapear los miembros del equipo y obtener sus roles localizados
+  const teamMembers = whoWeAre["en"].teamMembers.map((member) => ({
+    name: member.name,
+    fullName: member.fullName,
+    role: member.role[locale], // Obtenemos el rol según el idioma
+    photo: member.photo,
+    video: member.video,
+  }));
+
   return {
     props: {
-      home,
+      teamMembers, // Pasamos solo los miembros procesados
+      whoWeAre: WhoWeAre, // Opcional si necesitas otros datos
+      mission:localizedMission,
     },
   };
 }

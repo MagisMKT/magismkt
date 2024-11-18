@@ -4,59 +4,62 @@ import Shine from "@/components/icons/Shine";
 import Button from "@/components/Button";
 import Arrow from "@/components/icons/Arrow";
 
-const teamMembers = [
-  {
-    id: 1,
-    name: "Jessica Briones",
-    role: "Head of Business Development",
-    imageUrl: "/images/team/jessica.jpg",
-    videoUrl: "/images/team/jessica.mp4",
-  },
-  {
-    id: 2,
-    name: "Brenda Briones",
-    role: "Head of Content Strategy",
-    imageUrl: "/images/team/brenda.jpg",
-    videoUrl: "/images/team/brenda.mp4",
-  },
-  {
-    id: 3,
-    name: "Miranda Valencia",
-    role: "Engagement Specialist",
-    imageUrl: "/images/team/miranda.jpg",
-    videoUrl: "/images/team/miranda.mp4",
-  },
-  {
-    id: 4,
-    name: "Brenda Báez",
-    role: "Senior Designer",
-    imageUrl: "/images/team/brenda_b.jpg",
-    videoUrl: "/images/team/brenda_b.mp4",
-  },
-  {
-    id: 5,
-    name: "Ana Franco",
-    role: "Junior Designer",
-    imageUrl: "/images/team/ana.jpg",
-    videoUrl: "/images/team/ana.mp4",
-  },
-  {
-    id: 6,
-    name: "Laritza Martínez",
-    role: "Key Account Holder",
-    imageUrl: "/images/team/laritza.jpg",
-    videoUrl: "/images/team/laritza.mp4",
-  },
-  {
-    id: 7,
-    name: "Paola Valencia",
-    role: "Sales Executive",
-    imageUrl: "/images/team/paola.jpg",
-    videoUrl: "/images/team/paola.mp4",
-  },
-];
+// const teamMembers = [
+//   {
+//     id: 1,
+//     name: "Jessica Briones",
+//     role: "Head of Business Development",
+//     imageUrl: "/images/team/jessica.jpg",
+//     videoUrl: "/images/team/jessica.mp4",
+//   },
+//   {
+//     id: 2,
+//     name: "Brenda Briones",
+//     role: "Head of Content Strategy",
+//     imageUrl: "/images/team/brenda.jpg",
+//     videoUrl: "/images/team/brenda.mp4",
+//   },
+//   {
+//     id: 3,
+//     name: "Miranda Valencia",
+//     role: "Engagement Specialist",
+//     imageUrl: "/images/team/miranda.jpg",
+//     videoUrl: "/images/team/miranda.mp4",
+//   },
+//   {
+//     id: 4,
+//     name: "Brenda Báez",
+//     role: "Senior Designer",
+//     imageUrl: "/images/team/brenda_b.jpg",
+//     videoUrl: "/images/team/brenda_b.mp4",
+//   },
+//   {
+//     id: 5,
+//     name: "Ana Franco",
+//     role: "Junior Designer",
+//     imageUrl: "/images/team/ana.jpg",
+//     videoUrl: "/images/team/ana.mp4",
+//   },
+//   {
+//     id: 6,
+//     name: "Laritza Martínez",
+//     role: "Key Account Holder",
+//     imageUrl: "/images/team/laritza.jpg",
+//     videoUrl: "/images/team/laritza.mp4",
+//   },
+//   {
+//     id: 7,
+//     name: "Paola Valencia",
+//     role: "Sales Executive",
+//     imageUrl: "/images/team/paola.jpg",
+//     videoUrl: "/images/team/paola.mp4",
+//   },
+// ];
 
-function Team() {
+function Team({ whoWeAre, teamMembers }) {
+
+ 
+  
   return (
     <section
       className="min-h-[90vh] z-40 relative flex flex-col gap-12 justify-center items-end py-12 lg:py-24"
@@ -65,19 +68,20 @@ function Team() {
       <div className="container text-center flex flex-col gap-8 justify-center items-center mx-auto px-[20px]">
         <div className="flex gap-4 items-center">
           <Shine color="#DC0073" />
-          <h4>
-            The <span className="font-ramillas italic text-110">Team</span>
-          </h4>
+          <h4 dangerouslySetInnerHTML={{
+            __html: whoWeAre.teamTitle.replace(/`/g, ''), // Elimina las comillas inversas si están presentes
+          }}/>
+            
+          
         </div>
         <h2>
-          The faces{" "}
+         {whoWeAre.teamSubtitlePart1}
           <span className="text-110 font-ramillas italic font-extrabold text-pink">
-            behind the Magic
+            {whoWeAre.teamSubtitlePart2}
           </span>
         </h2>
         <p className="lg:w-1/3">
-          Finding a capable team to achieve great things can be quite
-          challenging, but we can offer you the best.
+          {whoWeAre.teamParagraph}
         </p>
       </div>
 
@@ -93,16 +97,17 @@ function Team() {
 
               <div className="absolute inset-0 overflow-hidden">
                 <img
-                  src={member.imageUrl}
+                  src={member.photo}
                   alt={member.name}
                   className="w-full h-full object-cover group-hover:hidden"
                 />
                 <video
-                  src={member.videoUrl}
+                  src={member.video}
                   className="w-full h-full object-cover hidden group-hover:block"
                   muted
                   loop
                   autoPlay
+                  playsInline
                 />
               </div>
               <div className="relative z-20 bg-opacity-50 p-8 w-full flex flex-col gap-1">
@@ -128,16 +133,17 @@ function Team() {
 
             <div className="absolute inset-0 overflow-hidden">
               <img
-                src={teamMembers[3].imageUrl}
+                src={teamMembers[3].photo}
                 alt={teamMembers[3].name}
                 className="w-full h-full object-cover group-hover:hidden"
               />
               <video
-                src={teamMembers[3].videoUrl}
+                src={teamMembers[3].video}
                 className="w-full h-full object-cover hidden group-hover:block"
                 muted
                 loop
                 autoPlay
+                playsInline
               />
             </div>
             <div className="relative z-20 bg-opacity-50 p-8 w-full flex flex-col gap-1">
@@ -157,10 +163,10 @@ function Team() {
           <div className="relative inset-0 overflow-hidden aspect-vertical bg-pinkSecondary w-full h-full rounded-[32px] flex items-center justify-center">
             <h3 className="text-main">
               <span className="font-bold italic font-ramillas text-pink">
-                Womans that work
+                {whoWeAre.teamCentralPhrasePart1}
               </span>
               <br />
-              with love
+              {whoWeAre.teamCentralPhrasePart2}
             </h3>
             <Image src="/images/shine-circle.svg" layout="fill" />
           </div>
@@ -176,16 +182,17 @@ function Team() {
 
             <div className="absolute inset-0 overflow-hidden">
               <img
-                src={teamMembers[4].imageUrl}
+                src={teamMembers[4].photo}
                 alt={teamMembers[4].name}
                 className="w-full h-full object-cover group-hover:hidden"
               />
               <video
-                src={teamMembers[4].videoUrl}
+                src={teamMembers[4].video}
                 className="w-full h-full object-cover hidden group-hover:block"
                 muted
                 loop
                 autoPlay
+                playsInline
               />
             </div>
             <div className="relative z-20 bg-opacity-50 p-8 w-full flex flex-col gap-1">
@@ -211,16 +218,17 @@ function Team() {
 
               <div className="absolute inset-0 overflow-hidden">
                 <img
-                  src={member.imageUrl}
+                  src={member.photo}
                   alt={member.name}
                   className="w-full h-full object-cover group-hover:hidden"
                 />
                 <video
-                  src={member.videoUrl}
+                  src={member.video}
                   className="w-full h-full object-cover hidden group-hover:block"
                   muted
                   loop
                   autoPlay
+                  playsInline
                 />
               </div>
               <div className="relative z-20 bg-opacity-50 p-8 w-full flex flex-col gap-1">
