@@ -1,12 +1,18 @@
 ---
 en:
-  storyTitlePart1: 'Our'
-  storyTitlePart2: 'Story'
-  storySubtitlePart1: 'Driving Success with a'
-  storySubtitlePart2: 'Feminine Touch:'
-  storySubtitlePart3: 'Meet Magis Marketing'
-  heroSubtitle: 'We are a <span class="font-ramillas italic font-bold text-110">100% women-led</span> multidisciplinary team.'
-
+  heroTitlePart1: Who
+  heroTitlePart2: we are.
+  teamSubtitlePart1: The faces
+  teamSubtitlePart2: behind the Magic
+  teamCentralPhrasePart1: Women that work
+  teamCentralPhrasePart2: with love
+  storySubtitlePart1: Driving Success with a
+  teamParagraph: Finding a capable team to achieve great things can be quite
+    challenging, but we can offer you the best.
+  heroSubtitle: We are a <span class="font-ramillas italic font-bold
+    text-110">100% women-led</span> multidisciplinary team.
+  storySubtitlePart2: "Feminine Touch:"
+  storySubtitlePart3: Meet Magis Marketing
   storyParagraph1: Founded in 2019 and based in Texas, Magis has embarked on an
     incredible journey marked by challenges and obstacles. Through it all, our
     team has risen to the occasion, demonstrating resilience, creativity, and
@@ -18,12 +24,9 @@ en:
     stronger and more committed to achieving outstanding results for our
     clients. At Magis, we believe that every obstacle is an opportunity to
     innovate and excel.
-  teamTitle: 'The <span class="font-ramillas italic text-110">Team</span>'
-  teamSubtitlePart1: 'The faces'
-  teamSubtitlePart2: 'behind the Magic'
-  teamParagraph: 'Finding a capable team to achieve great things can be quite challenging, but we can offer you the best.'
-  teamCentralPhrasePart1: 'Women that work'
-  teamCentralPhrasePart2: 'with love'
+  storyTitlePart1: Our
+  teamTitle: The <span class="font-ramillas italic text-110">Team</span>
+  storyTitlePart2: Story
   teamMembers:
     - name: Jessica
       fullName: Briones
@@ -74,16 +77,20 @@ en:
         es: Ejecutiva de Ventas
       photo: /images/paola.jpg
       video: /images/paola.mp4
-  heroTitlePart1: 'Who'
-  heroTitlePart2: 'we are'
 es:
-  storyTitlePart1: 'Nuestra'
-  storyTitlePart2: 'historia'
-  storySubtitlePart1: 'Impulsando el éxito con un'
-  storySubtitlePart2: 'toque femenino:'
-  storySubtitlePart3: 'Conoce Magis Marketing'
-  heroSubtitle: 'Somos un equipo multidisciplinario <span class="font-ramillas italic font-bold text-110">100% liderado por mujeres.</span>'
-
+  heroTitlePart1: Quiénes
+  heroTitlePart2: somos
+  teamSubtitlePart1: Los rostros
+  teamSubtitlePart2: detrás de la magia
+  teamCentralPhrasePart1: Mujeres que trabajan
+  teamCentralPhrasePart2: con amor
+  storySubtitlePart1: Impulsando el éxito con un
+  teamParagraph: Encontrar un equipo capaz de lograr grandes cosas puede ser todo
+    un reto, pero nosotros podemos ofrecerle lo mejor.
+  heroSubtitle: Somos un equipo multidisciplinario <span class="font-ramillas
+    italic font-bold text-110">100% liderado por mujeres.</span>
+  storySubtitlePart2: "toque femenino:"
+  storySubtitlePart3: Conoce Magis Marketing
   storyParagraph1: Fundada en 2019 y con sede en Texas, Magis ha emprendido un
     increíble viaje lleno de desafíos y obstáculos. A lo largo de todo este
     recorrido, nuestro equipo ha estado a la altura, demostrando resiliencia,
@@ -96,12 +103,7 @@ es:
     fortalecido y nos ha comprometido aún más a lograr resultados sobresalientes
     para nuestros clientes. En Magis, creemos que cada obstáculo es una
     oportunidad para innovar y sobresalir.
-  teamTitle: 'El <span class="font-ramillas italic text-110">Team</span>'
-  teamSubtitlePart1: 'Los rostros'
-  teamSubtitlePart2: 'detrás de la magia'
-  teamParagraph: 'Encontrar un equipo capaz de lograr grandes cosas puede ser todo un reto, pero nosotros podemos ofrecerle lo mejor.'
-  teamCentralPhrasePart1: 'Mujeres que trabajan'
-  teamCentralPhrasePart2: 'con amor'
-  heroTitlePart1: 'Quiénes'
-  heroTitlePart2: 'somos'
+  storyTitlePart1: Nuestra
+  teamTitle: El <span class="font-ramillas italic text-110">Team</span>
+  storyTitlePart2: historia
 ---
