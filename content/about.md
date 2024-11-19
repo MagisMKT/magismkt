@@ -1,7 +1,7 @@
 ---
 en:
   heroTitlePart1: Who
-  heroTitlePart2: we are.
+  heroTitlePart2: we are
   teamSubtitlePart1: The faces
   teamSubtitlePart2: behind the Magic
   teamCentralPhrasePart1: Women that work
