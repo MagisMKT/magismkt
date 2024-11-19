@@ -20,7 +20,7 @@ function About({ whoWeAre, teamMembers, mission }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const whoWeAre = await getMarkdownContent("who_we_are");
+  const whoWeAre = await getMarkdownContent("about");
   const WhoWeAre = whoWeAre[locale];
   const mission = await getMarkdownContent("mission");
   console.log('Mision:', mission);

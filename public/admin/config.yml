@@ -100,9 +100,9 @@ collections:
               i18n: true,
             }
 
-      - name: "who_we_are"
+      - name: "about"
         label: "Who We Are Page"
-        file: "content/who_we_are.md"
+        file: "content/about.md"
         i18n: true
         fields:
           # HERO SECTION
