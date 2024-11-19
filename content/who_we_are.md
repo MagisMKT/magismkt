@@ -2,13 +2,13 @@
 en:
   storyTitlePart1: 'Our'
   storyTitlePart2: 'Story'
-  storySubtitlePart1: 'Driving Success with a '
+  storySubtitlePart1: 'Driving Success with a'
   storySubtitlePart2: 'Feminine Touch:'
   storySubtitlePart3: 'Meet Magis Marketing'
-  heroSubtitle: '`We are a 
+  heroSubtitle: '`We are a
 <span class="font-ramillas italic font-bold text-110"> 100% women-led</span>
 multidisciplinary team.`'
-  
+
   storyParagraph1: Founded in 2019 and based in Texas, Magis has embarked on an
     incredible journey marked by challenges and obstacles. Through it all, our
     team has risen to the occasion, demonstrating resilience, creativity, and
@@ -84,7 +84,7 @@ es:
   storySubtitlePart1: 'Impulsando el éxito con un '
   storySubtitlePart2: 'Toque Femenino:'
   storySubtitlePart3: 'Conoce Magis Marketing'
-  heroSubtitle: '`Somos un equipo multidisciplinario 
+  heroSubtitle: '`Somos un equipo multidisciplinario
 <span class="font-ramillas italic font-bold text-110">100% liderado por mujeres.</span>`'
 
   storyParagraph1: Fundada en 2019 y con sede en Texas, Magis ha emprendido un
