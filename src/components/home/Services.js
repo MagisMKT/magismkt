@@ -86,7 +86,7 @@ function Services({ home, services }) {
             ))}
           </div>
           <Button
-            text="Discover the power of Magis"
+            text={home.whatWeDoTextButton}
             bgColor="dark:bg-main bg-light"
             textColor="dark:text-white text-main"
             iconBgColor="bg-pink"

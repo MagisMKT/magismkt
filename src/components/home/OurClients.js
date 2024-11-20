@@ -52,16 +52,10 @@ function OurClients({ home }) {
       <div className="container text-center flex flex-col gap-14 justify-center items-center mx-auto">
         <div className="flex gap-4 items-center">
           <Shine color="#FFC3D1" />
-          <h4>
-            Our <span className="font-ramillas italic text-110">clients</span>
-          </h4>
+          <h4 dangerouslySetInnerHTML={{ __html: home.clientsTitle.replace(/`/g, ''), }} />
         </div>
-        <h2 className="text-pink">
-          <span className="text-110 font-ramillas italic font-extrabold">
-            We love to{" "}
-          </span>
-          <span className="text-main dark:text-light">work with</span>
-        </h2>
+        <h2 className="text-pink" dangerouslySetInnerHTML={{ __html: home.clientsSubtitle.replace(/`/g, ''), }} />
+          
         <div className="w-full grid lg:grid-cols-4 grid-rows-2 rounded-[64px] overflow-hidden border-[0.75px] dark:border-white border-main !border-opacity-10">
           {logos.map((logo, index) => (
             <div
@@ -80,12 +74,10 @@ function OurClients({ home }) {
           ))}
           {/* CTA Grid Item */}
           <div className="flex flex-col items-center justify-center rounded-br-[64px] p-8 bg-blue gap-4 bg-[url('/images/bg-lines.svg')] bg-cover">
-            <h3 className="text-main">
-              Be the{" "}
-              <span className="italic font-ramillas text-110">next!</span>
-            </h3>
+            <h3 className="text-main" dangerouslySetInnerHTML={{ __html: home.clientsTextGrid.replace(/`/g, ''), }} />
+             
             <Button
-              text="Let's talk"
+              text={home.clientsTextButton}
               bgColor="bg-black"
               textColor="text-white"
               iconBgColor="bg-blue"

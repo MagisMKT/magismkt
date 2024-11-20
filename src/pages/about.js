@@ -6,7 +6,7 @@ import Story from "@/components/about/Story";
 import ImageGrid from "@/components/about/ImageGrid";
 import Team from "@/components/about/Team";
 
-function About({ whoWeAre, teamMembers, mission }) {
+function About({ whoWeAre, teamMembers, mission, free_session_cta, free_session_cta_titles }) {
   return (
     <div className="relative">
       <HeroSection whoWeAre={whoWeAre}/>
@@ -14,7 +14,7 @@ function About({ whoWeAre, teamMembers, mission }) {
       <Team whoWeAre={whoWeAre} teamMembers={teamMembers}/>
       <Mission mission={mission}/>
       <ImageGrid />
-      <Call />
+      <Call free_session_cta={free_session_cta} free_session_cta_titles={free_session_cta_titles}/>
     </div>
   );
 }
@@ -35,12 +35,21 @@ export async function getStaticProps({ locale }) {
     photo: member.photo,
     video: member.video,
   }));
+  const  free_session_ctaMD = await getMarkdownContent("free_session_cta");
+  const free_session_cta_titles = free_session_ctaMD[locale];
+  const free_session_cta = {
+    avatarPhoto: free_session_ctaMD["en"].avatarPhoto,
+    buttonLink: free_session_ctaMD["en"].buttonLink,
+  }
+
 
   return {
     props: {
       teamMembers, // Pasamos solo los miembros procesados
       whoWeAre: WhoWeAre, // Opcional si necesitas otros datos
       mission:localizedMission,
+      free_session_cta_titles,
+      free_session_cta
     },
   };
 }

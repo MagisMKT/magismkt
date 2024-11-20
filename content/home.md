@@ -19,6 +19,26 @@ en:
   whatWeDoTitle: '`What <span class="font-ramillas italic text-110">we do</span>`'
   whatWeDoSubtitle: '`Transforming brands with our <span class="text-blue dark:text-green px-2.5 py-1.5 rounded-full font ramillas italic font-bold text-110">reative services & expertise </span>`'
   whatWeDoParagraph: Our committed team blends imagination andproficiency to provide groundbreaking solutions that distinguish your business. Experience excellence with our customized approach to reaching your objectives.
+  whatWeDoTextButton: Discover the power of Magis
+  clientsTitle: '`Our <span class="font-ramillas italic text-110">clients</span>`'
+  clientsSubtitle: '`<span class="text-110 font-ramillas italic font-extrabold">We love to{" "}</span><span class="text-main dark:text-light">work with</span>`'
+  clientsTextGrid: '`Be the <span className="italic font-ramillas text-110">next!</span>`'
+  clientsTextButton: Let's talk
+  clientsLight:
+    - clientName: Tepatitlán
+      clientImage: /images/tepatitlan_white.png
+    - clientName: Hugo Balderas Ibarra
+      clientImage: /images/hugo-balderas_white.png
+    - clientName: Azteca Farmers Market
+      clientImage: /images/azteca_white.png
+    - clientName: Mueblerias el triunfo
+      clientImage: /images/muebleria_white.png
+    - clientName: The Gonzalez Law Group
+      clientImage: /images/the-gonzalez-law-group_white.png
+    - clientName: Carnitas Mexican Grill
+      clientImage: /images/carnitas_white.png
+    - clientName: Alex Transmissions
+      clientImage: /images/alex_white.png
   clientsDark:
     - clientImage: /images/tepatitlan.png
       clientName: Tepatitlán
@@ -34,7 +54,6 @@ en:
       clientImage: /images/carnitas.png
     - clientName: Alex Transmissions
       clientImage: /images/alex.png
- 
 es:
   whoWeAreSubtitle: '`Somos un equipo multidisciplinario  <span class="text-main bg-pink inline px-2.5 py-1.5 rounded-full font-ramillas italic font-bold text-110">100% liderado por mujeres.</span>`'
   subtitlePart1: Expertas en
@@ -53,4 +72,9 @@ es:
   whatWeDoTitle: '`Qué <span class="font-ramillas italic text-110">hacemos</span>`'
   whatWeDoSubtitle: '`Transformación de marcas con nuestros <span class="text-blue dark:text-green px-2.5 py-1.5 rounded-full font ramillas italic font-bold text-110">servicios creativos y experiencia </span>`'
   whatWeDoParagraph: Nuestro comprometido equipo combina imaginación y competencia para ofrecer soluciones innovadoras que distingan a su empresa. Experimente la excelencia con nuestro enfoque personalizado para alcanzar sus objetivos.
+  whatWeDoTextButton: Descubra el poder de Magis
+  clientsTitle: '`Nuestros <span class="font-ramillas italic text-110">clientes</span>`'
+  clientsSubtitle: '`<span class="text-110 font-ramillas italic font-extrabold">Nos encanta </span><span class="text-main dark:text-light">trabajar con</span>`'
+  clientsTextGrid: '`Sé el <span className="italic font-ramillas text-110">siguiente!</span>`'
+  clientsTextButton: Hablemos
 ---

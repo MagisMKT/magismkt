@@ -11,17 +11,17 @@ import CTA from "@/components/shared/CTA";
 import Logo from "@/components/Logo";
 import { test } from "gray-matter";
 
-function HomePage({ home, video, whoWeAre, services, mission, testimonialsTitles, testimonials}) {
+function HomePage({ home, video, whoWeAre, services, mission, testimonialsTitles, testimonials, free_session_cta_titles, free_session_cta, main_cta }) {
   return (
     <div className="relative">
       <HeroSection home={home} video={video} />
       <WhoWeAre home={home} whoWeAre={whoWeAre} />
       <Services home={home} services={services} />
       <Mission mission={mission} />
-      <OurClients  />
-      <Call />
+      <OurClients home={home} />
+      <Call free_session_cta={free_session_cta} free_session_cta_titles={free_session_cta_titles}/>
       <Testimonials testimonialsTitles={testimonialsTitles} testimonials={testimonials} />
-      <CTA />
+      <CTA main_cta={main_cta}/>
     </div>
   );
 }
@@ -49,6 +49,15 @@ export async function getStaticProps({ locale }) {
     img: service.img,
   }));
 
+  const  free_session_ctaMD = await getMarkdownContent("free_session_cta");
+  const free_session_cta_titles = free_session_ctaMD[locale];
+  const free_session_cta = {
+    avatarPhoto: free_session_ctaMD["en"].avatarPhoto,
+    buttonLink: free_session_ctaMD["en"].buttonLink,
+  }
+
+  const main_cta = await getMarkdownContent("main_cta");
+
 
   
 
@@ -63,7 +72,10 @@ export async function getStaticProps({ locale }) {
       services: services,
       mission: localizedMission,
       testimonialsTitles: testimonialsMD[locale],
-      testimonials: testimonials
+      testimonials: testimonials,
+      free_session_cta_titles: free_session_cta_titles,
+      free_session_cta: free_session_cta,
+      main_cta: main_cta[locale],
 
 
     },

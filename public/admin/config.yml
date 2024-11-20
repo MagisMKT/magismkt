@@ -89,7 +89,37 @@ collections:
               widget: "string",
               i18n: true,
             }
+          - {
+              label: "What We Do Text Button",
+              name: "whatWeDoTextButton",
+              widget: "string",
+              i18n: true,
+            }
           # OUR CLIENTS (Separa imagen y nombre por idioma)
+          - {
+              label: "Clients Title",
+              name: "clientsTitle",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "Clients Subtitle",
+              name: "clientsSubtitle",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "Clients Text Grid",
+              name: "clientsTextGrid",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "Clients Text Button",
+              name: "clientsTextButton",
+              widget: "string",
+              i18n: true,
+            }
           - label: "Clients for Dark Mode"
             name: "clientsDark"
             widget: "list"
