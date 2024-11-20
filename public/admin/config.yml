@@ -335,10 +335,10 @@ collections:
               name: "backgroundPhoto",
               widget: "image",
             }
-      # Servicies Section
-      - name: "servicies"
-        label: "Servicies Section"
-        file: "content/servicies.md"
+      # Services Section
+      - name: "services"
+        label: "Services Section"
+        file: "content/services.md"
         i18n: true
         fields:
           - label: "Services"
