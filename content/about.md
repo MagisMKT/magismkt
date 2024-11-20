@@ -11,7 +11,7 @@ en:
     challenging, but we can offer you the best.
   heroSubtitle: We are a <span class="font-ramillas italic font-bold
     text-110">100% women-led</span> multidisciplinary team.
-  storySubtitlePart2: "Feminine Touch:"
+  storySubtitlePart2: " Feminine Touch:"
   storySubtitlePart3: Meet Magis Marketing
   storyParagraph1: Founded in 2019 and based in Texas, Magis has embarked on an
     incredible journey marked by challenges and obstacles. Through it all, our
@@ -89,7 +89,7 @@ es:
     un reto, pero nosotros podemos ofrecerle lo mejor.
   heroSubtitle: Somos un equipo multidisciplinario <span class="font-ramillas
     italic font-bold text-110">100% liderado por mujeres.</span>
-  storySubtitlePart2: "toque femenino:"
+  storySubtitlePart2: " toque femenino:"
   storySubtitlePart3: Conoce Magis Marketing
   storyParagraph1: Fundada en 2019 y con sede en Texas, Magis ha emprendido un
     increíble viaje lleno de desafíos y obstáculos. A lo largo de todo este
