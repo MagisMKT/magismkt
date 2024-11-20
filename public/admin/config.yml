@@ -275,6 +275,30 @@ collections:
               - { label: "Photo", name: "photo", widget: "image" }
               - { label: "Video", name: "video", widget: "file" }
 
+      - name: "what_we_do"
+        label: "What We Do Page"
+        file: "content/what_we_do.md"
+        i18n: true
+        fields:
+          - {
+              label: "What We Do Title",
+              name: "whatWeDoTitle",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "What We Do Subtitle",
+              name: "whatWeDoSubtitle",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "What We Do Subtitle",
+              name: "whatWeDoTextButton",
+              widget: "string",
+              i18n: true,
+            }
+
       - name: "contact"
         label: "Contact Page"
         file: "content/contact.md"

@@ -4,10 +4,10 @@ import { getMarkdownContent } from "../lib/markdown";
 import Testimonials from "@/components/shared/Testimonials";
 import CTA from "@/components/shared/CTA";
 
-function ServicesPage({ services, testimonialsTitles, testimonials, main_cta }) {
+function ServicesPage({ what_we_do,services, testimonialsTitles, testimonials, main_cta }) {
   return (
     <div className="relative">
-      <HeroSection />
+      <HeroSection what_we_do={what_we_do} />
       <Services services={services} />
       <Testimonials testimonialsTitles={testimonialsTitles} testimonials={testimonials} />
       <CTA main_cta={main_cta} />
@@ -17,6 +17,7 @@ function ServicesPage({ services, testimonialsTitles, testimonials, main_cta }) 
 
 export async function getStaticProps({ locale }) {
   // const home = await getMarkdownContent(`home_${locale}`);
+  const what_we_do = await getMarkdownContent("what_we_do");
   const testimonialsMD = await getMarkdownContent("testimonials");
   const testimonials = testimonialsMD["en"].testimonials.map((testimonial) => ({
     name: testimonial.testimonialName,
@@ -41,6 +42,7 @@ export async function getStaticProps({ locale }) {
 
   return {
     props: {
+      what_we_do: what_we_do[locale],
       services: services,
       testimonialsTitles: testimonialsMD[locale],
       testimonials: testimonials,

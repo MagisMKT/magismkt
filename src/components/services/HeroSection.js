@@ -14,7 +14,7 @@ function getRandomIndexes(size, numActive) {
   return indexes;
 }
 
-function HeroSection() {
+function HeroSection({ what_we_do }) {
   const desktopGridSize = 84; // Grid para pantallas grandes (12x7)
   const mobileGridSize = 36; // Grid para pantallas móviles (6x6)
   const [gridSize, setGridSize] = useState(desktopGridSize);
@@ -63,24 +63,13 @@ function HeroSection() {
       <div className="relative z-30 px-4 flex flex-col gap-8 lg:gap-14 w-full mx-auto max-w-7xl">
         <div className="flex gap-4 max-w-full items-center">
           <Shine color="#BAE846" />
-          <h4>
-            What <span className="font-ramillas italic text-110">we do</span>
-          </h4>
+          <h4 dangerouslySetInnerHTML={{ __html: what_we_do.whatWeDoTitle.replace(/`/g, ''),}} />
         </div>
-        <h5 className="max-w-full">
-          <span className="font-ramillas italic">
-            Bringing
-            <span className="text-main bg-blue inline !leading-none px-1.5 lg:px-2.5 py-0.25 lg:py-1.5 -z-10 relative rounded-full font-ramillas italic font-bold text-110">
-              ambicious visions
-            </span>{" "}
-            to Life,
-          </span>{" "}
-          with our services
-        </h5>
+        <h5 className="max-w-full" dangerouslySetInnerHTML={{ __html: what_we_do.whatWeDoSubtitle.replace(/`/g, ''), }} />
 
         <div className="flex items-center">
           <Button
-            text="Discover services"
+            text={what_we_do.whatWeDoTextButton}
             bgColor="bg-black"
             textColor="text-white"
             iconBgColor="bg-green"
