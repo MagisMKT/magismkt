@@ -67,7 +67,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       home: localizedContent, // Cargamos solo el contenido relevante para el idioma
-      video: video,
+      video: video["en"],
       whoWeAre: WhoWeAre,
       services: services,
       mission: localizedMission,
