@@ -42,7 +42,7 @@ export async function getStaticProps({ locale }) {
   }));
 
   const serviceMD = await getMarkdownContent("services");
-  const services = serviceMD["services"].map((service) => ({
+  const services = serviceMD["en"].map((service) => ({
     number: service.number,
     title: service.title[locale],
     description: service.description[locale],
