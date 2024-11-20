@@ -4,34 +4,34 @@ import Shine from "@/components/icons/Shine";
 import Button from "@/components/Button";
 import Arrow from "@/components/icons/Arrow"; // Assuming this is the correct path to the Arrow component
 
-const testimonials = [
-  {
-    logo: "/images/azteca.png",
-    name: "Janet Yazdi",
-    title: "Owner, Azteca Farmer's Market",
-    text: "We've been working with Magis for about a year now and are very pleased with their creative processes and performance. We have been using their Social Media Management, Influencer Marketing, SEO and web design services and they have done a brilliant job!",
-  },
-  {
-    logo: "/images/azteca.svg",
-    name: "Marco Gonzalez",
-    title: "CEO, The Gonzalez Law Group",
-    text: '"Magis has been a great partner of ours and we thoroughly enjoy working with them. They are a friendly, forward thinking business and the synergy we have formed is being vital to growing our business!"',
-  },
-  {
-    logo: "/images/azteca.svg",
-    name: "Alex Oyervidez",
-    title: "Owner, Alex Transmissions",
-    text: "Magis has helped growing our customers and sales dramatically. They're very professional with an amazing service when it comes to advertising.",
-  },
-  {
-    logo: "/images/azteca.svg",
-    name: "Efren Gonzalez",
-    title: "Owner, Tepatitlan",
-    text: "The Magis team is brilliant! They understood our brand and ethos straight away and effectively masterminded the relaunch of our website. They are full of ideas and transparent with their strategy and structure. I'd always recommend Magis.",
-  },
-];
+// const testimonials = [
+//   {
+//     logo: "/images/azteca.png",
+//     name: "Janet Yazdi",
+//     title: "Owner, Azteca Farmer's Market",
+//     text: "We've been working with Magis for about a year now and are very pleased with their creative processes and performance. We have been using their Social Media Management, Influencer Marketing, SEO and web design services and they have done a brilliant job!",
+//   },
+//   {
+//     logo: "/images/azteca.svg",
+//     name: "Marco Gonzalez",
+//     title: "CEO, The Gonzalez Law Group",
+//     text: '"Magis has been a great partner of ours and we thoroughly enjoy working with them. They are a friendly, forward thinking business and the synergy we have formed is being vital to growing our business!"',
+//   },
+//   {
+//     logo: "/images/azteca.svg",
+//     name: "Alex Oyervidez",
+//     title: "Owner, Alex Transmissions",
+//     text: "Magis has helped growing our customers and sales dramatically. They're very professional with an amazing service when it comes to advertising.",
+//   },
+//   {
+//     logo: "/images/azteca.svg",
+//     name: "Efren Gonzalez",
+//     title: "Owner, Tepatitlan",
+//     text: "The Magis team is brilliant! They understood our brand and ethos straight away and effectively masterminded the relaunch of our website. They are full of ideas and transparent with their strategy and structure. I'd always recommend Magis.",
+//   },
+// ];
 
-const Testimonials = () => {
+const Testimonials = ({ testimonialsTitles, testimonials }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const length = testimonials.length;
 
@@ -53,15 +53,12 @@ const Testimonials = () => {
         <div className="flex gap-4 items-center justify-center">
           <Shine color="#0074d9" />
           <h4>
-            <span className="font-ramillas italic text-110">Testimonials</span>
+            <span className="font-ramillas italic text-110">{testimonialsTitles.testimonialsTitle}</span>
           </h4>
         </div>
-        <h2 className="text-blue">
-          <span className="text-main dark:text-light">What our</span>{" "}
-          <span className="text-110 font-ramillas italic font-extrabold">
-            clients say
-          </span>
-        </h2>
+        <h2 className="text-blue" dangerouslySetInnerHTML={{
+           __html: testimonialsTitles.testimonialsSubtitle
+            }}></h2>
 
         {/* Testimonial Content with Sliding Transition */}
         <div className="relative overflow-hidden max-w-[1200px]">
@@ -83,7 +80,7 @@ const Testimonials = () => {
                       <h4 className="text-green font-ramillas italic">
                         {testimonial.name}
                       </h4>
-                      <p>{testimonial.title}</p>
+                      <p>{testimonial.role}</p>
                     </div>
                   </div>
                   <h6 className="italic font-ramillas">{testimonial.text}</h6>

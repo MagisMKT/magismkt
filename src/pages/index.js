@@ -8,17 +8,19 @@ import OurClients from "@/components/home/OurClients";
 import Call from "@/components/shared/Call";
 import Testimonials from "@/components/shared/Testimonials";
 import CTA from "@/components/shared/CTA";
+import Logo from "@/components/Logo";
+import { test } from "gray-matter";
 
-function HomePage({ home, video, whoWeAre, mission}) {
+function HomePage({ home, video, whoWeAre, services, mission, testimonialsTitles, testimonials}) {
   return (
     <div className="relative">
       <HeroSection home={home} video={video} />
       <WhoWeAre home={home} whoWeAre={whoWeAre} />
-      <Services home={home} />
+      <Services home={home} services={services} />
       <Mission mission={mission} />
-      <OurClients />
+      <OurClients  />
       <Call />
-      <Testimonials />
+      <Testimonials testimonialsTitles={testimonialsTitles} testimonials={testimonials} />
       <CTA />
     </div>
   );
@@ -30,6 +32,25 @@ export async function getStaticProps({ locale }) {
   const whoWeAre = await getMarkdownContent("who_we_are");
   const mission = await getMarkdownContent("mission");
   const localizedMission = mission[locale];
+  const testimonialsMD = await getMarkdownContent("testimonials");
+  const testimonials = testimonialsMD["en"].testimonials.map((testimonial) => ({
+    name: testimonial.testimonialName,
+    logo: testimonial.testimonialImage,
+    text: testimonial.testimonialText[locale],
+    role: testimonial.testimonialRole
+
+  }));
+
+  const serviceMD = await getMarkdownContent("services");
+  const services = serviceMD["services"].map((service) => ({
+    number: service.number,
+    title: service.title[locale],
+    description: service.description[locale],
+    img: service.img,
+  }));
+
+
+  
 
   // Seleccionamos el contenido basado en el idioma
   const localizedContent = home[locale]; // Asume que los campos tienen un objeto con las traducciones
@@ -39,7 +60,11 @@ export async function getStaticProps({ locale }) {
       home: localizedContent, // Cargamos solo el contenido relevante para el idioma
       video: video,
       whoWeAre: WhoWeAre,
+      services: services,
       mission: localizedMission,
+      testimonialsTitles: testimonialsMD[locale],
+      testimonials: testimonials
+
 
     },
   };

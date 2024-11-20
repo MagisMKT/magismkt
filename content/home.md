@@ -12,25 +12,13 @@ en:
   ctaTitle: test
   word2: Women.
   word3: Creative.
-  clientsLight:
-    - clientName: Tepatitlán
-      clientImage: /images/tepatitlan_white.png
-    - clientName: Hugo Balderas Ibarra
-      clientImage: /images/hugo-balderas_white.png
-    - clientName: Azteca Farmers Market
-      clientImage: /images/azteca_white.png
-    - clientName: Mueblerias el triunfo
-      clientImage: /images/muebleria_white.png
-    - clientName: The Gonzalez Law Group
-      clientImage: /images/the-gonzalez-law-group_white.png
-    - clientName: Carnitas Mexican Grill
-      clientImage: /images/carnitas_white.png
-    - clientName: Alex Transmissions
-      clientImage: /images/alex_white.png
   ctaButtonText: test
   whoWeAreTitle: '`Who <span class="font-ramillas italic text-110">we are</span>`'
   ctaVideoText: Watch full video
   ctaText: Discover Magis
+  whatWeDoTitle: '`What <span class="font-ramillas italic text-110">we do</span>`'
+  whatWeDoSubtitle: '`Transforming brands with our <span class="text-blue dark:text-green px-2.5 py-1.5 rounded-full font ramillas italic font-bold text-110">reative services & expertise </span>`'
+  whatWeDoParagraph: Our committed team blends imagination andproficiency to provide groundbreaking solutions that distinguish your business. Experience excellence with our customized approach to reaching your objectives.
   clientsDark:
     - clientImage: /images/tepatitlan.png
       clientName: Tepatitlán
@@ -46,6 +34,7 @@ en:
       clientImage: /images/carnitas.png
     - clientName: Alex Transmissions
       clientImage: /images/alex.png
+ 
 es:
   whoWeAreSubtitle: '`Somos un equipo multidisciplinario  <span class="text-main bg-pink inline px-2.5 py-1.5 rounded-full font-ramillas italic font-bold text-110">100% liderado por mujeres.</span>`'
   subtitlePart1: Expertas en
@@ -61,4 +50,7 @@ es:
   whoWeAreTitle: '`Quiénes <span class="font-ramillas italic text-110">somos</span>`'
   ctaVideoText: Ver video
   ctaText: Descubre Magis
+  whatWeDoTitle: '`Qué <span class="font-ramillas italic text-110">hacemos</span>`'
+  whatWeDoSubtitle: '`Transformación de marcas con nuestros <span class="text-blue dark:text-green px-2.5 py-1.5 rounded-full font ramillas italic font-bold text-110">servicios creativos y experiencia </span>`'
+  whatWeDoParagraph: Nuestro comprometido equipo combina imaginación y competencia para ofrecer soluciones innovadoras que distingan a su empresa. Experimente la excelencia con nuestro enfoque personalizado para alcanzar sus objetivos.
 ---

@@ -70,6 +70,25 @@ collections:
               widget: "string",
               i18n: true,
             }
+          # OUR SERVICES
+          - {
+              label: "What We Do Title",
+              name: "whatWeDoTitle",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "What We Do Subtitle",
+              name: "whatWeDoSubtitle",
+              widget: "markdown",
+              i18n: true,
+            }
+          - {
+              label: "What We Do Paragraph",
+              name: "whatWeDoParagraph",
+              widget: "string",
+              i18n: true,
+            }
           # OUR CLIENTS (Separa imagen y nombre por idioma)
           - label: "Clients for Dark Mode"
             name: "clientsDark"
@@ -316,6 +335,89 @@ collections:
               name: "backgroundPhoto",
               widget: "image",
             }
+      # Servicies Section
+      - name: "servicies"
+        label: "Servicies Section"
+        file: "content/servicies.md"
+        i18n: true
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            i18n: false # No traduce toda la lista, pero permite contenido multilingüe
+            fields:
+            - {
+                label: "Service Number",
+                name: "number",
+                widget: "string",
+              }
+            - {
+                label: "Service Title",
+                name: "title",
+                widget: "object",
+                i18n: true,
+                fields:
+                  [
+                    {
+                      label: "Title (English)",
+                      name: "en",
+                      widget: "string",
+                    },
+                    {
+                      label: "Title (Spanish)",
+                      name: "es",
+                      widget: "string",
+                    },
+                  ],
+              }
+            - {
+                label: "Service Description",
+                name: "description",
+                widget: "object",
+                i18n: true,
+                fields:
+                  [
+                    {
+                      label: "Description (English)",
+                      name: "en",
+                      widget: "markdown",
+                    },
+                    {
+                      label: "Description (Spanish)",
+                      name: "es",
+                      widget: "markdown",
+                    },
+                  ],
+              }
+            - {
+                label: "Service Image",
+                name: "img",
+                widget: "image",
+              }
+            - label: "Sub-Services"
+              name: "subServices"
+              widget: "list"
+              i18n: false # No traduce toda la lista, pero cada subservicio puede ser multilingüe
+              fields:
+                - {
+                    label: "Sub-Service Name",
+                    name: "name",
+                    widget: "object",
+                    i18n: true,
+                    fields:
+                      [
+                        {
+                          label: "Name (English)",
+                          name: "en",
+                          widget: "string",
+                        },
+                        {
+                          label: "Name (Spanish)",
+                          name: "es",
+                          widget: "string",
+                        },
+                      ],
+                  }
 
       # Testimonials Section
       - name: "testimonials"
