@@ -63,7 +63,7 @@ function HeroSection({whoWeAre}) {
       <div className="absolute inset-0 bg-gradient-to-t from-[rgba(25,12,19,0.15)] via-[rgba(25,12,19,0.15)] to-transparent bg-opacity-60 z-20"></div>
 
       {/* Contenido */}
-      <div className="relative z-30 px-0 lg:px-4 flex flex-col gap-4 lg:gap-10 w-full mx-auto max-w-7xl">
+      <div className="relative z-30 px-0 lg:px-4 flex flex-col gap-4 lg:gap-10 w-full mx-auto max-w-7xl -mt-24">
         <div className="flex gap-4 items-center">
           <Shine color="#DC0073" />
           <h4>

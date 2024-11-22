@@ -41,6 +41,7 @@ function HeroSection({ home, video }) {
           height="auto"
           loop
           autoPlay
+          playsInline
           muted
           className="absolute h-full w-full top-0 left-0 object-cover z-10"
         >
