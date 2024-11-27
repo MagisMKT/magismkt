@@ -374,8 +374,8 @@ collections:
                   i18n: false,
                   fields: 
                     [
-                      { label: "EN", name: "en", widget: "string" },
-                      { label: "ES", name: "es", widget: "string" },
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
                     ],
                 } 
               - {
@@ -389,21 +389,17 @@ collections:
                       { label: "Spanish", name: "es", widget: "string" },
                     ],
                 }
-              - label: "Budget Options"
-                name: "budgetOptions"
-                widget: "list"
-                i18n: false
-                fields:
-                  - {
-                      label: "Option",
-                      name: "option",
-                      widget: "object",
-                      fields:
-                        [
-                          { label: "English", name: "en", widget: "string" },
-                          { label: "Spanish", name: "es", widget: "string" },
-                        ],
-                    }
+              - {
+                  label: "Budget Options",
+                  name: "budgetOptions",
+                  widget: "object",
+                  i18n: false,
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
+                }     
               - {
                   label: "Project Details Label",
                   name: "projectDetails",
