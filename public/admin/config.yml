@@ -370,6 +370,7 @@ collections:
               - label: "Service Options"
                 name: "serviceOptions"
                 widget: "list"
+                i18n: false
                 fields:
                   - {
                       label: "Option",
@@ -395,6 +396,7 @@ collections:
               - label: "Budget Options"
                 name: "budgetOptions"
                 widget: "list"
+                i18n: false
                 fields:
                   - {
                       label: "Option",
