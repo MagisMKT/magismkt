@@ -370,19 +370,13 @@ collections:
               - label: "Service Options"
                 name: "serviceOptions"
                 widget: "list"
-                fields:
-                  - {
-                      label: "Option",
-                      name: "option",
-                      widget: "object",
-                      fields:
-                        - label: "EN"
-                          name: "en"
-                          widget: "list"
-                        - label: "ES"
-                          name: "es"
-                          widget: "list"
-                    }
+                fields: 
+                  [
+                    { label: "EN", name: "en", widget: "string" },
+                    { label: "ES", name: "es", widget: "string" },
+                  ],
+          
+
               - {
                   label: "Budget Label",
                   name: "budget",
