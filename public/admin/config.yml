@@ -632,7 +632,7 @@ collections:
       - name: "header"
         label: "Header"
         file: "content/header.md"
-        i18n: false # Social Links no requieren traducción
+        i18n: true # Social Links no requieren traducción
         fields:
           - {
               label: "Header Button Text",
@@ -644,6 +644,7 @@ collections:
       - name: "pages_titles"
         label: "Pages Titles"
         file: "pages_titles.md"
+        i18n: true
         fields:
           - { label: "About Title", name: "aboutTitle", widget: "string", i18n: true }
           - { label: "Services Title", name: "servicesTitle", widget: "string", i18n: true }
@@ -652,6 +653,7 @@ collections:
       - name: "social_links"
         label: "Social Links"
         file: "social_links.md"
+        i18n: false
         fields:
           - { label: "Instagram", name: "instagram", widget: "string", i18n: false }
           - { label: "Facebook", name: "facebook", widget: "string", i18n: false }
