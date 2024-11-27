@@ -643,7 +643,7 @@ collections:
       #Pages Titles
       - name: "pages_titles"
         label: "Pages Titles"
-        file: "pages_titles.md"
+        file: "content/pages_titles.md"
         i18n: true
         fields:
           - { label: "About Title", name: "aboutTitle", widget: "string", i18n: true }
@@ -652,7 +652,7 @@ collections:
       #Social Links
       - name: "social_links"
         label: "Social Links"
-        file: "social_links.md"
+        file: "content/social_links.md"
         i18n: false
         fields:
           - { label: "Instagram", name: "instagram", widget: "string", i18n: false }
@@ -665,6 +665,7 @@ collections:
       - name: "footer"
         label: "Footer"
         file: "content/footer.md"
+        i18n: true
         fields:
           - {
               label: "Developer Signature",
