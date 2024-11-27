@@ -379,8 +379,8 @@ collections:
                       i18n: true,
                       fields:
                         [
-                          { label: "English", name: "en", widget: "string" },
-                          { label: "Spanish", name: "es", widget: "string" },
+                          { label: "English", name: "en", widget: "string", i18n: false,},
+                          { label: "Spanish", name: "es", widget: "string",i18n: false, },
                         ],
                     }
               - {
