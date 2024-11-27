@@ -75,7 +75,7 @@ function Team({ whoWeAre, teamMembers }) {
           
         </div>
         <h2>
-         {whoWeAre.teamSubtitlePart1}
+         {whoWeAre.teamSubtitlePart1}{" "}
           <span className="text-110 font-ramillas italic font-extrabold text-pink">
             {whoWeAre.teamSubtitlePart2}
           </span>

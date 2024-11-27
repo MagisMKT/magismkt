@@ -313,48 +313,163 @@ collections:
           - {
               label: "Contact Subtitle",
               name: "contactSubtitle",
-              widget: "markdown",
+              widget: "string",
               i18n: true,
             }
-          - label: "Form"
-            name: "form"
-            widget: "object"
-            i18n: true
+          - {
+              label: "Contact Paragraph",
+              name: "contactParagraph",
+              widget: "string",
+              i18n: true,
+            }
+          fields:
+      - {
+          label: "Contact Title",
+          name: "contactTitle",
+          widget: "markdown",
+          i18n: true,
+        }
+      - {
+          label: "Contact Subtitle",
+          name: "contactSubtitle",
+          widget: "markdown",
+          i18n: true,
+        }
+      - {
+          label: "Contact Paragraph",
+          name: "contactParagraph",
+          widget: "markdown",
+          i18n: true,
+        }
+      - label: "Form Fields"
+        name: "form"
+        widget: "object"
+        i18n: false
+        fields:
+          - {
+              label: "Full Name",
+              name: "fullname",
+              widget: "object",
+              i18n: true,
+              fields:
+                [
+                  { label: "English", name: "en", widget: "string" },
+                  { label: "Spanish", name: "es", widget: "string" },
+                ],
+            }
+          - {
+              label: "Email",
+              name: "email",
+              widget: "object",
+              i18n: true,
+              fields:
+                [
+                  { label: "English", name: "en", widget: "string" },
+                  { label: "Spanish", name: "es", widget: "string" },
+                ],
+            }
+          - {
+              label: "Phone Number",
+              name: "phoneNumber",
+              widget: "object",
+              i18n: true,
+              fields:
+                [
+                  { label: "English", name: "en", widget: "string" },
+                  { label: "Spanish", name: "es", widget: "string" },
+                ],
+            }
+          - {
+              label: "Company Name",
+              name: "companyName",
+              widget: "object",
+              i18n: true,
+              fields:
+                [
+                  { label: "English", name: "en", widget: "string" },
+                  { label: "Spanish", name: "es", widget: "string" },
+                ],
+            }
+          - {
+              label: "Services Label",
+              name: "services",
+              widget: "object",
+              i18n: true,
+              fields:
+                [
+                  { label: "English", name: "en", widget: "string" },
+                  { label: "Spanish", name: "es", widget: "string" },
+                ],
+            }
+          - label: "Service Options"
+            name: "serviceOptions"
+            widget: "list"
+            i18n: false # La lista no se traduce, pero cada elemento puede tener su propio idioma
             fields:
-              - { label: "Full Name", name: "fullName", widget: "string" }
-              - { label: "Email", name: "email", widget: "string" }
-              - { label: "Phone Number", name: "phoneNumber", widget: "string" }
-              - { label: "Company Name", name: "companyName", widget: "string" }
               - {
-                  label: "Services You Are Looking For",
-                  name: "services",
-                  widget: "list",
-                  field:
-                    { label: "Service", name: "service", widget: "string" },
+                  label: "Option",
+                  name: "option",
+                  widget: "object",
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
                 }
+          - {
+              label: "Budget Label",
+              name: "budget",
+              widget: "object",
+              i18n: true,
+              fields:
+                [
+                  { label: "English", name: "en", widget: "string" },
+                  { label: "Spanish", name: "es", widget: "string" },
+                ],
+            }
+          - label: "Budget Options"
+            name: "budgetOptions"
+            widget: "list"
+            i18n: false
+            fields:
               - {
-                  label: "Budget",
-                  name: "budget",
-                  widget: "list",
-                  field:
-                    {
-                      label: "Budget Option",
-                      name: "budgetOption",
-                      widget: "string",
-                    },
+                  label: "Option",
+                  name: "option",
+                  widget: "object",
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
                 }
-              - {
-                  label: "Project Details",
-                  name: "projectDetails",
-                  widget: "text",
-                }
-              - {
-                  label: "Form Button Text",
-                  name: "formButtonText",
-                  widget: "string",
-                  i18n: true,
-                }
-
+          - {
+              label: "Project Details Label",
+              name: "projectDetails",
+              widget: "object",
+              i18n: true,
+              fields:
+                [
+                  { label: "English", name: "en", widget: "string" },
+                  { label: "Spanish", name: "es", widget: "string" },
+                ],
+            }
+          - {
+              label: "Project Details Placeholder",
+              name: "projectDetailsPlaceholder",
+              widget: "object",
+              i18n: true,
+              fields:
+                [
+                  { label: "English", name: "en", widget: "string" },
+                  { label: "Spanish", name: "es", widget: "string" },
+                ],
+            }
+      - {
+           label: "Form Button Text",
+           name: "formButtonText",
+           widget: string,
+           i18n: true,
+        }
   # Colección para Secciones Compartidas
   - name: "shared"
     label: "Shared Sections"

@@ -4,7 +4,7 @@ import Arrow from "@/components/icons/Arrow";
 import Chevron from "@/components/icons/Chevron"; // Componente de Chevron
 import Check from "@/components/icons/Check"; // Componente de Palomita
 
-function ContactForm() {
+function ContactForm({ contactForm, contact }) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [selectedServices, setSelectedServices] = useState("");
   const [selectedBudget, setSelectedBudget] = useState("");
@@ -14,6 +14,8 @@ function ContactForm() {
     company: "",
     message: "",
   });
+
+  console.log("SERVICE OPTIONS", contactForm.servicesOptions[0]);
 
   const textareaRef = useRef(null);
 
@@ -36,6 +38,7 @@ function ContactForm() {
     document.getElementById(fieldId).focus();
     document.getElementById(fieldId).click();
   };
+  const name = contactForm.name;
 
   const fields = [
     {
@@ -43,63 +46,51 @@ function ContactForm() {
       type: "text",
       required: true,
       placeholder: "Jane Smith",
-      label: "Full Name*",
+      label: contactForm.name,
     },
     {
       id: "email",
       type: "email",
       required: true,
       placeholder: "jane@company.com",
-      label: "Email*",
+      label: contactForm.email,
     },
     {
       id: "phone",
       type: "text",
       required: false,
       placeholder: "+1 800 123 4567",
-      label: "Phone Number",
+      label: contactForm.phoneNumber,
     },
     {
       id: "company",
       type: "text",
       required: false,
       placeholder: "Magis MKT",
-      label: "Company Name",
+      label: contactForm.companyName,
     },
     {
       id: "services",
       type: "select",
       required: true,
       placeholder: "",
-      label: "Services you are looking for*",
-      options: [
-        "Select a service",
-        "Branding",
-        "Web Design & Development",
-        "Social Media",
-        "The Full Package",
-      ],
+      label: contactForm.services,
+      options: contactForm.servicesOptions,
     },
     {
       id: "budget",
       type: "select",
       required: true,
       placeholder: "",
-      label: "Budget*",
-      options: [
-        "Select a budget",
-        "500 - 1K USD",
-        "1K - 3K USD",
-        "3K - 5K USD",
-        "+10K USD",
-      ],
+      label: contactForm.budget,
+      options: contactForm.budgetOptions,
     },
     {
       id: "message",
       type: "textarea",
       required: false,
-      placeholder: "We want to redesign our brand...",
-      label: "Tell us some details about your project",
+      placeholder: contactForm.projectDetailsPlaceholder,
+      label: contactForm.projectDetails
     },
   ];
 
@@ -212,14 +203,14 @@ function ContactForm() {
                   <option
                     key={option}
                     value={
-                      option === "Select a service" ||
-                      option === "Select a budget"
+                      option === contactForm.servicesOptions[0] ||
+                      option === contactForm.budgetOptions[0]
                         ? ""
                         : option
                     }
                     disabled={
-                      option === "Select a service" ||
-                      option === "Select a budget"
+                      option === contactForm.servicesOptions[0] ||
+                      option === contactForm.budgetOptions[0]
                     }
                   >
                     {option}
@@ -267,7 +258,7 @@ function ContactForm() {
       ))}
       <div className="flex items-center justify-end col-span-1">
         <Button
-          text="Request a Quote"
+          text={contact.formButtonText}
           bgColor="dark:bg-main bg-light"
           textColor="dark:text-white text-main"
           hoverTextColor="dark:text-white text-main"
