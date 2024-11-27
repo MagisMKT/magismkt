@@ -376,7 +376,7 @@ collections:
                       label: "Option",
                       name: "option",
                       widget: "object",
-                      i18n: true,
+                      i18n: false,
                       fields:
                         [
                           { label: "English", name: "en", widget: "string", i18n: false,},
