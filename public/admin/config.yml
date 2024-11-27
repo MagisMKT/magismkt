@@ -370,18 +370,18 @@ collections:
               - label: "Service Options"
                 name: "serviceOptions"
                 widget: "list"
-                i18n: false
                 fields:
                   - {
                       label: "Option",
                       name: "option",
                       widget: "object",
-                      i18n: false,
                       fields:
-                        [
-                          { label: "English", name: "en", widget: "string", i18n: false,},
-                          { label: "Spanish", name: "es", widget: "string",i18n: false, },
-                        ],
+                        - label: "EN"
+                          name: "en"
+                          widget: "list"
+                        - label: "ES"
+                          name: "es"
+                          widget: "list"
                     }
               - {
                   label: "Budget Label",
