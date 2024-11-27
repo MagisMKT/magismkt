@@ -655,12 +655,12 @@ collections:
         file: "content/social_links.md"
         i18n: false
         fields:
-          - { label: "Instagram", name: "instagram", widget: "string", i18n: false }
-          - { label: "Facebook", name: "facebook", widget: "string", i18n: false }
-          - { label: "Tiktok", name: "tiktok", widget: "string", i18n: false }
-          - { label: "Youtube", name: "youtube", widget: "string", i18n: false }
-          - { label: "Pinterest", name: "pinterest", widget: "string", i18n: false }
-          - { label: "Linkedin", name: "linkedin", widget: "string", i18n: false }
+          - { label: "Instagram", name: "instagram", widget: "string" }
+          - { label: "Facebook", name: "facebook", widget: "string" }
+          - { label: "Tiktok", name: "tiktok", widget: "string" }
+          - { label: "Youtube", name: "youtube", widget: "string" }
+          - { label: "Pinterest", name: "pinterest", widget: "string" }
+          - { label: "Linkedin", name: "linkedin", widget: "string" }
       # Footer Configuration
       - name: "footer"
         label: "Footer"
