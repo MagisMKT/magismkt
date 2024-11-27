@@ -11,14 +11,14 @@ import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Dev from "./icons/Dev";
 
-function Footer() {
+function Footer({footer, socialLinks, pagesTitles}) {
   const router = useRouter();
 
   // Definimos los elementos del menú con sus respectivas rutas
   const menuItems = [
-    { href: "/about", label: "Who we are", id: "01" },
-    { href: "/services", label: "What we do", id: "02" },
-    { href: "/contact", label: "Contact us", id: "03" },
+    { href: "/about", label:pagesTitles.aboutTitle, id: "01" },
+    { href: "/services", label: pagesTitles.servicesTitle, id: "02" },
+    { href: "/contact", label: pagesTitles.contacTitle, id: "03" },
   ];
 
   return (
@@ -69,42 +69,42 @@ function Footer() {
           <div className="flex flex-col items-center lg:items-end space-y-6">
             <div className="flex space-x-4">
               <a
-                href="https://www.instagram.com/magis.mkt/"
+                href={socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Instagram className="fill-white dark:fill-main" />
               </a>
               <a
-                href="https://www.facebook.com/magis.mkt"
+                href={socialLinks.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Facebook className="fill-white dark:fill-main" />
               </a>
               <a
-                href="https://www.tiktok.com/@magis.mkt"
+                href={socialLinks.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Tiktok className="fill-white dark:fill-main" />
               </a>
               <a
-                href="https://www.youtube.com/@MAGISMARKETING"
+                href={socialLinks.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Youtube className="fill-white dark:fill-main" />
               </a>
               <a
-                href="https://www.linkedin.com/company/magis-mktg"
+                href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Linkedin className="fill-white dark:fill-main" />
               </a>
               <a
-                href="https://mx.pinterest.com/magismarketing/"
+                href={socialLinks.pinterest}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -119,7 +119,7 @@ function Footer() {
       <div className="flex flex-col md:flex-row gap-4 text-center items-center justify-center md:justify-between md:text-left text-sm dark:text-light text-main opacity-50 lg:container w-full mt-12 lg:mt-24">
         <span>© Magis Marketing 2024. All Rights Reserved.</span>
         <span className="flex gap-1">
-          Designed & developed by <Dev />
+          {footer.developerSignature}{" "} <Dev />
         </span>
       </div>
     </footer>

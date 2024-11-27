@@ -644,6 +644,7 @@ collections:
               label: "Header Social Links",
               name: "socialLinks",
               widget: "object",
+              i18n: false,
               fields:
                 [
                   { label: "Instagram", name: "instagram", widget: "string" },
@@ -654,7 +655,25 @@ collections:
                   { label: "LinkedIn", name: "linkedin", widget: "string" },
                 ],
             }
-
+      #Pages Titles
+      - name: "pages_titles"
+        label: "Pages Titles"
+        file: "pages_titles.md"
+        fields:
+          - { label: "About Title", name: "aboutTitle", widget: "string", i18n: true }
+          - { label: "Services Title", name: "servicesTitle", widget: "string", i18n: true }
+          - { label: "Contact Title", name: "contacTitle", widget: "string", i18n: true }
+      #Social Links
+      - name: "social_links"
+        label: "Social Links"
+        file: "social_links.md"
+        fields:
+          - { label: "Instagram", name: "instagram", widget: "string", i18n: false }
+          - { label: "Facebook", name: "facebook", widget: "string", i18n: false }
+          - { label: "Tiktok", name: "tiktok", widget: "string", i18n: false }
+          - { label: "Youtube", name: "youtube", widget: "string", i18n: false }
+          - { label: "Pinterest", name: "pinterest", widget: "string", i18n: false }
+          - { label: "Linkedin", name: "linkedin", widget: "string", i18n: false }
       # Footer Configuration
       - name: "footer"
         label: "Footer"

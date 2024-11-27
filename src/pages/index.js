@@ -10,9 +10,26 @@ import Testimonials from "@/components/shared/Testimonials";
 import CTA from "@/components/shared/CTA";
 import Logo from "@/components/Logo";
 import { test } from "gray-matter";
+import Layout from "@/components/Layout";
 
-function HomePage({ home, video, whoWeAre, services, mission, testimonialsTitles, testimonials, free_session_cta_titles, free_session_cta, main_cta }) {
+function HomePage({ 
+  home, 
+  video, 
+  whoWeAre, 
+  services, 
+  mission, 
+  testimonialsTitles, 
+  testimonials, 
+  free_session_cta_titles, 
+  free_session_cta, 
+  main_cta,
+  header,
+  socialLinks,
+  pagesTitles,
+  footer
+}) {
   return (
+    <Layout header={header} socialLinks={socialLinks} pagesTitles={pagesTitles} footer={footer}>
     <div className="relative">
       <HeroSection home={home} video={video} />
       <WhoWeAre home={home} whoWeAre={whoWeAre} />
@@ -23,6 +40,7 @@ function HomePage({ home, video, whoWeAre, services, mission, testimonialsTitles
       <Testimonials testimonialsTitles={testimonialsTitles} testimonials={testimonials} />
       <CTA main_cta={main_cta}/>
     </div>
+    </Layout>
   );
 }
 
@@ -58,6 +76,13 @@ export async function getStaticProps({ locale }) {
 
   const main_cta = await getMarkdownContent("main_cta");
 
+  // Cargar datos del header y enlaces sociales
+  const header = await getMarkdownContent("header");
+  const socialLinks = await getMarkdownContent("social_links");
+  const pagesTitles = await getMarkdownContent("pages_titles")
+  const footer = await getMarkdownContent("footer")
+
+
 
   
 
@@ -76,8 +101,10 @@ export async function getStaticProps({ locale }) {
       free_session_cta_titles: free_session_cta_titles,
       free_session_cta: free_session_cta,
       main_cta: main_cta[locale],
-
-
+      header: header[locale],
+      socialLinks: socialLinks["en"],
+      pagesTitles: pagesTitles[locale],
+      footer: footer[locale]
     },
   };
 }

@@ -13,11 +13,16 @@ import Pinterest from "./icons/Pinterest";
 import Linkedin from "./icons/Linkedin";
 import Youtube from "./icons/Youtube";
 
-function Header() {
+function Header({header, socialLinks, pagesTitles}) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const router = useRouter(); // Para obtener la ruta actual
   const isHomeOrAbout = router.pathname === "/" || router.pathname === "/about";
+
+  useEffect(() => {
+    console.log("header",header)
+    console.log("Social", socialLinks)
+  },[header,socialLinks])
 
   // Cerrar el menú al cambiar de página
   useEffect(() => {
@@ -47,10 +52,17 @@ function Header() {
 
   // Definimos los enlaces del menú con las rutas y los nombres
   const menuItems = [
-    { href: "/about", label: "Who we are", id: "01" },
-    { href: "/services", label: "What we do", id: "02" },
-    { href: "/contact", label: "Contact us", id: "03" },
+    { href: "/about", label:pagesTitles.aboutTitle, id: "01" },
+    { href: "/services", label: pagesTitles.servicesTitle, id: "02" },
+    { href: "/contact", label: pagesTitles.contacTitle, id: "03" },
   ];
+
+  // const menuItems = [
+  //   { href: "/about", label:"Who we are", id: "01" },
+  //   { href: "/services", label: "What we do", id: "02" },
+  //   { href: "/contact", label: "Contact us", id: "03" },
+  // ];
+
 
   return (
     <header
@@ -72,7 +84,7 @@ function Header() {
         {!scrolled && (
           <Link href="/contact" legacyBehavior>
             <a className="bg-pinkSecondary text-black px-6 py-3 rounded-full italic tracking-tight font-ramillas text-lg hover:bg-pink hover:text-white transition duration-500 hidden md:flex">
-              Get in touch
+              {header.headerButtonText}
             </a>
           </Link>
         )}
@@ -117,7 +129,7 @@ function Header() {
               <div className="flex gap-6">
                 <Link href="/contact" legacyBehavior>
                   <a className="bg-pinkSecondary text-black px-6 py-3 rounded-full italic tracking-tight font-ramillas text-lg hover:bg-pink hover:text-white transition duration-500">
-                    Get in touch
+                    {header.headerButtonText}
                   </a>
                 </Link>
                 {/* Botón de cerrar */}
@@ -179,32 +191,32 @@ function Header() {
                   {/* Redes sociales */}
                   {[
                     {
-                      href: "https://www.instagram.com/magis.mkt/",
+                      href: socialLinks.instagram,
                       icon: <Instagram className="fill-white dark:fill-main" />,
                       label: "Instagram",
                     },
                     {
-                      href: "https://www.facebook.com/magis.mkt",
+                      href: socialLinks.facebook,
                       icon: <Facebook className="fill-white dark:fill-main" />,
                       label: "Facebook",
                     },
                     {
-                      href: "https://www.tiktok.com/@magis.mkt",
+                      href: socialLinks.tiktok,
                       icon: <Tiktok className="fill-white dark:fill-main" />,
                       label: "Tiktok",
                     },
                     {
-                      href: "https://www.youtube.com/@MAGISMARKETING",
+                      href: socialLinks.youtube,
                       icon: <Youtube className="fill-white dark:fill-main" />,
                       label: "Youtube",
                     },
                     {
-                      href: "https://www.linkedin.com/company/magis-mktg",
+                      href: socialLinks.linkedin,
                       icon: <Linkedin className="fill-white dark:fill-main" />,
                       label: "Linkedin",
                     },
                     {
-                      href: "https://mx.pinterest.com/magismarketing/",
+                      href: socialLinks.pinterest,
                       icon: <Pinterest className="fill-white dark:fill-main" />,
                       label: "Pinterest",
                     },

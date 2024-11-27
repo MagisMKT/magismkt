@@ -2,20 +2,16 @@
 import "../styles/globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { LanguageProvider } from "@/context/LanguageContext";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 function MyApp({ Component, pageProps }) {
+  const { header, socialLinks, pagesTitles, footer } = pageProps; // Extraer props pasadas desde cada página
+
   return (
-    <>
-      <ThemeProvider>
-        <LanguageProvider>
-          <Header />
-          <Component {...pageProps} />
-          <Footer />
-        </LanguageProvider>
-      </ThemeProvider>
-    </>
+    <ThemeProvider>
+      <LanguageProvider>
+        <Component {...pageProps} />
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 
