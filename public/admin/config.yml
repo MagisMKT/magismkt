@@ -640,21 +640,6 @@ collections:
               widget: "string",
               i18n: true,
             }
-          - {
-              label: "Header Social Links",
-              name: "socialLinks",
-              widget: "object",
-              i18n: false,
-              fields:
-                [
-                  { label: "Instagram", name: "instagram", widget: "string" },
-                  { label: "Facebook", name: "facebook", widget: "string" },
-                  { label: "TikTok", name: "tiktok", widget: "string" },
-                  { label: "YouTube", name: "youtube", widget: "string" },
-                  { label: "Pinterest", name: "pinterest", widget: "string" },
-                  { label: "LinkedIn", name: "linkedin", widget: "string" },
-                ],
-            }
       #Pages Titles
       - name: "pages_titles"
         label: "Pages Titles"
