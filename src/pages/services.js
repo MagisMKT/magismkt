@@ -64,7 +64,7 @@ export async function getStaticProps({ locale }) {
       testimonials: testimonials,
       main_cta: main_cta[locale],
       header: header[locale],
-      socialLinks: socialLinks["en"],
+      socialLinks: socialLinks[locale],
       pagesTitles: pagesTitles[locale],
       footer: footer[locale]
     },

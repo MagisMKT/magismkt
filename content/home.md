@@ -40,7 +40,7 @@ en:
     excellence with our customized approach to reaching your objectives.
   whatWeDoSubtitle: '`Transforming brands with our <span class="text-blue
     dark:text-green px-2.5 py-1.5 rounded-full font ramillas italic font-bold
-    text-110">reative services & expertise </span>`'
+    text-110">creative services & expertise </span>`'
   ctaVideoText: Watch full video
   clientsTextGrid: '`Be the <span className="italic font-ramillas text-110">next!</span>`'
   whatWeDoTitle: '`What <span class="font-ramillas italic text-110">we do</span>`'
@@ -65,7 +65,7 @@ es:
   clientsSubtitle: '`<span class="text-110 font-ramillas italic
     font-extrabold">Nos encanta </span><span class="text-main
     dark:text-light">trabajar con</span>`'
-  whoWeAreSubtitle: '`Somos un equipo multidisciplinario  <span class="text-main
+  whoWeAreSubtitle: '`<span class="relative z-20">Somos un equipo multidisciplinario  </span><span class="text-main
     bg-pink inline px-2.5 py-1.5 rounded-full font-ramillas italic font-bold
     text-110">100% liderado por mujeres.</span>`'
   subtitlePart1: Expertas en

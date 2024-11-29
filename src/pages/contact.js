@@ -60,7 +60,7 @@ export async function getStaticProps({ locale }) {
       contact: contact[locale],
       contactForm,
       header: header[locale],
-      socialLinks: socialLinks["en"],
+      socialLinks: socialLinks[locale],
       pagesTitles: pagesTitles[locale],
       footer: footer[locale]
     },

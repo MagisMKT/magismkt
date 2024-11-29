@@ -102,7 +102,7 @@ export async function getStaticProps({ locale }) {
       free_session_cta: free_session_cta,
       main_cta: main_cta[locale],
       header: header[locale],
-      socialLinks: socialLinks["en"],
+      socialLinks: socialLinks[locale],
       pagesTitles: pagesTitles[locale],
       footer: footer[locale]
     },

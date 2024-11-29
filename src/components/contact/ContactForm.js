@@ -212,6 +212,8 @@ function ContactForm({ contactForm, contact }) {
                       option === contactForm.servicesOptions[0] ||
                       option === contactForm.budgetOptions[0]
                     }
+                    className="dark:bg-main dark:text-white bg-light text-main"
+
                   >
                     {option}
                   </option>

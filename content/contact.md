@@ -1,7 +1,7 @@
 ---
 en:
   contactTitle: '`Contact <span class="font-ramillas italic text-110">Us</span>`'
-  contactSubtitle: Let's grow <span class="text-main bg-green inline px-1.5 lg:px-2.5 py-0.25 lg:py-1.5 -z-10 relative rounded-full font-ramillas italic font-bold text-110 ">your sales!</span>
+  contactSubtitle: <span class="relative z-20">Let's grow </span><span class="text-main bg-green inline px-1.5 lg:px-2.5 py-0.25 lg:py-1.5 -z-10 relative rounded-full font-ramillas italic font-bold text-110 ">&nbsp;your sales! &nbsp;</span>
   contactParagraph: We are eager to assist in finding the best strategies to grow your business. Reach out to us for more information about our services.
   form:
     fullname:
@@ -57,7 +57,7 @@ en:
   formButtonText: Request a Quote
 es:
   contactTitle: '`Contácta <span class="font-ramillas italic text-110">con nosotros</span>`'
-  contactSubtitle: Hagamos crecer <span class="text-main bg-green inline px-1.5 lg:px-2.5 py-0.25 lg:py-1.5 -z-10 relative rounded-full font-ramillas italic font-bold text-110 ">tus ventas!</span>
+  contactSubtitle: <span class="relative z-20">Hagamos crecer </span><span class="text-main bg-green inline px-1.5 lg:px-2.5 py-0.25 lg:py-1.5 -z-10 relative rounded-full font-ramillas italic font-bold text-110 ">tus ventas!</span>
   contactParagraph: Estamos ansiosos por ayudarte a encontrar las mejores estrategias para hacer crecer tu negocio. Contáctanos para obtener más información sobre nuestros servicios.
   formButtonText: Solicitar presupuesto
 ---
