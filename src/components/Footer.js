@@ -11,12 +11,12 @@ import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Dev from "./icons/Dev";
 
-function Footer({footer, socialLinks, pagesTitles}) {
+function Footer({ footer, socialLinks, pagesTitles }) {
   const router = useRouter();
 
   // Definimos los elementos del menú con sus respectivas rutas
   const menuItems = [
-    { href: "/about", label:pagesTitles.aboutTitle, id: "01" },
+    { href: "/about", label: pagesTitles.aboutTitle, id: "01" },
     { href: "/services", label: pagesTitles.servicesTitle, id: "02" },
     { href: "/contact", label: pagesTitles.contacTitle, id: "03" },
   ];
@@ -118,8 +118,8 @@ function Footer({footer, socialLinks, pagesTitles}) {
       {/* Derechos reservados */}
       <div className="flex flex-col md:flex-row gap-4 text-center items-center justify-center md:justify-between md:text-left text-sm dark:text-light text-main opacity-50 lg:container w-full mt-12 lg:mt-24">
         <span>© Magis Marketing 2024. All Rights Reserved.</span>
-        <span className="flex gap-1">
-          {footer.developerSignature}{" "} <Dev />
+        <span className="flex items-center gap-1.5">
+          {footer.developerSignature} <Dev />
         </span>
       </div>
     </footer>
