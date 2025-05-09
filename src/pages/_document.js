@@ -6,6 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         {/* ——— Fuentes ——— */}
+        <title>Magis Marketing</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
