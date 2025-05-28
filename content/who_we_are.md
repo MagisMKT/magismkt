@@ -73,13 +73,13 @@ multidisciplinary team.`'
       fullName: López
       role:
         en: Community Manager
-        es: Community Managerr
+        es: Community Manager
       photo: /images/jocelyn.jpg
       video: /images/jocelyn.mp4
   heroTitlePart1: 'Who'
   heroTitlePart2: 'we are'
 es:
-  storyTitlePart1: 'Nustra '
+  storyTitlePart1: 'Nuestra '
   storyTitlePart2: 'historia'
   storySubtitlePart1: 'Impulsando el éxito con un '
   storySubtitlePart2: 'Toque Femenino:'

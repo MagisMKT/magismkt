@@ -42,13 +42,13 @@ en:
         es: Líder de Estrategia de Contenidos
       photo: /images/brenda.jpg
       video: /images/brenda.mp4
-    - name: Miranda
-      fullName: Valencia
+    - name: Carolina
+      fullName: Mendicuti
       role:
         en: Engagement Specialist
         es: Especialista en Engagement
-      photo: /images/miranda.jpg
-      video: /images/miranda.mp4
+      photo: /images/carolina.jpg
+      video: /images/carolina.mp4
     - name: Brenda
       fullName: Báez
       role:
@@ -64,19 +64,19 @@ en:
       photo: /images/ana.jpg
       video: /images/ana.mp4
     - role:
-        en: Key Account Holder
-        es: Key Account Holder
+        en: Junior Designer
+        es: Diseñadora Junior
       name: Laritza
       fullName: Martínez
       photo: /images/laritza.jpg
       video: /images/laritza.mp4
-    - name: Paola
-      fullName: Valencia
+    - name: Jocelyn
+      fullName: López
       role:
-        en: Sales Executive
-        es: Ejecutiva de Ventas
-      photo: /images/paola.jpg
-      video: /images/paola.mp4
+        en: CREATIVE & OPERATIONAL STRATEGIST
+        es: CREATIVE & OPERATIONAL STRATEGIST
+      photo: /images/jocelyn.jpg
+      video: /images/jocelyn.mp4
 es:
   heroTitlePart1: Quiénes
   heroTitlePart2: somos
