@@ -41,13 +41,13 @@ multidisciplinary team.`'
         es: Líder de Estrategia de Contenidos
       photo: /images/brenda.jpg
       video: /images/brenda.mp4
-    - name: Miranda
-      fullName: Valencia
+    - name: Carolina
+      fullName: Mendicuti
       role:
-        en: Engagement Specialist
-        es: Especialista en Engagement
-      photo: /images/miranda.jpg
-      video: /images/miranda.mp4
+        en: Creative & Operational Strategist
+        es: Creative & Operational Strategist
+      photo: /images/carolina.jpg
+      video: /images/carolina.mp4
     - name: Brenda
       fullName: Báez
       role:
@@ -63,19 +63,19 @@ multidisciplinary team.`'
       photo: /images/ana.jpg
       video: /images/ana.mp4
     - role:
-        en: Key Account Holder
-        es: Key Account Holder
+        en: Junior Designer
+        es: Diseñadora Junior
       name: Laritza
       fullName: Martínez
       photo: /images/laritza.jpg
       video: /images/laritza.mp4
-    - name: Paola
-      fullName: Valencia
+    - name: Jocelyn
+      fullName: López
       role:
-        en: Sales Executive
-        es: Ejecutiva de Ventas
-      photo: /images/paola.jpg
-      video: /images/paola.mp4
+        en: Community Manager
+        es: Community Manager
+      photo: /images/jocelyn.jpg
+      video: /images/jocelyn.mp4
   heroTitlePart1: 'Who'
   heroTitlePart2: 'we are'
 es:
