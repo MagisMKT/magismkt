@@ -45,8 +45,8 @@ en:
     - name: Carolina
       fullName: Mendicuti
       role:
-        en: Engagement Specialist
-        es: Especialista en Engagement
+        en: CREATIVE & OPERATIONAL STRATEGIST
+        es: CREATIVE & OPERATIONAL STRATEGIST
       photo: /images/carolina.jpg
       video: /images/carolina.mp4
     - name: Brenda
@@ -73,8 +73,8 @@ en:
     - name: Jocelyn
       fullName: López
       role:
-        en: CREATIVE & OPERATIONAL STRATEGIST
-        es: CREATIVE & OPERATIONAL STRATEGIST
+        en: Community Manager
+        es: Community Manager
       photo: /images/jocelyn.jpg
       video: /images/jocelyn.mp4
 es:
