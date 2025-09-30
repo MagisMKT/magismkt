@@ -42,13 +42,6 @@ en:
         es: Líder de Estrategia de Contenidos
       photo: /images/brenda.jpg
       video: /images/brenda.mp4
-    - name: Carolina
-      fullName: Mendicuti
-      role:
-        en: CREATIVE & OPERATIONAL STRATEGIST
-        es: CREATIVE & OPERATIONAL STRATEGIST
-      photo: /images/carolina.jpg
-      video: /images/carolina.mp4
     - name: Brenda
       fullName: Báez
       role:
