@@ -57,8 +57,8 @@ en:
       photo: /images/ana.jpg
       video: /images/ana.mp4
     - role:
-        en: Junior Designer
-        es: Diseñadora Junior
+        en: Project Manager
+        es: Project Manager
       name: Laritza
       fullName: Martínez
       photo: /images/laritza.jpg
