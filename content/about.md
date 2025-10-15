@@ -35,6 +35,13 @@ en:
         es: Líder de Desarrollo Comercial
       photo: /images/jessica.jpg
       video: /images/jessica.mp4
+    - role:
+        en: Project Manager
+        es: Project Manager
+      name: Laritza
+      fullName: Martínez
+      photo: /images/laritza.jpg
+      video: /images/laritza.mp4
     - name: Brenda
       fullName: Báez
       role:
@@ -49,13 +56,6 @@ en:
         es: Diseñadora Junior
       photo: /images/ana.jpg
       video: /images/ana.mp4
-    - role:
-        en: Project Manager
-        es: Project Manager
-      name: Laritza
-      fullName: Martínez
-      photo: /images/laritza.jpg
-      video: /images/laritza.mp4
     - name: Jocelyn
       fullName: López
       role:
