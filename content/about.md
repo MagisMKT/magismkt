@@ -36,13 +36,6 @@ en:
       photo: /images/jessica.jpg
       video: /images/jessica.mp4
     - name: Brenda
-      fullName: Briones
-      role:
-        en: Head of Content Strategy
-        es: Líder de Estrategia de Contenidos
-      photo: /images/brenda.jpg
-      video: /images/brenda.mp4
-    - name: Brenda
       fullName: Báez
       role:
         en: Senior Designer
