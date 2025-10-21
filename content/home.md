@@ -1,22 +1,25 @@
 ---
 en:
-  clientsSubtitle: '`<span class="text-110 font-ramillas italic font-extrabold">We
-    love to </span><span class="text-main dark:text-light">work with</span>`'
-  whoWeAreSubtitle: '`We are a <span class="text-main bg-pink inline px-2.5 py-1.5
-    rounded-full font-ramillas italic font-bold text-110"> 100% women-led</span>
-    multidisciplinary team.`'
-  subtitlePart1: Experts in
-  whoWeAreParagraph: '`Our talented women have risen to every occasion, each
-    member brings a unique perspective and skill set. <span
-    class="text-green">Together, we empower one another and create a supportive
-    environment that drives success for our team and clients.</span>`'
+  clientsSubtitle: '`<span class="text-110 font-ramillas italic
+    font-extrabold">Businesses that have </span><span class="text-main
+    dark:text-light">grown with Magis</span>`'
+  whoWeAreSubtitle: '`We are a marketing agency in Texas, <span class="text-main
+    bg-pink inline px-2.5 py-1.5 rounded-full font-ramillas italic font-bold
+    text-110"> built by and for Latino entrepreneurs.</span>`'
+  subtitlePart1: The social media agency
+  whoWeAreParagraph: '`At Magis, we’re committed to helping our people
+    —entrepreneurs and small to mid-sized business owners— grow through real
+    digital strategies. <span class="text-green">We believe every Hispanic brand
+    deserves high-quality content with the same professional standard as big
+    companies, but with the authenticity and heart that define our
+    culture.</span>`'
   whoWeAreButtonText: More about us
-  subtitlePart2: branding, marketing & public relations.
-  word1: Magis.
+  subtitlePart2: for Hispanic entrepreneurs.
+  word1: Creativity.
   clientsTextButton: Let's talk
   ctaTitle: test
   word2: Women.
-  word3: Creative.
+  word3: Results.
   clientsLight:
     - clientName: Tepatitlán
       clientImage: /images/tepatitlan_white.png
@@ -35,12 +38,13 @@ en:
   ctaButtonText: test
   clientsTitle: '`Our <span class="font-ramillas italic text-110">clients</span>`'
   whoWeAreTitle: '`Who <span class="font-ramillas italic text-110">we are</span>`'
-  whatWeDoParagraph: Our committed team blends imagination andproficiency to
-    provide groundbreaking solutions that distinguish your business. Experience
-    excellence with our customized approach to reaching your objectives.
-  whatWeDoSubtitle: '`Transforming brands with our <span class="text-blue
+  whatWeDoParagraph: We blend creativity and strategy to attract customers,
+    generate leads, and boost your sales.  Our team understands the Texas market
+    and how to connect with the Latino community — creating authentic content,
+    effective campaigns, and brands with identity.
+  whatWeDoSubtitle: '`We make your brand sell, <span class="text-blue
     dark:text-green px-2.5 py-1.5 rounded-full font ramillas italic font-bold
-    text-110">creative services & expertise </span>`'
+    text-110">not just look good. </span>`'
   ctaVideoText: Watch full video
   clientsTextGrid: '`Be the <span className="italic font-ramillas text-110">next!</span>`'
   whatWeDoTitle: '`What <span class="font-ramillas italic text-110">we do</span>`'
@@ -63,31 +67,34 @@ en:
       clientImage: /images/alex.png
 es:
   clientsSubtitle: '`<span class="text-110 font-ramillas italic
-    font-extrabold">Nos encanta </span><span class="text-main
-    dark:text-light">trabajar con</span>`'
-  whoWeAreSubtitle: '`<span class="relative z-20">Somos un equipo multidisciplinario  </span><span class="text-main
-    bg-pink inline px-2.5 py-1.5 rounded-full font-ramillas italic font-bold
-    text-110">100% liderado por mujeres.</span>`'
-  subtitlePart1: Expertas en
-  whoWeAreParagraph: '`Nuestras mujeres talentosas han estado a la altura de cada
-    ocasión, cada miembro aporta una perspectiva y un conjunto de habilidades
-    únicos. <span class="text-green">Juntos, nos fortalecemos mutuamente y
-    creamos un entorno de apoyo que impulsa el éxito de nuestro equipo y
-    nuestros clientes.</span>`'
+    font-extrabold">Negocios que han </span><span class="text-main
+    dark:text-light">crecido con Magis</span>`'
+  whoWeAreSubtitle: '`<span class="relative z-20">Somos una agencia de marketing
+    digital en Texas, </span><span class="text-main bg-pink inline px-2.5 py-1.5
+    rounded-full font-ramillas italic font-bold text-110">hecha por y para
+    emprendedores latinos.</span>`'
+  subtitlePart1: La agencia
+  whoWeAreParagraph: '`En Magis, nuestro compromiso es apoyar a nuestra gente
+    —emprendedores, dueños de pequeños y medianos negocios— a crecer con
+    estrategias digitales reales. <span class="text-green">Creemos que cada
+    marca hispana merece contenido de calidad, con el mismo estándar profesional
+    que las grandes empresas, pero con la autenticidad y cercanía que nos
+    define.</span>`'
   whoWeAreButtonText: Más sobre nosotras
-  subtitlePart2: branding, marketing y relaciones públicas.
-  word1: Magis.
+  subtitlePart2: emprendedores hispanos.
+  word1: Creatividad.
   clientsTextButton: Hablemos
-  word2: Mujeres.
-  word3: Creativas.
+  word2: " Estrategia."
+  word3: Resultados.
   clientsTitle: '`Nuestros <span class="font-ramillas italic text-110">clientes</span>`'
   whoWeAreTitle: '`Quiénes <span class="font-ramillas italic text-110">somos</span>`'
-  whatWeDoParagraph: Nuestro comprometido equipo combina imaginación y competencia
-    para ofrecer soluciones innovadoras que distingan a su empresa. Experimente
-    la excelencia con nuestro enfoque personalizado para alcanzar sus objetivos.
-  whatWeDoSubtitle: '`Transformación de marcas con nuestros <span class="text-blue
+  whatWeDoParagraph: "Combinamos creatividad y estrategia para atraer clientes,
+    generar leads y aumentar tus ventas. Nuestro equipo entiende el mercado en
+    Texas y cómo conectar con la comunidad latina: creamos contenido auténtico,
+    campañas efectivas y marcas con identidad."
+  whatWeDoSubtitle: '`Hacemos que tu marca venda, <span class="text-blue
     dark:text-green px-2.5 py-1.5 rounded-full font ramillas italic font-bold
-    text-110">servicios creativos y experiencia </span>`'
+    text-110"> no solo que se vea bien. </span>`'
   ctaVideoText: Ver video
   clientsTextGrid: '`Sé el <span className="italic font-ramillas text-110">siguiente!</span>`'
   whatWeDoTitle: '`Qué <span class="font-ramillas italic text-110">hacemos</span>`'
