@@ -14,7 +14,7 @@ en:
     companies, but with the authenticity and heart that define our
     culture.</span>`'
   whoWeAreButtonText: More about us
-  subtitlePart2: Hispanic entrepreneurs.
+  subtitlePart2: Latino entrepreneurs.
   word1: Creativity.
   clientsTextButton: Let's talk
   ctaTitle: test
@@ -81,7 +81,7 @@ es:
     que las grandes empresas, pero con la autenticidad y cercanía que nos
     define.</span>`'
   whoWeAreButtonText: Más sobre nosotras
-  subtitlePart2: emprendedores hispanos.
+  subtitlePart2: emprendedores latinos.
   word1: Creatividad.
   clientsTextButton: Hablemos
   word2: " Estrategia."
