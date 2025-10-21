@@ -9,9 +9,8 @@ en:
   storySubtitlePart1: Driving Success with a
   teamParagraph: Finding a capable team to achieve great things can be quite
     challenging, but we can offer you the best.
-  heroSubtitle: We are a marketing agency in Texas,<span class="font-ramillas
-    italic font-bold text-110">100% women-led</span> built by and for Latino
-    entrepreneurs.
+  heroSubtitle: We are a marketing agency,<span class="font-ramillas italic
+    font-bold text-110"> built by and for Latino entrepreneurs</span>
   storySubtitlePart2: " Feminine Touch:"
   storySubtitlePart3: Meet Magis Marketing
   storyParagraph1: Founded in 2019 and based in Texas, Magis has embarked on an
