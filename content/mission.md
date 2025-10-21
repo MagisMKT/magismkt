@@ -6,7 +6,7 @@ en:
     !leading-none rounded-full font-ramillas italic font-bold
     text-110">&nbsp;business&nbsp;</span>`'
   thirdTitle: '`Reject the ordinary, <br><span class="text-green font-ramillas
-    font-medium text-105">&amp;raise your standards.</span>`'
+    font-medium text-105"> raise your standards.</span>`'
   backgroundPhoto: /images/mission.jpg
 es:
   missionTitle: '`Nuestra <span class="font-ramillas italic text-110">misión</span>`'
@@ -14,6 +14,6 @@ es:
     text-105">MÁS</span>para tu<span class="text-main bg-pink inline px-5
     !leading-none rounded-full font-ramillas italic font-bold
     text-110">&nbsp;negocio&nbsp;</span>`'
-  thirdTitle: '`Rechaza lo común<br><span class="text-green font-ramillas
-    font-medium text-105">&amp; eleva tus estándares. </span>`'
+  thirdTitle: '`Rechaza lo común,<br><span class="text-green font-ramillas
+    font-medium text-105"> eleva tus estándares. </span>`'
 ---
