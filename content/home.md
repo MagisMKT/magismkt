@@ -3,9 +3,9 @@ en:
   clientsSubtitle: '`<span class="text-110 font-ramillas italic
     font-extrabold">Businesses that have grown</span><span class="text-main
     dark:text-light"> with Magis</span>`'
-  whoWeAreSubtitle: '`We are a marketing agency in Texas, <span class="text-main
-    bg-pink inline px-2.5 py-1.5 rounded-full font-ramillas italic font-bold
-    text-110"> built by and for Latino entrepreneurs.</span>`'
+  whoWeAreSubtitle: '`We are a marketing agency, <span class="text-main bg-pink
+    inline px-2.5 py-1.5 rounded-full font-ramillas italic font-bold text-110">
+    built by and for Latino entrepreneurs.</span>`'
   subtitlePart1: The social media agency for
   whoWeAreParagraph: '`At Magis, we’re committed to helping our people
     —entrepreneurs and small to mid-sized business owners— grow through real
@@ -70,7 +70,7 @@ es:
     font-extrabold">Negocios que han crecido </span><span class="text-main
     dark:text-light">con Magis</span>`'
   whoWeAreSubtitle: '`<span class="relative z-20">Somos una agencia de marketing
-    digital en Texas, </span><span class="text-main bg-pink inline px-2.5 py-1.5
+    digital, </span><span class="text-main bg-pink inline px-2.5 py-1.5
     rounded-full font-ramillas italic font-bold text-110">hecha por y para
     emprendedores latinos.</span>`'
   subtitlePart1: La agencia para
