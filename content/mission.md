@@ -7,7 +7,7 @@ en:
     text-110">&nbsp;business&nbsp;</span>`'
   thirdTitle: '`Reject the ordinary, <br><span class="text-green font-ramillas
     font-medium text-105"> raise your standards.</span>`'
-  backgroundPhoto: /images/mission.jpg
+  backgroundPhoto: /images/team.jpg
 es:
   missionTitle: '`Nuestra <span class="font-ramillas italic text-110">misión</span>`'
   missionSubtitle: '`<span class="font-ramillas italic font-bold
