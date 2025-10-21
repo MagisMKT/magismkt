@@ -9,8 +9,9 @@ en:
   storySubtitlePart1: Driving Success with a
   teamParagraph: Finding a capable team to achieve great things can be quite
     challenging, but we can offer you the best.
-  heroSubtitle: We are a <span class="font-ramillas italic font-bold
-    text-110">100% women-led</span> multidisciplinary team.
+  heroSubtitle: We are a marketing agency in Texas,<span class="font-ramillas
+    italic font-bold text-110">100% women-led</span> built by and for Latino
+    entrepreneurs.
   storySubtitlePart2: " Feminine Touch:"
   storySubtitlePart3: Meet Magis Marketing
   storyParagraph1: Founded in 2019 and based in Texas, Magis has embarked on an
@@ -73,8 +74,9 @@ es:
   storySubtitlePart1: Impulsando el éxito con un
   teamParagraph: Encontrar un equipo capaz de lograr grandes cosas puede ser todo
     un reto, pero nosotros podemos ofrecerle lo mejor.
-  heroSubtitle: Somos un equipo multidisciplinario <span class="font-ramillas
-    italic font-bold text-110">100% liderado por mujeres.</span>
+  heroSubtitle: Somos una agencia de marketing digital en Texas,<span
+    class="font-ramillas italic font-bold text-110">hecha por y para
+    emprendedores latinos.</span>
   storySubtitlePart2: " toque femenino:"
   storySubtitlePart3: Conoce Magis Marketing
   storyParagraph1: Fundada en 2019 y con sede en Texas, Magis ha emprendido un
