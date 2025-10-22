@@ -3,9 +3,10 @@ en:
   clientsSubtitle: '`<span class="text-110 font-ramillas italic
     font-extrabold">Businesses that have grown</span><span class="text-main
     dark:text-light"> with Magis</span>`'
-  whoWeAreSubtitle: '`We are a marketing agency, built by and for <span
-    class="text-main bg-pink inline px-2.5 py-1.5 rounded-full font-ramillas
-    italic font-bold text-110">Latino entrepreneurs.</span>`'
+  whoWeAreSubtitle: <span class="z-20 block relative">We are a marketing agency,
+    built by and for</span><span class="text-main bg-pink inline px-2.5 py-1.5
+    rounded-full font-ramillas italic font-bold text-110 -z-10 relative">Latino
+    entrepreneurs.</span>
   subtitlePart1: The social media agency for
   whoWeAreParagraph: '`At Magis, we’re committed to helping our people
     —entrepreneurs and small to mid-sized business owners— grow through real
@@ -69,10 +70,10 @@ es:
   clientsSubtitle: '`<span class="text-110 font-ramillas italic
     font-extrabold">Negocios que han crecido </span><span class="text-main
     dark:text-light">con Magis</span>`'
-  whoWeAreSubtitle: '`<span class="relative z-20">Somos una agencia de marketing
-    digital, </span><span class="text-main bg-pink inline px-2.5 py-1.5
-    rounded-full font-ramillas italic font-bold text-110">hecha por y para
-    emprendedores latinos.</span>`'
+  whoWeAreSubtitle: <span class="relative z-20 relative">Somos una agencia de
+    marketing digital, </span><span class="text-main bg-pink inline px-2.5
+    py-1.5 rounded-full font-ramillas italic font-bold text-110">hecha por y
+    para emprendedores latinos.</span>
   subtitlePart1: La agencia para
   whoWeAreParagraph: '`En Magis, nuestro compromiso es apoyar a nuestra gente
     —emprendedores, dueños de pequeños y medianos negocios— a crecer con
