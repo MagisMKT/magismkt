@@ -4,10 +4,12 @@ en:
   heroTitlePart2: we are
   teamSubtitlePart1: The faces
   teamSubtitlePart2: behind the Magic
-  teamCentralPhrasePart1: Women that work
-  teamCentralPhrasePart2: with love
+  teamCentralPhrasePart1: Let's do
+  teamCentralPhrasePart2: MORE!
   storySubtitlePart1: Driving Success with a
-  teamParagraph: A multidisciplinary team of specialists in strategy, design, content, and digital advertising — all working together to help your brand grow.
+  teamParagraph: A multidisciplinary team of specialists in strategy, design,
+    content, and digital advertising — all working together to help your brand
+    grow.
   heroSubtitle: We are a marketing agency,<span class="font-ramillas italic
     font-bold text-110"> built by and for Latino entrepreneurs</span>
   storySubtitlePart2: " Feminine Touch:"
@@ -67,10 +69,12 @@ es:
   heroTitlePart2: somos
   teamSubtitlePart1: Los rostros
   teamSubtitlePart2: detrás de la magia
-  teamCentralPhrasePart1: Mujeres que trabajan
-  teamCentralPhrasePart2: con amor
+  teamCentralPhrasePart1: ¡Hagamos
+  teamCentralPhrasePart2: MÁS!
   storySubtitlePart1: Impulsando el éxito con un
-  teamParagraph: Un equipo multidisciplinario con especialistas en estrategia, diseño, contenido y publicidad digital, trabajando juntos para que tu marca crezca.
+  teamParagraph: Un equipo multidisciplinario con especialistas en estrategia,
+    diseño, contenido y publicidad digital, trabajando juntos para que tu marca
+    crezca.
   heroSubtitle: Somos una agencia de marketing digital en Texas,<span
     class="font-ramillas italic font-bold text-110">hecha por y para
     emprendedores latinos.</span>
