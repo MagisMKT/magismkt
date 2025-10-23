@@ -163,7 +163,7 @@ function Team({ whoWeAre, teamMembers }) {
               <br />
               {whoWeAre.teamCentralPhrasePart2}
             </h3>
-            <Image quality={100} src="/images/shine-circle.svg" layout="fill" />
+            <Image src="/images/shine-circle.svg" layout="fill" />
           </div>
         </div>
 

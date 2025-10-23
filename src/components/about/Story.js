@@ -7,14 +7,12 @@ function Story({ whoWeAre }) {
     <section className="min-h-[90vh] z-40 relative -mt-[13vh] flex flex-col justify-center items-center pt-48 lg:py-12 px-[20px]">
       <div className="absolute top-0 dark:bg-[url('/images/curve.svg')] bg-[url('/images/curve_light.svg')] min-h-[13vh] bg-[length:100vw] bg-bottom w-full z-20 bg-no-repeat"></div>
       <Image
-        quality={100}
         src="/images/logo_separator.svg"
         width="120"
         height="120"
         className="dark:visible z-30 absolute top-[60px] left-auto right-auto w-[100px] h-[100px] lg:w-[120px] lg:h-[120px]"
       />
       <Image
-        quality={100}
         src="/images/logo_separator_light.svg"
         width="120"
         height="120"

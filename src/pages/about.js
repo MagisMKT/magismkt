@@ -30,7 +30,7 @@ function About({
         <Story whoWeAre={whoWeAre} />
         <Team whoWeAre={whoWeAre} teamMembers={teamMembers} />
         <Mission mission={mission} />
-        <Image quality={100} Grid />
+        <ImageGrid />
         <Call
           free_session_cta={free_session_cta}
           free_session_cta_titles={free_session_cta_titles}

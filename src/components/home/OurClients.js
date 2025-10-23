@@ -73,7 +73,6 @@ function OurClients({ home }) {
             >
               {/* Usamos la versión blanca o negra según el tema */}
               <Image
-                quality={100}
                 src={theme === "dark" ? logo.srcBlack : logo.srcWhite}
                 alt={logo.alt}
                 width={150}
