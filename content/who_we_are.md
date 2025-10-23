@@ -5,10 +5,7 @@ en:
   storySubtitlePart1: 'Driving Success with a'
   storySubtitlePart2: 'Feminine Touch:'
   storySubtitlePart3: 'Meet Magis Marketing'
-  heroSubtitle: '`We are a
-<span class="font-ramillas italic font-bold text-110"> 100% women-led</span>
-multidisciplinary team.`'
-
+  heroSubtitle: '`We are a <span class="font-ramillas italic font-bold text-110"> 100% women-led</span> multidisciplinary team.`'
   storyParagraph1: Founded in 2019 and based in Texas, Magis has embarked on an
     incredible journey marked by challenges and obstacles. Through it all, our
     team has risen to the occasion, demonstrating resilience, creativity, and
@@ -23,7 +20,7 @@ multidisciplinary team.`'
   teamTitle: '`The <span class="font-ramillas italic text-110">Team</span>`'
   teamSubtitlePart1: 'The faces '
   teamSubtitlePart2: 'behind the Magic'
-  teamParagraph: 'Finding a capable team to achieve great things can be quite challenging, but we can offer you the best.'
+  teamParagraph: 'A multidisciplinary team of specialists in strategy, design, content, and digital advertising — all working together to help your brand grow.'
   teamCentralPhrasePart1: 'Womans that work '
   teamCentralPhrasePart2: 'with love'
   teamMembers:
@@ -84,9 +81,7 @@ es:
   storySubtitlePart1: 'Impulsando el éxito con un '
   storySubtitlePart2: 'Toque Femenino:'
   storySubtitlePart3: 'Conoce Magis Marketing'
-  heroSubtitle: '`Somos un equipo multidisciplinario
-<span class="font-ramillas italic font-bold text-110">100% liderado por mujeres.</span>`'
-
+  heroSubtitle: '`Somos un equipo multidisciplinario <span class="font-ramillas italic font-bold text-110">100% liderado por mujeres.</span>`'
   storyParagraph1: Fundada en 2019 y con sede en Texas, Magis ha emprendido un
     increíble viaje lleno de desafíos y obstáculos. A lo largo de todo este
     recorrido, nuestro equipo ha estado a la altura, demostrando resiliencia,
@@ -102,7 +97,7 @@ es:
   teamTitle: '`El <span class="font-ramillas italic text-110">Team</span>`'
   teamSubtitlePart1: 'Los rostros '
   teamSubtitlePart2: 'detrás de la Magía'
-  teamParagraph: 'Encontrar un equipo capaz de lograr grandes cosas puede ser todo un reto, pero nosotros podemos ofrecerle lo mejor.'
+  teamParagraph: 'Un equipo multidisciplinario con especialistas en estrategia, diseño, contenido y publicidad digital, trabajando juntos para que tu marca crezca.'
   teamCentralPhrasePart1: 'Mujeres que trabajan '
   teamCentralPhrasePart2: 'con amor'
   heroTitlePart1: 'Quiénes'
