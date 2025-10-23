@@ -4,14 +4,14 @@ en:
     - number: "01"
       title:
         en: Social Media
-        es: Redes Sociales
+        es: Social Media
       description:
-        en: We take care of everything — planning, filming, and results. We
-          create strategic content that strengthens your social media presence,
+        en: We take care of everything — planning, filming, and results. We create
+          strategic content that strengthens your social media presence,
           attracts customers, and builds community.
-        es: "Nos encargamos de todo: planificación, grabación y resultados.
-          Creamos contenido estratégico que impulsa tu presencia en redes
-          sociales, atrae clientes y construye comunidad."
+        es: "Nos encargamos de todo: planificación, grabación y resultados. Creamos
+          contenido estratégico que impulsa tu presencia en redes sociales,
+          atrae clientes y construye comunidad."
       img: /images/s_public-relations.svg
       subServices:
         - name: Content strategy and monthly planning
@@ -26,12 +26,12 @@ en:
         en: Branding
         es: Identidad de Marca
       description:
-        en: We design your business image — from logo to colors — so it looks
-          like a big brand. Because even if it's small, your business deserves
+        en: We design your business image — from logo to colors — so it looks like a big
+          brand. Because even if it's small, your business deserves
           professional-level branding.
-        es: "Diseñamos la imagen de tu negocio — desde el logo hasta los colores
-          — para que se vea como una gran marca. Porque aunque sea pequeño, tu
-          negocio merece un branding de nivel profesional."
+        es: Diseñamos la imagen de tu negocio — desde el logo hasta los colores — para
+          que se vea como una gran marca. Porque aunque sea pequeño, tu negocio
+          merece un branding de nivel profesional.
       img: /images/s_branding.svg
       subServices:
         - name: Visual identity development (logo, color palette, typography)
@@ -47,11 +47,11 @@ en:
         en: Digital Marketing
         es: Marketing Digital
       description:
-        en: Digital marketing goes beyond social media. We create strategies
-          that help your business reach more people and generate real sales.
-        es: "El marketing digital va más allá de las redes sociales. Creamos
-          estrategias que ayudan a tu negocio a llegar a más personas y generar
-          ventas reales."
+        en: Digital marketing goes beyond social media. We create strategies that help
+          your business reach more people and generate real sales.
+        es: El marketing digital va más allá de las redes sociales. Creamos estrategias
+          que ayudan a tu negocio a llegar a más personas y generar ventas
+          reales.
       img: /images/s_marketing.svg
       subServices:
         - name: Google & YouTube Ads
