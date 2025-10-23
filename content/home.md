@@ -8,8 +8,8 @@ en:
     rounded-full font-ramillas italic font-bold text-110 -z-10 relative">Latino
     entrepreneurs.</span>
   subtitlePart1: The social media agency for
-  whoWeAreParagraph: '`At Magis, we’re committed to helping our people
-    —entrepreneurs and small to mid-sized business owners— grow through real
+  whoWeAreParagraph: '`At Magis, we’re committed to helping our people,
+    entrepreneurs and small to mid-sized business owners, grow through real
     digital strategies. <span class="text-green">We believe every Hispanic brand
     deserves high-quality content with the same professional standard as big
     companies, but with the authenticity and heart that define our
@@ -75,8 +75,8 @@ es:
     py-1.5 rounded-full font-ramillas italic font-bold text-110">hecha por y
     para emprendedores latinos.</span>
   subtitlePart1: La agencia para
-  whoWeAreParagraph: '`En Magis, nuestro compromiso es apoyar a nuestra gente
-    —emprendedores, dueños de pequeños y medianos negocios— a crecer con
+  whoWeAreParagraph: '`En Magis, nuestro compromiso es apoyar a nuestra gente,
+    emprendedores, dueños de pequeños y medianos negocios, a crecer con
     estrategias digitales reales. <span class="text-green">Creemos que cada
     marca hispana merece contenido de calidad, con el mismo estándar profesional
     que las grandes empresas, pero con la autenticidad y cercanía que nos
