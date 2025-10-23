@@ -3,7 +3,6 @@ import HeroSection from "@/components/services/HeroSection";
 import Services from "@/components/services/Services";
 import Testimonials from "@/components/shared/Testimonials";
 import CTA from "@/components/shared/CTA";
-
 import { getMarkdownContent } from "../lib/markdown";
 
 function ServicesPage({
@@ -38,63 +37,51 @@ function ServicesPage({
 }
 
 export async function getStaticProps({ locale }) {
-  // Helper para elegir locale con fallback a "en"
-  const pickLocale = (mdObj) => (mdObj?.[locale] ? locale : "en");
-
-  // Carga de contenido desde Decap/markdown
   const whatWeDoMD = await getMarkdownContent("what_we_do");
   const testimonialsMD = await getMarkdownContent("testimonials");
-  const servicesMD = await getMarkdownContent("services");
+  const servicesMD = await getMarkdownContent("services"); // ⬅️ ahora tiene { services: [...] } en la raíz
   const mainCtaMD = await getMarkdownContent("main_cta");
   const headerMD = await getMarkdownContent("header");
   const socialLinksMD = await getMarkdownContent("social_links");
   const pagesTitlesMD = await getMarkdownContent("pages_titles");
   const footerMD = await getMarkdownContent("footer");
 
-  // Locale por sección (cada fuente puede o no tener el locale)
-  const L_what = pickLocale(whatWeDoMD);
-  const L_test = pickLocale(testimonialsMD);
-  const L_serv = pickLocale(servicesMD);
-  const L_cta = pickLocale(mainCtaMD);
-  const L_header = pickLocale(headerMD);
-  const L_social = pickLocale(socialLinksMD);
-  const L_pages = pickLocale(pagesTitlesMD);
-  const L_footer = pickLocale(footerMD);
+  // helper simple para fallback
+  const pick = (obj) => (obj?.[locale] ? locale : "en");
 
-  // Mapear testimonials desde el locale correcto
+  const L_test = pick(testimonialsMD);
   const testimonials = (testimonialsMD?.[L_test]?.testimonials ?? []).map(
     (t) => ({
       name: t.testimonialName,
       logo: t.testimonialImage,
-      text: t.testimonialText?.[L_test] ?? t.testimonialText?.en ?? "",
+      text: t.testimonialText?.[L_test] ?? "",
       role: t.testimonialRole,
     }),
   );
 
-  // Mapear services desde el locale correcto
-  const services = (servicesMD?.[L_serv]?.services ?? []).map((s) => ({
+  // ⬇️ AHORA leemos desde la RAÍZ: servicesMD.services
+  const services = (servicesMD?.services ?? []).map((s) => ({
     number: s.number,
-    title: s.title?.[L_serv] ?? s.title?.en ?? "",
-    description: s.description?.[L_serv] ?? s.description?.en ?? "",
+    title: s.title?.[locale] ?? s.title?.en ?? "",
+    description: s.description?.[locale] ?? s.description?.en ?? "",
     img: s.img,
     subServices: (s.subServices ?? []).map((ss) => ({
-      name: ss.name?.[L_serv] ?? ss.name?.en ?? "",
+      name: ss.name?.[locale] ?? ss.name?.en ?? "",
     })),
   }));
 
   return {
     props: {
-      what_we_do: whatWeDoMD?.[L_what] ?? {},
+      what_we_do: whatWeDoMD?.[pick(whatWeDoMD)] ?? {},
       services,
       testimonialsTitles: testimonialsMD?.[L_test] ?? {},
       testimonials,
-      main_cta: mainCtaMD?.[L_cta] ?? {},
-      header: headerMD?.[L_header] ?? {},
-      socialLinks: socialLinksMD?.[L_social] ?? {},
-      pagesTitles: pagesTitlesMD?.[L_pages] ?? {},
-      footer: footerMD?.[L_footer] ?? {},
+      main_cta: mainCtaMD?.[pick(mainCtaMD)] ?? {},
+      header: headerMD?.[pick(headerMD)] ?? {},
+      socialLinks: socialLinksMD?.[pick(socialLinksMD)] ?? {},
+      pagesTitles: pagesTitlesMD?.[pick(pagesTitlesMD)] ?? {},
+      footer: footerMD?.[pick(footerMD)] ?? {},
     },
-    // ISR: refresca cada 60s para ver cambios del CMS
     revalidate: 60,
   };
 }

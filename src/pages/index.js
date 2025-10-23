@@ -8,38 +8,47 @@ import OurClients from "@/components/home/OurClients";
 import Call from "@/components/shared/Call";
 import Testimonials from "@/components/shared/Testimonials";
 import CTA from "@/components/shared/CTA";
-import Logo from "@/components/Logo";
-import { test } from "gray-matter";
 import Layout from "@/components/Layout";
 
-function HomePage({ 
-  home, 
-  video, 
-  whoWeAre, 
-  services, 
-  mission, 
-  testimonialsTitles, 
-  testimonials, 
-  free_session_cta_titles, 
-  free_session_cta, 
+function HomePage({
+  home,
+  video,
+  whoWeAre,
+  services,
+  mission,
+  testimonialsTitles,
+  testimonials,
+  free_session_cta_titles,
+  free_session_cta,
   main_cta,
   header,
   socialLinks,
   pagesTitles,
-  footer
+  footer,
 }) {
   return (
-    <Layout header={header} socialLinks={socialLinks} pagesTitles={pagesTitles} footer={footer}>
-    <div className="relative">
-      <HeroSection home={home} video={video} />
-      <WhoWeAre home={home} whoWeAre={whoWeAre} />
-      <Services home={home} services={services} />
-      <Mission mission={mission} />
-      <OurClients home={home} />
-      <Call free_session_cta={free_session_cta} free_session_cta_titles={free_session_cta_titles}/>
-      <Testimonials testimonialsTitles={testimonialsTitles} testimonials={testimonials} />
-      <CTA main_cta={main_cta}/>
-    </div>
+    <Layout
+      header={header}
+      socialLinks={socialLinks}
+      pagesTitles={pagesTitles}
+      footer={footer}
+    >
+      <div className="relative">
+        <HeroSection home={home} video={video} />
+        <WhoWeAre home={home} whoWeAre={whoWeAre} />
+        <Services home={home} services={services} />
+        <Mission mission={mission} />
+        <OurClients home={home} />
+        <Call
+          free_session_cta={free_session_cta}
+          free_session_cta_titles={free_session_cta_titles}
+        />
+        <Testimonials
+          testimonialsTitles={testimonialsTitles}
+          testimonials={testimonials}
+        />
+        <CTA main_cta={main_cta} />
+      </div>
     </Layout>
   );
 }
@@ -55,36 +64,35 @@ export async function getStaticProps({ locale }) {
     name: testimonial.testimonialName,
     logo: testimonial.testimonialImage,
     text: testimonial.testimonialText[locale],
-    role: testimonial.testimonialRole
-
+    role: testimonial.testimonialRole,
   }));
 
-  const serviceMD = await getMarkdownContent("services");
-  const services = serviceMD["en"].services.map((service) => ({
-    number: service.number,
-    title: service.title[locale],
-    description: service.description[locale],
-    img: service.img,
+  const servicesMD = await getMarkdownContent("services");
+  // 👇 nuevo mapping
+  const services = (servicesMD?.services ?? []).map((s) => ({
+    number: s.number,
+    title: s.title?.[locale] ?? s.title?.en ?? "",
+    description: s.description?.[locale] ?? s.description?.en ?? "",
+    img: s.img,
+    subServices: (s.subServices ?? []).map((ss) => ({
+      name: ss.name?.[locale] ?? ss.name?.en ?? "",
+    })),
   }));
 
-  const  free_session_ctaMD = await getMarkdownContent("free_session_cta");
+  const free_session_ctaMD = await getMarkdownContent("free_session_cta");
   const free_session_cta_titles = free_session_ctaMD[locale];
   const free_session_cta = {
     avatarPhoto: free_session_ctaMD["en"].avatarPhoto,
     buttonLink: free_session_ctaMD["en"].buttonLink,
-  }
+  };
 
   const main_cta = await getMarkdownContent("main_cta");
 
   // Cargar datos del header y enlaces sociales
   const header = await getMarkdownContent("header");
   const socialLinks = await getMarkdownContent("social_links");
-  const pagesTitles = await getMarkdownContent("pages_titles")
-  const footer = await getMarkdownContent("footer")
-
-
-
-  
+  const pagesTitles = await getMarkdownContent("pages_titles");
+  const footer = await getMarkdownContent("footer");
 
   // Seleccionamos el contenido basado en el idioma
   const localizedContent = home[locale]; // Asume que los campos tienen un objeto con las traducciones
@@ -104,7 +112,7 @@ export async function getStaticProps({ locale }) {
       header: header[locale],
       socialLinks: socialLinks[locale],
       pagesTitles: pagesTitles[locale],
-      footer: footer[locale]
+      footer: footer[locale],
     },
   };
 }
