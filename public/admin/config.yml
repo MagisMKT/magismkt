@@ -489,64 +489,57 @@ collections:
       - name: "services"
         label: "Services Section"
         file: "content/services.md"
-        i18n: true
+        i18n: false
         fields:
           - label: "Services"
             name: "services"
             widget: "list"
-            i18n: false # la lista es compartida; los textos tienen en/es dentro
+            i18n: false # La lista completa no se traduce, pero los contenidos internos sí
             fields:
               - label: "Service Number"
                 name: "number"
                 widget: "string"
-
-              # ⬇️ NO usar i18n aquí porque ya guardas { en, es }
               - label: "Service Title"
                 name: "title"
                 widget: "object"
-                # i18n: false (implícito)
+                i18n: true
                 fields:
-                  - { label: "Title (English)", name: "en", widget: "string" }
-                  - { label: "Title (Spanish)", name: "es", widget: "string" }
-
-              # ⬇️ Igual: objeto con en/es, sin i18n del CMS
+                  - label: "Title (English)"
+                    name: "en"
+                    widget: "string"
+                  - label: "Title (Spanish)"
+                    name: "es"
+                    widget: "string"
               - label: "Service Description"
                 name: "description"
                 widget: "object"
+                i18n: true
                 fields:
-                  - {
-                      label: "Description (English)",
-                      name: "en",
-                      widget: "markdown",
-                    }
-                  - {
-                      label: "Description (Spanish)",
-                      name: "es",
-                      widget: "markdown",
-                    }
-
-              - { label: "Service Image", name: "img", widget: "image" }
-
+                  - label: "Description (English)"
+                    name: "en"
+                    widget: "markdown"
+                  - label: "Description (Spanish)"
+                    name: "es"
+                    widget: "markdown"
+              - label: "Service Image"
+                name: "img"
+                widget: "image"
               - label: "Sub-Services"
                 name: "subServices"
                 widget: "list"
-                i18n: false
+                i18n: false # La lista de subservicios no se traduce, pero cada elemento sí
                 fields:
-                  # ⬇️ También sin i18n porque ya lleva en/es
                   - label: "Sub-Service Name"
                     name: "name"
                     widget: "object"
+                    i18n: true
                     fields:
-                      - {
-                          label: "Name (English)",
-                          name: "en",
-                          widget: "string",
-                        }
-                      - {
-                          label: "Name (Spanish)",
-                          name: "es",
-                          widget: "string",
-                        }
+                      - label: "Name (English)"
+                        name: "en"
+                        widget: "string"
+                      - label: "Name (Spanish)"
+                        name: "es"
+                        widget: "string"
       # Testimonials Section
       - name: "testimonials"
         label: "Testimonials Section"
