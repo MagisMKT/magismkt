@@ -8,6 +8,8 @@ import OurClients from "@/components/home/OurClients";
 import Call from "@/components/shared/Call";
 import Testimonials from "@/components/shared/Testimonials";
 import CTA from "@/components/shared/CTA";
+import Logo from "@/components/Logo";
+import { test } from "gray-matter";
 import Layout from "@/components/Layout";
 
 function HomePage({
@@ -67,16 +69,12 @@ export async function getStaticProps({ locale }) {
     role: testimonial.testimonialRole,
   }));
 
-  const servicesMD = await getMarkdownContent("services");
-  // 👇 nuevo mapping
-  const services = (servicesMD?.services ?? []).map((s) => ({
-    number: s.number,
-    title: s.title?.[locale] ?? s.title?.en ?? "",
-    description: s.description?.[locale] ?? s.description?.en ?? "",
-    img: s.img,
-    subServices: (s.subServices ?? []).map((ss) => ({
-      name: ss.name?.[locale] ?? ss.name?.en ?? "",
-    })),
+  const serviceMD = await getMarkdownContent("services");
+  const services = serviceMD["en"].services.map((service) => ({
+    number: service.number,
+    title: service.title[locale],
+    description: service.description[locale],
+    img: service.img,
   }));
 
   const free_session_ctaMD = await getMarkdownContent("free_session_cta");

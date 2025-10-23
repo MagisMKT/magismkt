@@ -484,63 +484,32 @@ collections:
               name: "backgroundPhoto",
               widget: "image",
             }
-
       - name: "services"
         label: "Services Section"
         file: "content/services.md"
-        i18n: false
+        i18n: true # <- ACTIVADO otra vez
         fields:
           - label: "Services"
             name: "services"
             widget: "list"
-            i18n: false
             fields:
               - { label: "Service Number", name: "number", widget: "string" }
-
-              - label: "Service Title"
-                name: "title"
-                widget: "object"
-                fields:
-                  - { label: "Title (English)", name: "en", widget: "string" }
-                  - { label: "Title (Spanish)", name: "es", widget: "string" }
-
-              - label: "Service Description"
-                name: "description"
-                widget: "object"
-                fields:
-                  - {
-                      label: "Description (English)",
-                      name: "en",
-                      widget: "markdown",
-                    }
-                  - {
-                      label: "Description (Spanish)",
-                      name: "es",
-                      widget: "markdown",
-                    }
-
+              - { label: "Service Title", name: "title", widget: "string" } # ahora es string simple
+              - {
+                  label: "Service Description",
+                  name: "description",
+                  widget: "markdown",
+                }
               - { label: "Service Image", name: "img", widget: "image" }
-
               - label: "Sub-Services"
                 name: "subServices"
                 widget: "list"
-                i18n: false
                 fields:
-                  - label: "Sub-Service Name"
-                    name: "name"
-                    widget: "object"
-                    fields:
-                      - {
-                          label: "Name (English)",
-                          name: "en",
-                          widget: "string",
-                        }
-                      - {
-                          label: "Name (Spanish)",
-                          name: "es",
-                          widget: "string",
-                        }
-      # Testimonials Section
+                  - {
+                      label: "Sub-Service Name",
+                      name: "name",
+                      widget: "string",
+                    } # string simple
       - name: "testimonials"
         label: "Testimonials Section"
         file: "content/testimonials.md"
@@ -597,8 +566,6 @@ collections:
                       },
                     ],
                 }
-
-      # Main CTA Section
       - name: "main_cta"
         label: "Main CTA Section"
         file: "content/main_cta.md"
