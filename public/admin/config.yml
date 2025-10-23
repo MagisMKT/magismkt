@@ -485,22 +485,18 @@ collections:
               widget: "image",
             }
 
-      # Services Section
       - name: "services"
         label: "Services Section"
         file: "content/services.md"
-        i18n: false # el archivo NO usa i18n del CMS; ya traes {en,es} dentro
+        i18n: false
         fields:
           - label: "Services"
             name: "services"
             widget: "list"
-            i18n: false # la lista es compartida
+            i18n: false
             fields:
-              - label: "Service Number"
-                name: "number"
-                widget: "string"
+              - { label: "Service Number", name: "number", widget: "string" }
 
-              # Objeto con {en, es} — SIN i18n del CMS
               - label: "Service Title"
                 name: "title"
                 widget: "object"
@@ -508,7 +504,6 @@ collections:
                   - { label: "Title (English)", name: "en", widget: "string" }
                   - { label: "Title (Spanish)", name: "es", widget: "string" }
 
-              # Objeto con {en, es} — SIN i18n del CMS
               - label: "Service Description"
                 name: "description"
                 widget: "object"
@@ -531,7 +526,6 @@ collections:
                 widget: "list"
                 i18n: false
                 fields:
-                  # Objeto con {en, es} — SIN i18n del CMS
                   - label: "Sub-Service Name"
                     name: "name"
                     widget: "object"
