@@ -7,8 +7,7 @@ en:
   teamCentralPhrasePart1: Women that work
   teamCentralPhrasePart2: with love
   storySubtitlePart1: Driving Success with a
-  teamParagraph: Finding a capable team to achieve great things can be quite
-    challenging, but we can offer you the best.
+  teamParagraph: A multidisciplinary team of specialists in strategy, design, content, and digital advertising — all working together to help your brand grow.
   heroSubtitle: We are a marketing agency,<span class="font-ramillas italic
     font-bold text-110"> built by and for Latino entrepreneurs</span>
   storySubtitlePart2: " Feminine Touch:"
@@ -71,8 +70,7 @@ es:
   teamCentralPhrasePart1: Mujeres que trabajan
   teamCentralPhrasePart2: con amor
   storySubtitlePart1: Impulsando el éxito con un
-  teamParagraph: Encontrar un equipo capaz de lograr grandes cosas puede ser todo
-    un reto, pero nosotros podemos ofrecerle lo mejor.
+  teamParagraph: Un equipo multidisciplinario con especialistas en estrategia, diseño, contenido y publicidad digital, trabajando juntos para que tu marca crezca.
   heroSubtitle: Somos una agencia de marketing digital en Texas,<span
     class="font-ramillas italic font-bold text-110">hecha por y para
     emprendedores latinos.</span>
