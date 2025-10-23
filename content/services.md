@@ -1,7 +1,7 @@
 ---
 en:
   services:
-    - number: "001"
+    - number: "01"
       title: Social Media
       description: We take care of everything — planning, filming, and results. We
         create strategic content that strengthens your social media presence,
