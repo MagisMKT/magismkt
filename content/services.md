@@ -7,7 +7,7 @@ services:
     description:
       en: "We take care of everything — planning, filming, and results. We create strategic content that strengthens your social media presence, attracts customers, and builds community."
       es: "Nos encargamos de todo: planificación, grabación y resultados. Creamos contenido estratégico que impulsa tu presencia en redes sociales, atrae clientes y construye comunidad."
-    img: "/images/s_social-media.svg"
+    img: "/images/s_public-relations.svg"
     subServices:
       - name:
           en: "Content strategy and monthly planning"
@@ -72,7 +72,7 @@ services:
     description:
       en: "Digital marketing goes beyond social media. We create strategies that help your business reach more people and generate real sales."
       es: "El marketing digital va más allá de las redes sociales. Creamos estrategias que ayudan a tu negocio a llegar a más personas y generar ventas reales."
-    img: "/images/s_digital-marketing.svg"
+    img: "/images/s_marketing.svg"
     subServices:
       - name:
           en: "Google & YouTube Ads"
