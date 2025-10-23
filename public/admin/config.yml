@@ -6,21 +6,23 @@ media_folder: "public/images"
 public_folder: "/images"
 
 i18n:
-  structure: single_file
+  structure: single_file # Cambiar a single_file para colecciones de tipo files
   locales:
     - en
     - es
 
 collections:
+  # Colección para las páginas individuales (Home, Who We Are, Contact, etc.)
   - name: "pages"
     label: "Pages"
-    i18n: true
+    i18n: true # Habilitamos i18n para la colección
     files:
       - name: "home"
         label: "Home Page"
         file: "content/home.md"
         i18n: true
         fields:
+          # HERO SECTION
           - { label: "Word 1", name: "word1", widget: "string", i18n: true }
           - { label: "Word 2", name: "word2", widget: "string", i18n: true }
           - { label: "Word 3", name: "word3", widget: "string", i18n: true }
@@ -43,6 +45,7 @@ collections:
               widget: "string",
               i18n: true,
             }
+          # WHO WE ARE
           - {
               label: "Who We Are Title",
               name: "whoWeAreTitle",
@@ -67,6 +70,7 @@ collections:
               widget: "string",
               i18n: true,
             }
+          # OUR SERVICES
           - {
               label: "What We Do Title",
               name: "whatWeDoTitle",
@@ -91,6 +95,7 @@ collections:
               widget: "string",
               i18n: true,
             }
+          # OUR CLIENTS (Separa imagen y nombre por idioma)
           - {
               label: "Clients Title",
               name: "clientsTitle",
@@ -122,6 +127,7 @@ collections:
             fields:
               - { label: "Client Name", name: "clientName", widget: "string" }
               - { label: "Client Image", name: "clientImage", widget: "image" }
+
           - label: "Clients for Light Mode"
             name: "clientsLight"
             widget: "list"
@@ -129,6 +135,7 @@ collections:
             fields:
               - { label: "Client Name", name: "clientName", widget: "string" }
               - { label: "Client Image", name: "clientImage", widget: "image" }
+          # CALL TO ACTION (CTA)
           - {
               label: "Our clients CTA Title",
               name: "ctaTitle",
@@ -147,6 +154,7 @@ collections:
         file: "content/about.md"
         i18n: true
         fields:
+          # HERO SECTION
           - {
               label: "Hero Title Part1",
               name: "heroTitlePart1",
@@ -171,6 +179,7 @@ collections:
               widget: "string",
               i18n: true,
             }
+          # STORY
           - {
               label: "Story Title Part1",
               name: "storyTitlePart1",
@@ -213,6 +222,7 @@ collections:
               widget: "text",
               i18n: true,
             }
+          # TEAM SECTION
           - {
               label: "Team Title",
               name: "teamTitle",
@@ -225,6 +235,7 @@ collections:
               widget: "markdown",
               i18n: true,
             }
+
           - {
               label: "Team Subtitle Part2",
               name: "teamSubtitlePart2",
@@ -249,20 +260,25 @@ collections:
               widget: "text",
               i18n: true,
             }
+          # TEAM MEMBERS (Nombre compartido, rol en ambos idiomas)
           - label: "Team Members"
             name: "teamMembers"
             widget: "list"
-            i18n: false
+            i18n: false # El nombre no necesita traducción
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Full Name", name: "fullName", widget: "string" }
-              - label: "Role"
-                name: "role"
-                widget: "object"
-                i18n: true
-                fields:
-                  - { label: "Role (English)", name: "en", widget: "string" }
-                  - { label: "Role (Spanish)", name: "es", widget: "string" }
+              - {
+                  label: "Role",
+                  name: "role",
+                  widget: "object",
+                  i18n: true, # El rol se traduce
+                  fields:
+                    [
+                      { label: "Role (English)", name: "en", widget: "string" },
+                      { label: "Role (Spanish)", name: "es", widget: "string" },
+                    ],
+                }
               - { label: "Photo", name: "photo", widget: "image" }
               - { label: "Video", name: "video", widget: "file" }
 
@@ -284,7 +300,7 @@ collections:
               i18n: true,
             }
           - {
-              label: "What We Do Text Button",
+              label: "What We Do Subtitle",
               name: "whatWeDoTextButton",
               widget: "string",
               i18n: true,
@@ -318,87 +334,128 @@ collections:
             widget: "object"
             i18n: false
             fields:
-              - label: "Full Name"
-                name: "fullname"
-                widget: "object"
-                i18n: false
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Spanish", name: "es", widget: "string" }
-              - label: "Email"
-                name: "email"
-                widget: "object"
-                i18n: true
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Spanish", name: "es", widget: "string" }
-              - label: "Phone Number"
-                name: "phoneNumber"
-                widget: "object"
-                i18n: true
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Spanish", name: "es", widget: "string" }
-              - label: "Company Name"
-                name: "companyName"
-                widget: "object"
-                i18n: true
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Spanish", name: "es", widget: "string" }
-              - label: "Services Label"
-                name: "services"
-                widget: "object"
-                i18n: true
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Spanish", name: "es", widget: "string" }
-              - label: "Service Options"
-                name: "serviceOptions"
-                widget: "object"
-                i18n: false
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Spanish", name: "es", widget: "string" }
-              - label: "Budget Label"
-                name: "budget"
-                widget: "object"
-                i18n: true
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Spanish", name: "es", widget: "string" }
-              - label: "Budget Options"
-                name: "budgetOptions"
-                widget: "object"
-                i18n: false
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Spanish", name: "es", widget: "string" }
-              - label: "Project Details Label"
-                name: "projectDetails"
-                widget: "object"
-                i18n: true
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Spanish", name: "es", widget: "string" }
-              - label: "Project Details Placeholder"
-                name: "projectDetailsPlaceholder"
-                widget: "object"
-                i18n: true
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Spanish", name: "es", widget: "string" }
+              - {
+                  label: "Full Name",
+                  name: "fullname",
+                  widget: "object",
+                  i18n: false,
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
+                }
+              - {
+                  label: "Email",
+                  name: "email",
+                  widget: "object",
+                  i18n: true,
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
+                }
+              - {
+                  label: "Phone Number",
+                  name: "phoneNumber",
+                  widget: "object",
+                  i18n: true,
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
+                }
+              - {
+                  label: "Company Name",
+                  name: "companyName",
+                  widget: "object",
+                  i18n: true,
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
+                }
+              - {
+                  label: "Services Label",
+                  name: "services",
+                  widget: "object",
+                  i18n: true,
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
+                }
+              - {
+                  label: "Service Options",
+                  name: "serviceOptions",
+                  widget: "object",
+                  i18n: false,
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
+                }
+              - {
+                  label: "Budget Label",
+                  name: "budget",
+                  widget: "object",
+                  i18n: true,
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
+                }
+              - {
+                  label: "Budget Options",
+                  name: "budgetOptions",
+                  widget: "object",
+                  i18n: false,
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
+                }
+              - {
+                  label: "Project Details Label",
+                  name: "projectDetails",
+                  widget: "object",
+                  i18n: true,
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
+                }
+              - {
+                  label: "Project Details Placeholder",
+                  name: "projectDetailsPlaceholder",
+                  widget: "object",
+                  i18n: true,
+                  fields:
+                    [
+                      { label: "English", name: "en", widget: "string" },
+                      { label: "Spanish", name: "es", widget: "string" },
+                    ],
+                }
           - {
               label: "Form Button Text",
               name: "formButtonText",
               widget: "string",
               i18n: true,
             }
-
+  # Colección para Secciones Compartidas
   - name: "shared"
     label: "Shared Sections"
     i18n: true
     files:
+      # Misión (Mission Section)
       - name: "mission"
         label: "Mission Section"
         file: "content/mission.md"
@@ -428,6 +485,7 @@ collections:
               widget: "image",
             }
 
+      # Services Section
       - name: "services"
         label: "Services Section"
         file: "content/services.md"
@@ -436,53 +494,53 @@ collections:
           - label: "Services"
             name: "services"
             widget: "list"
-            i18n: false
+            i18n: false # La lista completa no se traduce, pero los contenidos internos sí
             fields:
-              - { label: "Service Number", name: "number", widget: "string" }
+              - label: "Service Number"
+                name: "number"
+                widget: "string"
               - label: "Service Title"
                 name: "title"
                 widget: "object"
                 i18n: true
                 fields:
-                  - { label: "Title (English)", name: "en", widget: "string" }
-                  - { label: "Title (Spanish)", name: "es", widget: "string" }
+                  - label: "Title (English)"
+                    name: "en"
+                    widget: "string"
+                  - label: "Title (Spanish)"
+                    name: "es"
+                    widget: "string"
               - label: "Service Description"
                 name: "description"
                 widget: "object"
                 i18n: true
                 fields:
-                  - {
-                      label: "Description (English)",
-                      name: "en",
-                      widget: "markdown",
-                    }
-                  - {
-                      label: "Description (Spanish)",
-                      name: "es",
-                      widget: "markdown",
-                    }
-              - { label: "Service Image", name: "img", widget: "image" }
+                  - label: "Description (English)"
+                    name: "en"
+                    widget: "markdown"
+                  - label: "Description (Spanish)"
+                    name: "es"
+                    widget: "markdown"
+              - label: "Service Image"
+                name: "img"
+                widget: "image"
               - label: "Sub-Services"
                 name: "subServices"
                 widget: "list"
-                i18n: false
+                i18n: false # La lista de subservicios no se traduce, pero cada elemento sí
                 fields:
                   - label: "Sub-Service Name"
                     name: "name"
                     widget: "object"
                     i18n: true
                     fields:
-                      - {
-                          label: "Name (English)",
-                          name: "en",
-                          widget: "string",
-                        }
-                      - {
-                          label: "Name (Spanish)",
-                          name: "es",
-                          widget: "string",
-                        }
-
+                      - label: "Name (English)"
+                        name: "en"
+                        widget: "string"
+                      - label: "Name (Spanish)"
+                        name: "es"
+                        widget: "string"
+      # Testimonials Section
       - name: "testimonials"
         label: "Testimonials Section"
         file: "content/testimonials.md"
@@ -503,7 +561,7 @@ collections:
           - label: "Testimonials"
             name: "testimonials"
             widget: "list"
-            i18n: false
+            i18n: false # No se traduce la lista completa, solo el testimonial
             fields:
               - {
                   label: "Testimonial Image",
@@ -520,22 +578,27 @@ collections:
                   name: "testimonialRole",
                   widget: "string",
                 }
-              - label: "Testimonial Text"
-                name: "testimonialText"
-                widget: "object"
-                i18n: true
-                fields:
-                  - {
-                      label: "Testimonial (English)",
-                      name: "en",
-                      widget: "markdown",
-                    }
-                  - {
-                      label: "Testimonial (Spanish)",
-                      name: "es",
-                      widget: "markdown",
-                    }
+              - {
+                  label: "Testimonial Text",
+                  name: "testimonialText",
+                  widget: "object",
+                  i18n: true, # Solo el texto del testimonio se traduce
+                  fields:
+                    [
+                      {
+                        label: "Testimonial (English)",
+                        name: "en",
+                        widget: "markdown",
+                      },
+                      {
+                        label: "Testimonial (Spanish)",
+                        name: "es",
+                        widget: "markdown",
+                      },
+                    ],
+                }
 
+      # Main CTA Section
       - name: "main_cta"
         label: "Main CTA Section"
         file: "content/main_cta.md"
@@ -560,6 +623,7 @@ collections:
               i18n: true,
             }
 
+      # Free Session CTA
       - name: "free_session_cta"
         label: "Free Session CTA"
         file: "content/free_session_cta.md"
@@ -581,10 +645,12 @@ collections:
             }
           - { label: "Button Link", name: "buttonLink", widget: "string" }
 
+  # Colección General para Header y Footer
   - name: "general"
     label: "General"
     i18n: true
     files:
+      # Header Configuration
       - name: "header"
         label: "Header"
         file: "content/header.md"
@@ -596,7 +662,7 @@ collections:
               widget: "string",
               i18n: true,
             }
-
+      #Pages Titles
       - name: "pages_titles"
         label: "Pages Titles"
         file: "content/pages_titles.md"
@@ -616,11 +682,11 @@ collections:
             }
           - {
               label: "Contact Title",
-              name: "contactTitle",
+              name: "contacTitle",
               widget: "string",
               i18n: true,
             }
-
+      #Social Links
       - name: "social_links"
         label: "Social Links"
         file: "content/social_links.md"
@@ -652,7 +718,24 @@ collections:
               widget: "string",
               i18n: true,
             }
-
+      # Footer Configuration
       - name: "footer"
         label: "Footer"
         file: "content/footer.md"
+        i18n: true
+        fields:
+          - {
+              label: "Developer Signature",
+              name: "developerSignature",
+              widget: "string",
+              i18n: true,
+            }
+
+      # Video Compartido (General)
+      - name: "video"
+        label: "Video"
+        file: "content/video.md"
+        i18n: false # El video no requiere traducción
+        fields:
+          - { label: "Upload Video", name: "videoUrl", widget: "file" }
+          - { label: "Full Video", name: "fullVideo", widget: "string" }
