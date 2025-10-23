@@ -73,10 +73,12 @@ function Services({ services }) {
               >
                 {/* Controlamos el orden con lg:order-1 y lg:order-2 */}
                 <div
-                  className={`${index % 2 === 0 ? "lg:order-1" : "lg:order-2"
-                    } flex justify-end`}
+                  className={`${
+                    index % 2 === 0 ? "lg:order-1" : "lg:order-2"
+                  } flex justify-end`}
                 >
                   <Image
+                    quality={100}
                     src={service.img}
                     alt={service.title}
                     width={600}
@@ -86,8 +88,9 @@ function Services({ services }) {
                 </div>
 
                 <div
-                  className={`${index % 2 === 0 ? "lg:order-2" : "lg:order-1"
-                    } flex flex-col gap-8`}
+                  className={`${
+                    index % 2 === 0 ? "lg:order-2" : "lg:order-1"
+                  } flex flex-col gap-8`}
                 >
                   <h3 className="font-semibold">
                     <span className="font-light italic">{service.number} </span>

@@ -52,10 +52,19 @@ function OurClients({ home }) {
       <div className="container text-center flex flex-col gap-14 justify-center items-center mx-auto">
         <div className="flex gap-4 items-center">
           <Shine color="#FFC3D1" />
-          <h4 dangerouslySetInnerHTML={{ __html: home.clientsTitle.replace(/`/g, ''), }} />
+          <h4
+            dangerouslySetInnerHTML={{
+              __html: home.clientsTitle.replace(/`/g, ""),
+            }}
+          />
         </div>
-        <h2 className="text-pink" dangerouslySetInnerHTML={{ __html: home.clientsSubtitle.replace(/`/g, ''), }} />
-          
+        <h2
+          className="text-pink"
+          dangerouslySetInnerHTML={{
+            __html: home.clientsSubtitle.replace(/`/g, ""),
+          }}
+        />
+
         <div className="w-full grid lg:grid-cols-4 grid-rows-2 rounded-[64px] overflow-hidden border-[0.75px] dark:border-white border-main !border-opacity-10">
           {logos.map((logo, index) => (
             <div
@@ -64,6 +73,7 @@ function OurClients({ home }) {
             >
               {/* Usamos la versión blanca o negra según el tema */}
               <Image
+                quality={100}
                 src={theme === "dark" ? logo.srcBlack : logo.srcWhite}
                 alt={logo.alt}
                 width={150}
@@ -74,8 +84,13 @@ function OurClients({ home }) {
           ))}
           {/* CTA Grid Item */}
           <div className="flex flex-col items-center justify-center rounded-br-[64px] p-8 bg-blue gap-4 bg-[url('/images/bg-lines.svg')] bg-cover">
-            <h3 className="text-main" dangerouslySetInnerHTML={{ __html: home.clientsTextGrid.replace(/`/g, ''), }} />
-             
+            <h3
+              className="text-main"
+              dangerouslySetInnerHTML={{
+                __html: home.clientsTextGrid.replace(/`/g, ""),
+              }}
+            />
+
             <Button
               text={home.clientsTextButton}
               bgColor="bg-black"

@@ -45,20 +45,18 @@ function Services({ home, services }) {
         <div className="flex gap-4 items-center justify-center">
           <Shine color="#BAE846" />
           <h4
-          dangerouslySetInnerHTML={{
-            __html: home.whatWeDoTitle.replace(/`/g, ""),
-          }}
+            dangerouslySetInnerHTML={{
+              __html: home.whatWeDoTitle.replace(/`/g, ""),
+            }}
           />
         </div>
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-end">
           <h2
-           dangerouslySetInnerHTML={{
-            __html: home.whatWeDoSubtitle.replace(/`/g, ""),
-          }}
+            dangerouslySetInnerHTML={{
+              __html: home.whatWeDoSubtitle.replace(/`/g, ""),
+            }}
           />
-          <p className="lg:px-20">
-            {home.whatWeDoParagraph}
-          </p>
+          <p className="lg:px-20">{home.whatWeDoParagraph}</p>
         </div>
         <div className="max-w-[1400px] mx-auto py-4 lg:py-16 px-4 flex flex-col items-center">
           <div className="w-full relative">
@@ -76,6 +74,7 @@ function Services({ home, services }) {
                 <p className="text-95 order-2">{service.description}</p>
                 <div className="flex justify-start lg:justify-end order-1 md:order-3">
                   <Image
+                    quality={100}
                     src={service.img}
                     alt={service.title}
                     width={180}

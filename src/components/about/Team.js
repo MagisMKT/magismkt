@@ -57,9 +57,6 @@ import Arrow from "@/components/icons/Arrow";
 // ];
 
 function Team({ whoWeAre, teamMembers }) {
-
- 
-  
   return (
     <section
       className="min-h-[90vh] z-40 relative flex flex-col gap-12 justify-center items-end py-12 lg:py-24"
@@ -68,21 +65,19 @@ function Team({ whoWeAre, teamMembers }) {
       <div className="container text-center flex flex-col gap-8 justify-center items-center mx-auto px-[20px]">
         <div className="flex gap-4 items-center">
           <Shine color="#DC0073" />
-          <h4 dangerouslySetInnerHTML={{
-            __html: whoWeAre.teamTitle.replace(/`/g, ''), // Elimina las comillas inversas si están presentes
-          }}/>
-            
-          
+          <h4
+            dangerouslySetInnerHTML={{
+              __html: whoWeAre.teamTitle.replace(/`/g, ""), // Elimina las comillas inversas si están presentes
+            }}
+          />
         </div>
         <h2>
-         {whoWeAre.teamSubtitlePart1}{" "}
+          {whoWeAre.teamSubtitlePart1}{" "}
           <span className="text-110 font-ramillas italic font-extrabold text-pink">
             {whoWeAre.teamSubtitlePart2}
           </span>
         </h2>
-        <p className="lg:w-1/3">
-          {whoWeAre.teamParagraph}
-        </p>
+        <p className="lg:w-1/3">{whoWeAre.teamParagraph}</p>
       </div>
 
       <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 grid-rows-3 border-collapse overflow-hidden border-[0.5px] dark:border-white border-main  !border-opacity-10">
@@ -168,7 +163,7 @@ function Team({ whoWeAre, teamMembers }) {
               <br />
               {whoWeAre.teamCentralPhrasePart2}
             </h3>
-            <Image src="/images/shine-circle.svg" layout="fill" />
+            <Image quality={100} src="/images/shine-circle.svg" layout="fill" />
           </div>
         </div>
 

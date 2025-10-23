@@ -53,12 +53,17 @@ const Testimonials = ({ testimonialsTitles, testimonials }) => {
         <div className="flex gap-4 items-center justify-center">
           <Shine color="#0074d9" />
           <h4>
-            <span className="font-ramillas italic text-110">{testimonialsTitles.testimonialsTitle}</span>
+            <span className="font-ramillas italic text-110">
+              {testimonialsTitles.testimonialsTitle}
+            </span>
           </h4>
         </div>
-        <h2 className="text-blue" dangerouslySetInnerHTML={{
-           __html: testimonialsTitles.testimonialsSubtitle
-            }}></h2>
+        <h2
+          className="text-blue"
+          dangerouslySetInnerHTML={{
+            __html: testimonialsTitles.testimonialsSubtitle,
+          }}
+        ></h2>
 
         {/* Testimonial Content with Sliding Transition */}
         <div className="relative overflow-hidden max-w-[1200px]">
@@ -71,6 +76,7 @@ const Testimonials = ({ testimonialsTitles, testimonials }) => {
                 <div className="border-[0.5px] dark:border-white border-main !border-opacity-20  text-left rounded-[64px] p-10 lg:p-24 flex flex-col gap-8 lg:min-h-[200px] mx-[20px] lg:mx-[40px]">
                   <div className="flex items-center gap-8">
                     <Image
+                      quality={100}
                       src={testimonial.logo}
                       alt={testimonial.name}
                       width={110}

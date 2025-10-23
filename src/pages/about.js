@@ -7,7 +7,8 @@ import ImageGrid from "@/components/about/ImageGrid";
 import Team from "@/components/about/Team";
 import Layout from "@/components/Layout";
 
-function About({ whoWeAre,
+function About({
+  whoWeAre,
   teamMembers,
   mission,
   free_session_cta,
@@ -15,17 +16,25 @@ function About({ whoWeAre,
   header,
   socialLinks,
   pagesTitles,
-  footer
+  footer,
 }) {
   return (
-    <Layout header={header} socialLinks={socialLinks} pagesTitles={pagesTitles} footer={footer}>
+    <Layout
+      header={header}
+      socialLinks={socialLinks}
+      pagesTitles={pagesTitles}
+      footer={footer}
+    >
       <div className="relative">
         <HeroSection whoWeAre={whoWeAre} />
         <Story whoWeAre={whoWeAre} />
         <Team whoWeAre={whoWeAre} teamMembers={teamMembers} />
         <Mission mission={mission} />
-        <ImageGrid />
-        <Call free_session_cta={free_session_cta} free_session_cta_titles={free_session_cta_titles} />
+        <Image quality={100} Grid />
+        <Call
+          free_session_cta={free_session_cta}
+          free_session_cta_titles={free_session_cta_titles}
+        />
       </div>
     </Layout>
   );
@@ -35,7 +44,7 @@ export async function getStaticProps({ locale }) {
   const whoWeAre = await getMarkdownContent("about");
   const WhoWeAre = whoWeAre[locale];
   const mission = await getMarkdownContent("mission");
-  console.log('Mision:', mission);
+  console.log("Mision:", mission);
 
   const localizedMission = mission[locale];
 
@@ -52,13 +61,12 @@ export async function getStaticProps({ locale }) {
   const free_session_cta = {
     avatarPhoto: free_session_ctaMD["en"].avatarPhoto,
     buttonLink: free_session_ctaMD["en"].buttonLink,
-  }
-   // Cargar datos del header y enlaces sociales
-   const header = await getMarkdownContent("header");
-   const socialLinks = await getMarkdownContent("social_links");
-   const pagesTitles = await getMarkdownContent("pages_titles")
-   const footer = await getMarkdownContent("footer")
- 
+  };
+  // Cargar datos del header y enlaces sociales
+  const header = await getMarkdownContent("header");
+  const socialLinks = await getMarkdownContent("social_links");
+  const pagesTitles = await getMarkdownContent("pages_titles");
+  const footer = await getMarkdownContent("footer");
 
   return {
     props: {
@@ -70,7 +78,7 @@ export async function getStaticProps({ locale }) {
       header: header[locale],
       socialLinks: socialLinks[locale],
       pagesTitles: pagesTitles[locale],
-      footer: footer[locale]
+      footer: footer[locale],
     },
   };
 }

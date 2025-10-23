@@ -10,16 +10,20 @@ function Call({ free_session_cta, free_session_cta_titles }) {
         <div className="absolute -bottom-[80px] right-0 w-[80px] h-[80px] bg-[url('/images/substract.svg')] bg-no-repeat bg-contain"></div>
         <div className="absolute -top-[80px] right-0 rotate-90 w-[80px] h-[80px] bg-[url('/images/substract.svg')] bg-no-repeat bg-contain"></div>
         <Image
+          quality={100}
           src={free_session_cta.avatarPhoto}
           width="180"
           height="180"
           className="w-[140px] h-[140px] lg:w-[180px] lg:h-[180px]"
         />
         <div className="flex flex-col gap-6 justify-center items-center text-center">
-          <h2 className="text-main" dangerouslySetInnerHTML={{ __html: free_session_cta_titles.title.replace(/`/g, ''),}} />
-          <p className="text-main">
-          {free_session_cta_titles.subtitle}
-          </p>
+          <h2
+            className="text-main"
+            dangerouslySetInnerHTML={{
+              __html: free_session_cta_titles.title.replace(/`/g, ""),
+            }}
+          />
+          <p className="text-main">{free_session_cta_titles.subtitle}</p>
         </div>
         <Button
           text={free_session_cta_titles.buttonText}
