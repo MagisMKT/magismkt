@@ -41,7 +41,7 @@ en:
   whoWeAreTitle: '`Who <span class="font-ramillas italic text-110">we are</span>`'
   whatWeDoParagraph: We blend creativity and strategy to attract customers,
     generate leads, and boost your sales.  Our team understands the Texas market
-    and how to connect with the Latino community — creating authentic content,
+    and how to connect with the Latino community, creating authentic content,
     effective campaigns, and brands with identity.
   whatWeDoSubtitle: '`We make your brand sell, <span class="text-blue
     dark:text-green px-2.5 py-1.5 rounded-full font ramillas italic font-bold
