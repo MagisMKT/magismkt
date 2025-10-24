@@ -28,8 +28,8 @@ en:
       clientImage: /images/hugo-balderas_white.png
     - clientName: Azteca Farmers Market
       clientImage: /images/azteca_white.png
-    - clientName: Mueblerias el triunfo
-      clientImage: /images/muebleria_white.png
+    - clientName: Cherry Moon
+      clientImage: /images/cherry-moon-light.png
     - clientName: The Gonzalez Law Group
       clientImage: /images/the-gonzalez-law-group_white.png
     - clientName: Carnitas Mexican Grill
@@ -58,8 +58,8 @@ en:
       clientImage: /images/hugo-balderas.png
     - clientName: Azteca Farmers Market
       clientImage: /images/azteca_opacity.png
-    - clientName: Muebleria el triunfo
-      clientImage: /images/muebleria.png
+    - clientName: Cherry Moon
+      clientImage: /images/cherry-moon.png
     - clientName: The Gonzalez Law Group
       clientImage: /images/the-gonzalez-law-group.png
     - clientName: Carnitas Mexican Grill
