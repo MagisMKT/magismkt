@@ -5,7 +5,7 @@ en:
     class="relative z-20"> We grow</span><span class="text-main bg-blue inline
     !leading-none px-1.5 lg:px-2.5 py-0.25 lg:py-1.5 -z-10 relative rounded-full
     font-ramillas italic font-bold text-110">&nbsp;businesses</span> to
-    Life,</span><span class="relative z-20"> through advertising</span>`'
+    life,</span><span class="relative z-20"> through advertising</span>`'
   whatWeDoTextButton: Discover services
 es:
   whatWeDoTitle: '`Que <span class="font-ramillas italic text-110">hacemos</span>`'
