@@ -6,9 +6,9 @@ en:
         en: Social Media
         es: Social Media
       description:
-        en: We take care of everything — planning, filming, and results. We create
+        en: "We take care of everything: planning, filming, and results. We create
           strategic content that strengthens your social media presence,
-          attracts customers, and builds community.
+          attracts customers, and builds community."
         es: "Nos encargamos de todo: planificación, grabación y resultados. Creamos
           contenido estratégico que impulsa tu presencia en redes sociales,
           atrae clientes y construye comunidad."
@@ -26,11 +26,11 @@ en:
         en: Branding
         es: Identidad de Marca
       description:
-        en: We design your business image — from logo to colors — so it looks like a big
+        en: We design your business image, from logo to colors, so it looks like a big
           brand. Because even if it's small, your business deserves
           professional-level branding.
-        es: Diseñamos la imagen de tu negocio — desde el logo hasta los colores — para
-          que se vea como una gran marca. Porque aunque sea pequeño, tu negocio
+        es: Diseñamos la imagen de tu negocio, desde el logo hasta los colores, para que
+          se vea como una gran marca. Porque aunque sea pequeño, tu negocio
           merece un branding de nivel profesional.
       img: /images/s_branding.svg
       subServices:
