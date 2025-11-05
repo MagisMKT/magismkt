@@ -12,7 +12,7 @@ en:
     grow.
   heroSubtitle: We are a marketing agency,<span class="font-ramillas italic
     font-bold text-110"> built by and for Latino entrepreneurs</span>
-  storySubtitlePart2: give more.
+  storySubtitlePart2: " give more."
   storySubtitlePart3: Meet Magis Marketing
   storyParagraph1: >-
     Magis comes from Latin and means “more” not in the sense of having more, but
@@ -84,7 +84,7 @@ es:
   heroSubtitle: Somos una agencia de marketing digital en Texas,<span
     class="font-ramillas italic font-bold text-110">hecha por y para
     emprendedores latinos.</span>
-  storySubtitlePart2: dar más.
+  storySubtitlePart2: " dar más."
   storySubtitlePart3: Conoce Magis Marketing
   storyParagraph1: >-
     Magis proviene del latín y significa “más”, no en el sentido de tener más,
