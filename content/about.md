@@ -6,25 +6,31 @@ en:
   teamSubtitlePart2: behind the Magic
   teamCentralPhrasePart1: Let's do
   teamCentralPhrasePart2: MORE!
-  storySubtitlePart1: Driving Success with a
+  storySubtitlePart1: Born to
   teamParagraph: A multidisciplinary team of specialists in strategy, design,
     content, and digital advertising — all working together to help your brand
     grow.
   heroSubtitle: We are a marketing agency,<span class="font-ramillas italic
     font-bold text-110"> built by and for Latino entrepreneurs</span>
-  storySubtitlePart2: " Feminine Touch:"
+  storySubtitlePart2: give more.
   storySubtitlePart3: Meet Magis Marketing
-  storyParagraph1: Founded in 2019 and based in Texas, Magis has embarked on an
-    incredible journey marked by challenges and obstacles. Through it all, our
-    team has risen to the occasion, demonstrating resilience, creativity, and
-    unwavering dedication. Our story is one of perseverance, driven by a passion
-    for delivering exceptional marketing, branding, and PR services.
+  storyParagraph1: >-
+    Magis comes from Latin and means “more” not in the sense of having more, but
+    of serving more and giving more. That’s exactly who we are at Magis: a
+    business that gives more to other businesses. The idea of a social media
+    agency for Latinos in Houston was born in 2018. Our first attempt didn’t
+    take off like it happens to many entrepreneurs, but we didn’t give up.
+
+    In 2022, we tried again and officially named it Magis. At first, we chased big companies and fancy brands, but by 2025 we realized something powerful: we weren’t born to serve big corporations, we were born to support great people.
   heroButtonText: Meet the Team
-  storyParagraph2: From our humble beginnings to the dynamic agency we are today,
-    every step of the way has been an adventure. Each challenge has made us
-    stronger and more committed to achieving outstanding results for our
-    clients. At Magis, we believe that every obstacle is an opportunity to
-    innovate and excel.
+  storyParagraph2: >-
+    Today, Magis specializes in helping Latino entrepreneurs and small business
+    owners with their marketing, providing high-quality, tangible results at
+    accessible prices. No matter the size of your business, we offer
+    personalized, professional service, because that’s what our community
+    deserves.
+
+    Magis grows from the belief that Latinos and minorities deserve more: more quality, more professionalism, more education, more everything. Because we are not less. We are more.
   storyTitlePart1: Our
   teamTitle: The <span class="font-ramillas italic text-110">Team</span>
   storyTitlePart2: Story
@@ -71,27 +77,32 @@ es:
   teamSubtitlePart2: detrás de la magia
   teamCentralPhrasePart1: ¡Hagamos
   teamCentralPhrasePart2: MÁS!
-  storySubtitlePart1: Impulsando el éxito con un
+  storySubtitlePart1: Nacimos para
   teamParagraph: Un equipo multidisciplinario con especialistas en estrategia,
     diseño, contenido y publicidad digital, trabajando juntos para que tu marca
     crezca.
   heroSubtitle: Somos una agencia de marketing digital en Texas,<span
     class="font-ramillas italic font-bold text-110">hecha por y para
     emprendedores latinos.</span>
-  storySubtitlePart2: " toque femenino:"
+  storySubtitlePart2: dar más.
   storySubtitlePart3: Conoce Magis Marketing
-  storyParagraph1: Fundada en 2019 y con sede en Texas, Magis ha emprendido un
-    increíble viaje lleno de desafíos y obstáculos. A lo largo de todo este
-    recorrido, nuestro equipo ha estado a la altura, demostrando resiliencia,
-    creatividad y una dedicación inquebrantable. Nuestra historia es una de
-    perseverancia, impulsada por la pasión de ofrecer servicios excepcionales de
-    marketing, branding y relaciones públicas.
+  storyParagraph1: >-
+    Magis proviene del latín y significa “más”, no en el sentido de tener más,
+    sino de servir más y dar más. Y eso es exactamente lo que somos en Magis: un
+    negocio que le da más a otros negocios.
+
+    La idea de una agencia de redes sociales para latinos en Houston nació en 2018. Nuestro primer intento no despegó, como le pasa a muchos emprendedores, pero no nos rendimos.
+
+    En 2022, lo intentamos de nuevo y oficialmente la nombramos 'Magis'. Al principio perseguíamos a las grandes compañías, pero para 2025 nos dimos cuenta de algo poderoso: No nacimos para servir a las grandes corporaciones, nacimos para apoyar a grandes personas.
   heroButtonText: Conoce al Team
-  storyParagraph2: Desde nuestros humildes comienzos hasta la agencia dinámica que
-    somos hoy, cada paso del camino ha sido una aventura. Cada desafío nos ha
-    fortalecido y nos ha comprometido aún más a lograr resultados sobresalientes
-    para nuestros clientes. En Magis, creemos que cada obstáculo es una
-    oportunidad para innovar y sobresalir.
+  storyParagraph2: >-
+    Hoy, Magis se especializa en ayudar a emprendedores y dueños de negocios
+    latinos con su marketing, ofreciendo resultados de alta calidad, tangibles y
+    a precios accesibles. Sin importar el tamaño de tu negocio, brindamos un
+    servicio personalizado y profesional, porque eso es lo que nuestra comunidad
+    merece.
+
+    Magis crece desde la creencia de que los latinos y las minorías merecen más: más calidad, más profesionalismo, más educación, más de todo. Porque no somos menos. Somos más.
   storyTitlePart1: Nuestra
   teamTitle: El <span class="font-ramillas italic text-110">Team</span>
   storyTitlePart2: historia
